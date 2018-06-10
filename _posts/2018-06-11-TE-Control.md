@@ -3,10 +3,12 @@
 
 ---
 
-<hr>
-<h2 id="layout--posttitle--tracking-error-controlfeature-img-assetsimgsample_feature_img.pngtags--math">layout:  post<br>
+<ul>
+<li></li>
+</ul>
+<h2 id="layout--posttitle--tracking-error-controlfeature-img--assetsimgsample_feature_img.pngtags--math">layout:  post<br>
 title:  Tracking-error Control<br>
-feature-img: "assets/img/sample_feature_img.png"<br>
+feature-img:  "assets/img/sample_feature_img.png"<br>
 tags:  [Math]</h2>
 <h1 id="formulation-of-tracking-error-control">Formulation of Tracking-error Control</h1>
 <h3 id="key-idea">Key idea</h3>
