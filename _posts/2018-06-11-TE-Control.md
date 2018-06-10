@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Tracking-error Control
-feature-img: "assets/img/sample_feature_img.png"
+#feature-img: "assets/img/sample_feature_img.png"
 tags: [Math]
 
 ---
 
-<p>어디에서 끝나는게 좋을까.</p>
+<p>어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까. 어디에서 끝나는게 좋을까.</p>
 <h3 id="key-idea">Key idea</h3>
 <ul>
 <li>포트폴리오와 BM간의 비중을 조절하여 Ex-ante Tracking error를 통제할 수 있다.</li>
