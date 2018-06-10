@@ -16,7 +16,7 @@
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 locale: ko-KR
-title: "계량투자실험실"
+title: "계량투자 실험실"
 description: "It really is the best."
 baseurl: # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
