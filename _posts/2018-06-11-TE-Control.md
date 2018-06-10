@@ -4,9 +4,10 @@
 ---
 
 <hr>
-<h2 id="layout--posttitle--tracking-error-controltags--math">layout:  post<br>
+<p>layout:  post<br>
 title:  Tracking-error Control<br>
-tags:  [Math]</h2>
+tags:  [Math]</p>
+<hr>
 <h1 id="formulation-of-tracking-error-control">Formulation of Tracking-error Control</h1>
 <h3 id="key-idea">Key idea</h3>
 <ul>
