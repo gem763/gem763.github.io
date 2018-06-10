@@ -6,6 +6,7 @@
 <hr>
 <p>layout:  post<br>
 title:  Tracking-error Control<br>
+feature-img: "assets/img/sample_feature_img.png"<br>
 tags:  [Math]</p>
 <hr>
 <h1 id="formulation-of-tracking-error-control">Formulation of Tracking-error Control</h1>
