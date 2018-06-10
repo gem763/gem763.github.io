@@ -6,7 +6,6 @@ tags: [Math]
 
 ---
 
-<h1 id="formulation-of-tracking-error-control">Formulation of Tracking-error Control</h1>
 <p>어디에서 끝나는게 좋을까.</p>
 <h3 id="key-idea">Key idea</h3>
 <ul>
