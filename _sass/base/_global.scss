@@ -93,6 +93,7 @@ p, ol, ul, dl, .math-display {
 .math-display {
   display: inline-block;
   width: 100%;
+  overflow-x: scroll;
 }
 // Lists within lists
 li > ul, li > ol {
