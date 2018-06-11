@@ -93,8 +93,6 @@ p, ol, ul, dl, .math-display {
 .math-display {
   display: inline-block;
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 // Lists within lists
 li > ul, li > ol {
