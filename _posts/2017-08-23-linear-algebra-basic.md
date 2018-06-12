@@ -53,6 +53,7 @@ Trace는 아래와 같은 성질을 지닌다.
 $$
 \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = \text{tr}(\mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x}) = \text{tr}(\mathbf{A} \mathbf{x} \mathbf{x}^\mathsf{T}) = \text{tr}(\mathbf{x} \mathbf{x}^\mathsf{T} \mathbf{A})
 $$
+
 <br/>
 
 ### Determinant
@@ -131,6 +132,7 @@ $\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = 
 $$
 \frac{\partial \mathbf{f}}{\partial x} = \left[ \frac{\partial y_1}{\partial x} \cdots \frac{\partial y_m}{\partial x} \right] \in \mathbb{R}^{1 \times m}
 $$
+
 <br/>
 
 ### 벡터를 벡터로 미분
@@ -158,6 +160,7 @@ $$
 \dfrac{\partial^2 y}{\partial x_n \partial x_1} & \cdots & \dfrac{\partial^2 y}{\partial x_n^2} 
 \end{bmatrix} = \frac{\partial}{\partial \mathbf{x}} \nabla f = \mathbf{J}(\nabla f) \in \mathbb{R}^{n \times n}
 $$
+
 <br/>
 
 ### 스칼라를 행렬로 미분
@@ -172,6 +175,7 @@ $$
 \dfrac{\partial y}{\partial x_{m1}} & \cdots & \dfrac{\partial y}{\partial x_{mn}} 
 \end{bmatrix} \in \mathbb{R}^{m \times n}
 $$
+
 <br/>
 
 ### 주요 미분규칙
@@ -187,7 +191,15 @@ ${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{A}} \text{tr}(\mathbf
 ${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{A}} \log(\det{A}) = (\mathbf{A}^{-1})^\mathsf{T}$
 
 
+<br/>
 
+* $\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x} = \dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}$
+
+* $\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = (\mathbf{A} + \mathbf{A}^\mathsf{T}) ~\mathbf{x}$
+
+* $\dfrac{\partial}{\partial \mathbf{A}} \text{tr}(\mathbf{B}\mathbf{A}) = \mathbf{B}^\mathsf{T}$
+
+* $\dfrac{\partial}{\partial \mathbf{A}} \log(\det{A}) = (\mathbf{A}^{-1})^\mathsf{T}$
 
 
 
