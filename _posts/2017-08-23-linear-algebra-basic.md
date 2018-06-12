@@ -24,7 +24,7 @@ $$
 \Vert \mathbf{A} \Vert_p = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
 $$
 
-이 중 $p = 2$ 인 경우를 프로베니우스 놈(Frobenius norm)이라고 하며, 다음과 같이 쓰기도 한다. 
+이 중 $p = 2$ 인 경우를 프로베니우스 놈 (Frobenius norm)이라고 하며, 다음과 같이 쓰기도 한다. 
 
 $$
 \Vert \mathbf{A} \Vert = \Vert \mathbf{A} \Vert_F = \left( \sum_{i,~j} a_{ij}^2 \right)^{1/2}
@@ -155,8 +155,8 @@ $$
 $$
 \mathbf{H} = \frac{\partial^2 y}{\partial \mathbf{x}^2} = 
 \begin{bmatrix}
-\dfrac{\partial^2 y}{\partial x_1^2} & \cdots & \dfrac{\partial^2 y}{\partial x_1 \partial x_n} \\\\
-\vdots & \ddots & \vdots \\\\
+\dfrac{\partial^2 y}{\partial x_1^2} & \cdots & \dfrac{\partial^2 y}{\partial x_1 \partial x_n} \\
+\vdots & \ddots & \vdots \\
 \dfrac{\partial^2 y}{\partial x_n \partial x_1} & \cdots & \dfrac{\partial^2 y}{\partial x_n^2} 
 \end{bmatrix} = \frac{\partial}{\partial \mathbf{x}} \nabla f = \mathbf{J}(\nabla f) \in \mathbb{R}^{n \times n}
 $$
@@ -170,8 +170,8 @@ $y = f(\mathbf{X}) \in \mathbb{R}, ~ \mathbf{X} = [x_{ij}] \in \mathbb{R}^{m \ti
 $$
 \frac{\partial y}{\partial \mathbf{X}} = 
 \begin{bmatrix}
-\dfrac{\partial y}{\partial x_{11}} & \cdots & \dfrac{\partial y}{\partial x_{1n}} \\\\
-\vdots & \ddots & \vdots \\\\
+\dfrac{\partial y}{\partial x_{11}} & \cdots & \dfrac{\partial y}{\partial x_{1n}} \\
+\vdots & \ddots & \vdots \\
 \dfrac{\partial y}{\partial x_{m1}} & \cdots & \dfrac{\partial y}{\partial x_{mn}} 
 \end{bmatrix} \in \mathbb{R}^{m \times n}
 $$
@@ -181,17 +181,6 @@ $$
 ### 주요 미분규칙
 
 벡터 $\mathbf{x}, \mathbf{w} \in \mathbb{R}^n$와 행렬 $\mathbf{A}, \mathbf{B} \in \mathbb{R}^{n \times n}$에 대하여, 
-
-${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x} = \dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}$
-
-${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = (\mathbf{A} + \mathbf{A}^\mathsf{T}) ~\mathbf{x}$
-
-${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{A}} \text{tr}(\mathbf{B}\mathbf{A}) = \mathbf{B}^\mathsf{T}$
-
-${\scriptsize \bullet} ~~\dfrac{\partial}{\partial \mathbf{A}} \log(\det{A}) = (\mathbf{A}^{-1})^\mathsf{T}$
-
-
-<br/>
 
 * $\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x} = \dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}$
 
