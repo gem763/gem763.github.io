@@ -1,3 +1,9 @@
+---
+layout: post
+title: 선형대수학의 기초
+excerpt_separator: <!--more-->
+---
+
 계량투자에 필요하다고 생각되는, 선형대수학의 기초적인 부분을 정리합니다. 이 포스트는 수시로 업데이트 됩니다. 
 <!--more-->
 
@@ -5,7 +11,7 @@
 
 ## 행렬의 크기
 
-행렬 $\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}$ 에 하나의 실수를 대응시키는 연산을 의미하며, **Norm**, **Trace**, **Determinant** 등이 있다. 
+행렬 \$$\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}$$ 에 하나의 실수를 대응시키는 연산을 의미하며, **Norm**, **Trace**, **Determinant** 등이 있다. 
 <br/>
 
 ### Norm
