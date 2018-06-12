@@ -10,7 +10,7 @@
 
 ### Norm
 
-$p = 1, 2, \infty$ 에 대해서, **$p$-Norm** 은 다음과 같이 정의된다. 
+$$p = 1, 2, \infty$$ 에 대해서, **$p$-Norm** 은 다음과 같이 정의된다. 
 
 $$
 \Vert \mathbf{A} \Vert_p = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
