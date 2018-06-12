@@ -6,8 +6,7 @@ excerpt_separator: <!--more-->
 
 ---
 
-<div class="stackedit__toc">
-  
+
 <ul>
 <li>
 <ul>
@@ -18,7 +17,7 @@ excerpt_separator: <!--more-->
 </li>
 </ul>
 
-</div>
+
 
 계량투자[바보]에 필요하다고 생각되는, 선형대수학의 기초적인 부분을 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
 <!--more-->
