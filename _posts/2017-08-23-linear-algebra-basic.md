@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 
 ---
 
-계량투자[바보]에 필요하다고 생각되는, 선형대수학의 기초적인 부분을 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
+계량투자에 필요하다고 생각되는, 선형대수학의 기초적인 부분을 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
 <!--more-->
 
 ---
@@ -24,7 +24,7 @@ $$
 \Vert \mathbf{A} \Vert_p = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
 $$
 
-이 중 $p = 2$ 인 경우를 프로베니우스 놈 [Frobenius norm]이라고 하며, 다음과 같이 쓰기도 한다. 
+이 중 $p = 2$ 인 경우를 프로베니우스 놈 (Frobenius norm)이라고 하며, 다음과 같이 쓰기도 한다. 
 
 $$
 \Vert \mathbf{A} \Vert = \Vert \mathbf{A} \Vert_F = \left( \sum_{i,~j} a_{ij}^2 \right)^{1/2}
@@ -65,7 +65,7 @@ $$
 $$
 
 
-* $$\mathbf{C}_{i,~j} = (-1)^{i+j} \mathbf{M}_{i,~j}$$ : 코팩터[Cofactor]
+* $\mathbf{C}_{i,~j} = (-1)^{i+j} \mathbf{M}_{i,~j}$ : 코팩터(Cofactor)
 * $\mathbf{M}_{i,~j}$ : 마이너(Minor)라고 하며, $\mathbf{A}$에서 $i$-행과 $j$-열을 지워서 얻어진 행렬의 행렬식
 
 Determinant는 다음과 같은 성질을 지닌다. 
