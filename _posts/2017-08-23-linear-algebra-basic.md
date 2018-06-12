@@ -24,7 +24,7 @@ $$
 \Vert \mathbf{A} \Vert_p = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
 $$
 
-이 중 $p = 2$ 인 경우를 프로베니우스 놈 (Frobenius norm)이라고 하며, 다음과 같이 쓰기도 한다. 
+이 중 $p = 2$ 인 경우를 프로베니우스 놈 [Frobenius norm]이라고 하며, 다음과 같이 쓰기도 한다. 
 
 $$
 \Vert \mathbf{A} \Vert = \Vert \mathbf{A} \Vert_F = \left( \sum_{i,~j} a_{ij}^2 \right)^{1/2}
