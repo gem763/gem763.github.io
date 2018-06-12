@@ -1,85 +1,29 @@
-﻿# SITE CONFIGURATION
-baseurl: ""
-url: "https://gem763.github.io/"
+# Site Build Settings
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: 계량투자 실험실
-  avatar:  # assets/img/avatar.png
-  favicon: # assets/favicon.ico
-  gravatar: # Email MD5 hash
-  description: "Research laboratory for Quantitative investing" # used by search engines
+# Jekyll-paginate-v2 configuration
+#  pagination:
+#   enabled: true
+#   per_page: 5
+#   permalink: '/page/:num/'
+#   title: ':title - page :num of :max'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
 
-  # Header and footer text
-  header_text: #>
-     #<p>테스트</p>
-  header_text_feature_image:
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+# jekyll-paginate configuration
+paginate:            5
 
-  # Icons
-  rss: true
-  email_address: "gem763@hanmail.net"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook: "sejin.kang.777"
-  flickr:
-  gitlab:
-  github: "gem763"
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: #"twitter"
-  wordpress:
-  youtube:
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
-  search: false # Enable the search feature
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           '계량투자 실험실'
+description:	       'Quantlab'
+author:              'quanty'
 
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-  str_search_no_results: "No results found."
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  # google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
-  google_fonts: "Nanum+Gothic:400,700,800"
-  # google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
-
-  # Post navigation
-  post_navigation: true
-
-# PAGINATION
-paginate: 10
-paginate_path: "blog/page:num"
-
-# BUILD SETTINGS
-markdown: kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-plugins: [jekyll-paginate]
-theme: jekyll-theme-type
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
