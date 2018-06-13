@@ -93,16 +93,16 @@ hr {
 	overflow-y: hidden;
 }
 
-/*
+
 .math-inline{
 	display: inline-block;
-	max-width: 100%;
+	max-width: 50%;
 }
 
 .math-block{
 	display: block;
 }
-*/
+
 
 
 .container {
