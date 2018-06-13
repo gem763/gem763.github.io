@@ -126,7 +126,7 @@ $$
 
 ### 벡터를 스칼라로 미분
 
-$\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = \mathbf{f}(x) \in \mathbb{R}^m$,  $x \in \mathbb{R}$ 에 대하여,
+<div class="math">$\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = \mathbf{f}(x) \in \mathbb{R}^m$</div>,  $x \in \mathbb{R}$ 에 대하여,
 
 
 $$
