@@ -143,8 +143,8 @@ $\mathbf{y} = \mathbf{f}(\mathbf{x}) \in \mathbb{R}^m, ~ \mathbf{x} \in \mathbb{
 $$
 \mathbf{J} = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} = 
 \begin{bmatrix}
-\dfrac{\partial y_1}{\partial x_1} & \cdots & \dfrac{\partial y_1}{\partial x_n} \\\\
-\vdots & \ddots & \vdots \\\\
+\dfrac{\partial y_1}{\partial x_1} & \cdots & \dfrac{\partial y_1}{\partial x_n} \\
+\vdots & \ddots & \vdots \\
 \dfrac{\partial y_m}{\partial x_1} & \cdots & \dfrac{\partial y_m}{\partial x_n}
 \end{bmatrix} \in \mathbb{R}^{m \times n}
 $$
