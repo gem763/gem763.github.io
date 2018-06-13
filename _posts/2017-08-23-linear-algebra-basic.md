@@ -74,7 +74,7 @@ Determinant는 다음과 같은 성질을 지닌다.
 * $\det{\mathbf{A}\mathbf{B}} = \det{\mathbf{A}} ~ \det{\mathbf{B}}$
 * $\det{\mathbf{A}}^{-1} = \frac{1}{\det{\mathbf{A}}}$
 
-
+<br/>
 
 ## 역행렬
 
@@ -105,7 +105,7 @@ $$
 * $\mathbf{C}$ : 코팩터 행렬(Cofactor matrix, comatrix)
 * $\mathbf{C}^\mathsf{T} = \text{adj}(\mathbf{A})$ : Adjugate matrix 또는 Adjoint matrix 라고 불린다. 
 
-
+<br/>
 
 ## 행렬의 미분
 
