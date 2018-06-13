@@ -146,19 +146,23 @@ $$
 \dfrac{\partial y_1}{\partial x_1} & \cdots & \dfrac{\partial y_1}{\partial x_n} \\
 \vdots & \ddots & \vdots \\
 \dfrac{\partial y_m}{\partial x_1} & \cdots & \dfrac{\partial y_m}{\partial x_n}
-\end{bmatrix} \in \mathbb{R}^{m \times n}
+\end{bmatrix}
 $$
 
-벡터를 벡터로 미분한 결과값인 $\mathbf{J}$를 **자코비안 행렬**(Jacobian matrix)이라고 한다. 특히 $y = f(\mathbf{x}) \in \mathbb{R}, ~ \mathbf{x} \in \mathbb{R}^n$에 대하여, 다변수함수 $f$의 이차도함수 $\mathbf{H}$를 **헤시안 행렬**(Hessian matrix)이라고도 한다. 
+벡터를 벡터로 미분한 결과값인 $\mathbf{J} \in \mathbb{R}^{m \times n}$를 **자코비안 행렬**(Jacobian matrix)이라고 한다. 특히 $y = f(\mathbf{x}) \in \mathbb{R}, ~ \mathbf{x} \in \mathbb{R}^n$에 대하여, 다변수함수 $f$의 이차도함수 $\mathbf{H} \in \mathbb{R}^{n \times n}$를 **헤시안 행렬**(Hessian matrix)이라고도 한다. 
 
 
 $$
-\mathbf{H} = \frac{\partial^2 y}{\partial \mathbf{x}^2} = 
-\begin{bmatrix}
+\begin{aligned}
+\mathbf{H} 
+&= \frac{\partial^2 y}{\partial \mathbf{x}^2} = 
+\frac{\partial}{\partial \mathbf{x}} \nabla f = \mathbf{J}(\nabla f) \\\\
+&= \begin{bmatrix}
 \dfrac{\partial^2 y}{\partial x_1^2} & \cdots & \dfrac{\partial^2 y}{\partial x_1 \partial x_n} \\
 \vdots & \ddots & \vdots \\
 \dfrac{\partial^2 y}{\partial x_n \partial x_1} & \cdots & \dfrac{\partial^2 y}{\partial x_n^2} 
-\end{bmatrix} = \frac{\partial}{\partial \mathbf{x}} \nabla f = \mathbf{J}(\nabla f) \in \mathbb{R}^{n \times n}
+\end{bmatrix} 
+\end{aligned}
 $$
 
 <br/>
