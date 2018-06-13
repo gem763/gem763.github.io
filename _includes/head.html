@@ -32,6 +32,7 @@
   -->
 
   <script type="text/x-mathjax-config">
+	MathJax.Ajax.config.path["a11y"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/extensions/a11y";
     MathJax.Hub.Config({
       //TeX: {
       //  equationNumbers: {
@@ -41,7 +42,12 @@
 	  //CommonHTML: { linebreaks: { automatic: true } },
 	  //"HTML-CSS": { linebreaks: { automatic: true } },
 	  //SVG: { linebreaks: { automatic: true } },
-	  //"auto-collapse": { disabled: false; }, 
+	  //extensions: ["[a11y]/accessibility-menu.js"], 
+	  //menuSettings: {
+		//collapsible: false,
+		//autocollapse: false,
+		//explorer: true, 
+	  //}, 
       tex2jax: {
         inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
         //displayMath: [ ['$$','$$'] ],
@@ -52,6 +58,7 @@
   
   <!-- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"> -->
   <!-- src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"> -->
+  
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
   </script>

@@ -87,7 +87,7 @@ hr {
   Site container
 */
 
-/*
+
 .math{
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -96,14 +96,14 @@ hr {
 .math-inline{
 	display: inline-block;
 	
-	max-width: 99%;
+	max-width: 100%;
 }
 
 .math-block{
 	display: block;
 }
 
-*/
+
 
 .container {
   margin-left: auto;
