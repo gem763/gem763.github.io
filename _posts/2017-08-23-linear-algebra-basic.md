@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 
 ## 행렬의 크기
 
-행렬 <div class="math">$\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}$</div> 에 하나의 실수를 대응시키는 연산을 의미하며, **Norm**, **Trace**, **Determinant** 등이 있다. 
+행렬 <math>$\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}$</math> 에 하나의 실수를 대응시키는 연산을 의미하며, **Norm**, **Trace**, **Determinant** 등이 있다. 
 <br/>
 
 ### Norm
