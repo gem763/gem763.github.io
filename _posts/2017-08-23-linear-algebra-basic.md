@@ -6,7 +6,6 @@ excerpt_separator: <!--more-->
 
 ---
 
-<link rel="stylesheet" href="https://stackedit.io/style.css" />
 <div class="stackedit__toc">
   
 <ul>
