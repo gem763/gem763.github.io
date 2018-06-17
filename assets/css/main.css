@@ -104,20 +104,22 @@ hr {
 }
 */
 
-
+/*
 #markdown-toc::before {
     content: "Contents";
     font-weight: bold;
 }
-
+*/
 
 #markdown-toc ul {
     list-style: decimal;
 }
 
 #markdown-toc {
-    border: 1px solid #aaa;
-    padding: 10em;
+    font-family: "Nanum Gothic", sans-serif;
+    /*font-size: 18px;*/
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
     list-style: decimal;
     display: block;
 }
