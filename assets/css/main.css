@@ -105,6 +105,23 @@ hr {
 */
 
 
+#markdown-toc::before {
+    content: "Contents";
+    font-weight: bold;
+}
+
+
+#markdown-toc ul {
+    list-style: decimal;
+}
+
+#markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    list-style: decimal;
+    display: inline-block;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
