@@ -16,7 +16,7 @@ excerpt_separator: <!--more-->
 </head>
 
 <body class="stackedit">
-  <div class="stackedit__left">
+  <div class="stackedit__top">
     <div class="stackedit__toc">
       
 <ul>
