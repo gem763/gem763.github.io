@@ -21,7 +21,7 @@ excerpt_separator: <!--more-->
 $p = 1, 2, \infty$ 에 대해서, **$p$-Norm** 은 다음과 같이 정의된다. 
 
 <div class="math">$$
-\Vert \mathbf{A} \Vert\\\\_{p} = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
+\Vert \mathbf{A} \Vert_{p} = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
 $$</div>
 
 이 중 $p = 2$ 인 경우를 프로베니우스 놈 (====TEST==== norm)이라고 하며, 다음과 같이 쓰기도 한다. 
@@ -62,7 +62,7 @@ $$</div>
 \det{\mathbf{A}} = |\mathbf{A}| = \sum_i \mathbf{C}_{i, ~j_o} a_{i,~j_o} = \sum_j  \mathbf{C}_{i_o, ~j} a_{i_o,~j}
 $$</div>
 
-* $\mathbf{C}\_{i,j} = (-1)^{i+j} \mathbf{M}\_{i,j}$ : 코팩터(Cofactor)
+* '$\mathbf{C}_{i,j} = (-1)^{i+j} \mathbf{M}_{i,j}$' : 코팩터(Cofactor)
 * $\mathbf{M}\_{i,j}$ : 마이너(Minor)라고 하며, $\mathbf{A}$에서 $i$-행과 $j$-열을 지워서 얻어진 행렬의 행렬식
 
 Determinant는 다음과 같은 성질을 지닌다. 
