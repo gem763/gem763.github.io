@@ -124,7 +124,7 @@ Determinant는 다음과 같은 성질을 지닌다.
 
 ### 벡터를 스칼라로 미분
 
-<span class="math"><script type="math/tex">\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = \mathbf{f}(x) \in \mathbb{R}^m</script></span>,  <span class="math"><script type="math/tex">x \in \mathbb{R}</script></span> 에 대하여,
+<span class="math-inline"><script type="math/tex">\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = \mathbf{f}(x) \in \mathbb{R}^m</script></span>,  <span class="math"><script type="math/tex">x \in \mathbb{R}</script></span> 에 대하여,
 
 
 <div class="math"><script type="math/tex; mode=display">
