@@ -117,9 +117,9 @@ hr {
 
 #markdown-toc {
     border: 1px solid #aaa;
-    padding: 1.5em;
+    padding: 10em;
     list-style: decimal;
-    display: inline-block;
+    display: block;
 }
 
 .container {
