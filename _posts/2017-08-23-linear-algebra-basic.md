@@ -6,7 +6,21 @@ excerpt_separator: <!--more-->
 
 ---
 
-[object Object]
+<div class="stackedit__left">
+  <div class="stackedit__toc">
+    
+<ul>
+<li>
+<ul>
+<li><a href="#행렬의-크기">행렬의 크기</a></li>
+<li><a href="#역행렬">역행렬</a></li>
+<li><a href="#행렬의-미분">행렬의 미분</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
 계량투자에 필요한 선형대수학의 기초를 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
 <!--more-->
 
