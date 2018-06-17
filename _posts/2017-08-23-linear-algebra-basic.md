@@ -6,19 +6,9 @@ excerpt_separator: <!--more-->
 
 ---
 
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2017-08-23-linear-algebra-basic</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
-
-<body class="stackedit">
-  <div class="stackedit__top">
-    <div class="stackedit__toc">
-      
+<link rel="stylesheet" href="https://stackedit.io/style.css" />
+<div class="stackedit__toc">
+  
 <ul>
 <li>
 <ul>
@@ -29,12 +19,7 @@ excerpt_separator: <!--more-->
 </li>
 </ul>
 
-    </div>
-  </div>
-</body>
-
-</html>
-
+</div>
 
 계량투자에 필요한 선형대수학의 기초를 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
 <!--more-->
