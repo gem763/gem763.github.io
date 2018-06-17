@@ -21,7 +21,7 @@ excerpt_separator: <!--more-->
 $p = 1, 2, \infty$ 에 대해서, **$p$-Norm** 은 다음과 같이 정의된다. 
 
 <div class="math">$$
-\Vert \mathbf{A} \Vert\\_{p} = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
+\Vert \mathbf{A} \Vert\\\\_{p} = \left( \sum_{i,~j} |a_{ij} |^p \right)^{1/p} 
 $$</div>
 
 이 중 $p = 2$ 인 경우를 프로베니우스 놈 (====TEST==== norm)이라고 하며, 다음과 같이 쓰기도 한다. 
