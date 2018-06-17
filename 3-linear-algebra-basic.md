@@ -165,7 +165,7 @@ $$</div>
 
 ### 스칼라를 행렬로 미분
 
-$$y = f(\mathbf{X}) \in \mathbb{R}, ~ \mathbf{X} = [x_{ij}] \in \mathbb{R}^{m \times n}$$에 대하여, 
+$y = f(\mathbf{X}) \in \mathbb{R}, ~ \mathbf{X} = [x_{ij}] \in \mathbb{R}^{m \times n}$에 대하여, 
 
 <div class="math">$$
 \frac{\partial y}{\partial \mathbf{X}} = 
@@ -181,7 +181,7 @@ $$</div>
 
 벡터 $\mathbf{x}, \mathbf{w} \in \mathbb{R}^n$와 행렬 $\mathbf{A}, \mathbf{B} \in \mathbb{R}^{n \times n}$에 대하여, 
 
-* $$\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x}\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}$$  
+* <script type="math/tex>$\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x}\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}$</script>
 
 * $\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = (\mathbf{A} + \mathbf{A}^\mathsf{T}) ~\mathbf{x}$
 
