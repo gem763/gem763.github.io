@@ -111,6 +111,7 @@ hr {
 }
 */
 
+/*
 #markdown-toc ul {
     list-style: decimal;
 }
@@ -132,6 +133,55 @@ hr {
 #markdown-toc a:hover {
 	color: #3d5b99;
 }
+*/
+#markdown-toc {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 13px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+	padding-left: 30px;
+    list-style: decimal;
+    display: block;
+}
+
+/*
+#markdown-toc ul{
+	padding:0
+}
+
+
+#markdown-toc ul a{
+	margin:.5rem 0;
+	padding:.5rem 1rem
+}
+
+#markdown-toc ul ul{
+	color:#888;
+	font-size:.9em
+}
+	
+#markdown-toc ul ul a{
+	margin:.5rem 0;
+	padding:.5rem 1rem
+}
+
+
+#markdown-toc li{
+	display:block
+}
+*/
+
+#markdown-toc a{
+	display:block;
+	color:inherit;
+	text-decoration:none
+}
+
+#markdown-toc a:active,#markdown-toc a:focus,#markdown-toc a:hover{
+	background-color:rgba(0,0,0,.075);
+	border-radius:2px
+}
+
 
 .container {
   margin-left: auto;
