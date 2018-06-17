@@ -117,11 +117,20 @@ hr {
 
 #markdown-toc {
     font-family: "Nanum Gothic", sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
+	padding-left: 30px;
     list-style: decimal;
     display: block;
+}
+
+#markdown-toc a {
+	color: #999;
+}
+
+#markdown-toc a:hover {
+	color: #3d5b99;
 }
 
 .container {
