@@ -6,14 +6,14 @@ excerpt_separator: <!--more-->
 
 ---
 
-계량투자에 필요하다고 생각되는, 선형대수학의 기초적인 부분을 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습됩니다. 
+계량투자에 필요한 선형대수학의 기초를 정리합니다. 이 포스트는 수시로 업데이트 될 수 있습니다. 
 <!--more-->
 
 
 
 ## 행렬의 크기
 
-행렬 <span><script type="math/tex">\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}</script></span> 에 하나의 실수를 대응시키는 연산을 의미하며, **Norm**, **Trace**, **Determinant** 등이 있다. 
+행렬의 크기란, 행렬 <span><script type="math/tex">\mathbf{A} = [a_{ij}] \in \mathbb{R}^{m \times n}</script></span> 에 하나의 실수를 대응시키는 연산을 의미한다. **Norm**, **Trace**, **Determinant** 등이 있다. 
 <br/>
 
 ### Norm
@@ -45,7 +45,7 @@ Trace는 아래와 같은 성질을 지닌다.
 * <span><script type="math/tex">\text{tr}(\mathbf{A}^\mathsf{T}) = \text{tr}(\mathbf{A})</script></span>
 * <span><script type="math/tex">\text{tr}(\mathbf{A} + \mathbf{B}) = \text{tr}(\mathbf{A}) + \text{tr}(\mathbf{B})</script></span>
 * <span><script type="math/tex">\text{tr}(\mathbf{A}\mathbf{B}) = \text{tr}(\mathbf{B}\mathbf{A})</script></span>
-* <span><script type="math/tex">\text{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \text{tr}(\mathbf{B}\mathbf{C}\mathbf{A}) = \text{tr}(\mathbf{C}\mathbf{A}\mathbf{B})</script></span> : 트레이스 트릭(Trace trick)
+* <span><script type="math/tex">\text{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \text{tr}(\mathbf{B}\mathbf{C}\mathbf{A})</script></span> <span><script type="math/tex">= \text{tr}(\mathbf{C}\mathbf{A}\mathbf{B})</script></span> : 트레이스 트릭(Trace trick)
 
 이중 트레이스 트릭을 이용하면, 다음과 같은 이차형식(Quadratic form)의 미분을 쉽게 할 수 있다. 벡터 <span><script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script></span> 에 대해서, 
 
@@ -124,7 +124,7 @@ Determinant는 다음과 같은 성질을 지닌다.
 
 ### 벡터를 스칼라로 미분
 
-<span><script type="math/tex">\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T} = [f_1(x) \cdots f_m(x)]^\mathsf{T} = \mathbf{f}(x) \in \mathbb{R}^m</script></span>,  <span><script type="math/tex">x \in \mathbb{R}</script></span> 에 대하여,
+<span><script type="math/tex">\mathbf{y} = [y_1 \cdots y_m]^\mathsf{T}</script></span> <span><script type="math/tex">= [f_1(x) \cdots f_m(x)]^\mathsf{T}</script></span> <span><script type="math/tex">= \mathbf{f}(x) \in \mathbb{R}^m</script></span>, <span><script type="math/tex">x \in \mathbb{R}</script></span> 에 대하여,
 
 
 <div class="math"><script type="math/tex; mode=display">
@@ -165,7 +165,7 @@ Determinant는 다음과 같은 성질을 지닌다.
 
 ### 스칼라를 행렬로 미분
 
-<span><script type="math/tex">y = f(\mathbf{X}) \in \mathbb{R}, ~ \mathbf{X} = [x_{ij}] \in \mathbb{R}^{m \times n}</script></span>에 대하여, 
+<span><script type="math/tex">y = f(\mathbf{X}) \in \mathbb{R}</script></span>, <span><script type="math/tex">\mathbf{X} = [x_{ij}] \in \mathbb{R}^{m \times n}</script></span>에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
 \frac{\partial y}{\partial \mathbf{X}} = 
@@ -181,13 +181,13 @@ Determinant는 다음과 같은 성질을 지닌다.
 
 벡터 <span><script type="math/tex">\mathbf{x}, \mathbf{w} \in \mathbb{R}^n</script></span>와 행렬 <span><script type="math/tex">\mathbf{A}, \mathbf{B} \in \mathbb{R}^{n \times n}</script></span>에 대하여, 
 
-* <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x}\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}</script></span>
+* <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{x}} \mathbf{w}^\mathsf{T} \mathbf{x} = \dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{w} = \mathbf{w}</script></span>
 
 * <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{x}} \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = (\mathbf{A} + \mathbf{A}^\mathsf{T}) ~\mathbf{x}</script></span>
 
 * <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{A}} \text{tr}(\mathbf{B}\mathbf{A}) = \mathbf{B}^\mathsf{T}</script></span>
 
-* <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{A}} \log(\det{A}) = (\mathbf{A}^{-1})^\mathsf{T}</script></span>
+* <span><script type="math/tex">\dfrac{\partial}{\partial \mathbf{A}} \log(\det{\mathbf{A}}) = (\mathbf{A}^{-1})^\mathsf{T}</script></span>
 
 
 
