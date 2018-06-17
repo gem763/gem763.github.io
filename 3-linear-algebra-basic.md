@@ -63,7 +63,7 @@ $$</div>
 $$</div>
 
 * $\mathbf{C}\_{i,j} = (-1)^{i+j} \mathbf{M}\_{i,j}$ : 코팩터(Cofactor)
-* $\mathbf{M}_{i,j}$ : 마이너(Minor)라고 하며, $\mathbf{A}$에서 $i$-행과 $j$-열을 지워서 얻어진 행렬의 행렬식
+* $\mathbf{M}\_{i,j}$ : 마이너(Minor)라고 하며, $\mathbf{A}$에서 $i$-행과 $j$-열을 지워서 얻어진 행렬의 행렬식
 
 Determinant는 다음과 같은 성질을 지닌다. 
 
