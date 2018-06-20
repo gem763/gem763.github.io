@@ -150,13 +150,13 @@ Trace는 아래와 같은 성질을 지닌다.
 행렬식이라고도 한다. 정방행렬 <span><script type="math/tex">\mathbf{A} = [a_{ij}] \in \mathbb{R}^{n \times n}</script></span>에 대해, 다음과 같이 재귀적(Recurisve)인 방식으로 정의되는데, 이를 **Cofactor expansion**이라고 부른다. 임의의 <span><script type="math/tex">k</script></span>-행 또는 임의의 <span><script type="math/tex">k</script></span>-열에 대해서, 
 
 <div class="math"><script type="math/tex; mode=display">
-\det{\mathbf{A}} = |\mathbf{A}| = \sum_i \mathbf{C}_{ik} a_{ik} = \sum_j  \mathbf{C}_{kj} a_{kj}
+\det{\mathbf{A}} = \sum_i \mathbf{C}_{ik} a_{ik} = \sum_j  \mathbf{C}_{kj} a_{kj}
 </script></div>
 
 * <span><script type="math/tex">\mathbf{C}_{ij} = (-1)^{i+j} \mathbf{M}_{ij}</script></span> : Cofactor
 * <span><script type="math/tex">\mathbf{M}_{ij}</script></span> : Minor라고 하며, <span><script type="math/tex">\mathbf{A}</script></span>에서 <span><script type="math/tex">i</script></span>-행과 <span><script type="math/tex">j</script></span>-열을 지워서 얻어진 행렬의 Determinant
 
-Determinant가 재귀적인 이유는, Minor인 <span><script type="math/tex">\mathbf{M}_{ij}</script></span> 역시 Determinant이기 때문이다. 즉 Minor가 한 차원씩 작아지며 결국 1차원 실수가 될 때까지 계산이 반복된다. Determinant는 다음과 같은 성질을 지닌다. 
+<span><script type="math/tex">\det{\mathbf{A}}</script></span>를 <span><script type="math/tex">|\mathbf{A}|</script></span>라고 쓰기도 한다. Determinant가 재귀적인 이유는, Minor인 <span><script type="math/tex">\mathbf{M}_{ij}</script></span> 역시 Determinant이기 때문이다. 즉 Minor가 한 차원씩 작아지며 결국 1차원 실수가 될 때까지 계산이 반복된다. Determinant는 다음과 같은 성질을 지닌다. 
 
 * <span><script type="math/tex">\det{\mathbf{A}}^\mathsf{T} = \det{\mathbf{A}}</script></span>
 * <span><script type="math/tex">\det{\mathbf{I}} = 1</script></span>
@@ -174,7 +174,7 @@ Determinant가 재귀적인 이유는, Minor인 <span><script type="math/tex">\m
 0 & \text{otherwise}
 \end{cases}
 ></script></div>
->즉 <span><script type="math/tex">\mathbf{A}</script></span>와 코팩터의 각기 다른 열에서 원소를 선택하여 서로 곱하면 그 값은 0이 된다는 사실을 알 수 있다. 임의의 (<span><script type="math/tex">h,k</script></span>)-행에 대해서도 마찬가지이다. 이는 아래에서, <span><script type="math/tex">\mathbf{A}</script></span>의 역행렬을 유도하는 과정에서 사용하게 되는 주요 성질이다. 증명은 [여기](https://proofwiki.org/wiki/Matrix_Product_with_Adjugate_Matrix)를 참고. 
+>즉 <span><script type="math/tex">\mathbf{A}</script></span>와 코팩터의 각기 다른 열에서 원소를 선택하여 서로 곱하면 그 값은 0이 된다는 사실을 알 수 있다. 임의의 (<span><script type="math/tex">h,k</script></span>)-행에 대해서도 마찬가지이다. 이는 <span><script type="math/tex">\mathbf{A}</script></span>의 역행렬을 유도하는 과정에서 사용하게 되는 주요 성질이다. 증명은 [여기](https://proofwiki.org/wiki/Matrix_Product_with_Adjugate_Matrix)를 참고. 
 
 
 
