@@ -37,6 +37,8 @@ body {
 
 h1{
   font-size: 2rem;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1 a {
@@ -204,10 +206,11 @@ hr {
 
 .masthead {
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
   margin-bottom: 4rem;
   font-family: "Nanum Gothic", sans-serif;
   /*font-family: "Quattrocento Sans", sans-serif;*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .masthead a:hover {
@@ -222,7 +225,7 @@ hr {
 
 .masthead-subtitle {
   /*font-family: "Quattrocento Sans", sans-serif;*/
-  color: #999;
+  color: #9a9a9a;
 }
 
 /*
@@ -253,6 +256,14 @@ hr {
   margin-bottom: 5rem;
   padding: 0px;
   list-style: none;
+}
+
+.post-category {
+  margin:0px;
+  padding:0px;
+  color: #9a9a9a;
+  /*font-family: 'Quattrocento Sans', sans-serif;*/
+  font-size:1rem;
 }
 
 .post-date {
@@ -339,7 +350,7 @@ hr {
 */
 
 .menu {
-  padding-top: 0.5rem;
+  padding-top: 0rem;
   display: block;
 }
 
@@ -348,7 +359,7 @@ hr {
 }
 
 .menu-content a {
-  color: #999;
+  color: #9a9a9a;
   font-size: 1rem;
   padding-right: 10px;
 }

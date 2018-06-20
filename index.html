@@ -8,9 +8,7 @@ title: Home
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
   </h1>
-  <h5>
-  {{ post.categories | capitalize }}
-  </h5>
+  <span class="post-category"> # {{ post.categories }} </span>
   {% if post.image %}
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
@@ -19,6 +17,7 @@ title: Home
   <p>
     <!--{{ post.content | strip_html | truncate: 35 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>-->
 	{{ post.excerpt }} <!--<a href="{{ site.github.url }}{{ post.url }}">Read more</a>-->
+	<!--<span class="post-date"> {{ post.categories }} </span>-->
     <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
   </p>
 </div>
