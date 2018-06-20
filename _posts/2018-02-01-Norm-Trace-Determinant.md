@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Norm, Trace, Determinant"
-tags: [선형대수학]
-categories: 수학
-image: spools.jpg
+title: Norm, Trace, Determinant
+tags: [linear algebra, math]
+categories: linear algebra
 excerpt_separator: <!--more-->
 
 ---
