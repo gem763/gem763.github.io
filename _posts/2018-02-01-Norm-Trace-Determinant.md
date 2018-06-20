@@ -36,7 +36,7 @@ excerpt_separator: <!--more-->
 \Vert \mathbf{x} \Vert_{p} \equiv \left( \sum_{i} |x_{i} |^p \right)^{1/p} 
 </script></div>
 
-<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 여러가지 형태가 있으며, 각자 고유의 명칭이 있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
+<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 다양한 형태가 있으며, 각자 고유의 명칭이 있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
 
 * **Taxicab norm** 또는 **Manhattan norm** (<span><script type="math/tex">p=1</script></span>)
 <div class="math"><script type="math/tex; mode=display">
