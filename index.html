@@ -8,6 +8,9 @@ title: Home
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
   </h1>
+  <h5>
+  {{ post.categories | capitalize }}
+  </h5>
   {% if post.image %}
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
