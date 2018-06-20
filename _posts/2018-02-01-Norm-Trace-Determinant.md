@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Norm, Trace, Determinant
-tags: [Linear algebra, Mathematics]
+tags: [Linear algebra, Math]
 categories: [Linear algebra]
 excerpt_separator: <!--more-->
+
 ---
 
 **행렬에 하나의 실수값을 대응**시켜야 할 때가 있다. 예를들어 행렬 자체의 크기를 측정하거나, 행렬 간의 크기를 서로 비교해야 하는 경우이다. 하지만 행렬에는 수많은 원소가 포함되어 있기 때문에, 단 하나의 실수값을 부여하는 논리는 상황에 따라 다를 수 있다. 이 중 가장 빈번하게 쓰이는 **Norm**, **Trace**, **Determinant**에 대해 알아본다. 
@@ -55,7 +56,7 @@ excerpt_separator: <!--more-->
 
 <br/>
 
-> **_Hölder's inequality_**
+> <big>**Hölder's inequality**</big>
 > 
 ><span><script type="math/tex">\frac{1}{p}+\frac{1}{q}=1</script></span>를 만족하는 실수 <span><script type="math/tex">p, ~q \ge 1</script></span>에 대해서, 
 ><div class="math"><script type="math/tex; mode=display">
@@ -108,7 +109,7 @@ excerpt_separator: <!--more-->
 
 <br/>
 
-> **_Frobenius norm_**
+> <big>**Frobenius norm**</big>
 > 
 > 앞서 언급했듯이, 행렬의 Induced norm은 Vector norm을 통해 간접적으로 표현된다. 이와는 별개로, **행렬 자체의 각 원소를 이용해서 행렬의 크기를 정의**하는 방법이 있다. 이를 **Entrywise norm**이라고 한다. 행렬 <span><script type="math/tex">\mathbf{A}</script></span>의 (entrywise) <span><script type="math/tex">p</script></span>-norm 은 다음과 같이 정의된다. 
 ><div class="math"><script type="math/tex; mode=display">
@@ -163,7 +164,7 @@ Determinant가 재귀적인 이유는, Minor인 <span><script type="math/tex">\m
 
 <br/>
 
-> **_Cofactor expansion의 일반화_**
+> <big>**Cofactor expansion의 일반화**</big>
 > 
 > 위의 Determinant 정의에서 나오는 Cofactor expansion은 임의의 열(이나 행) **한 개**를 선택하고, 해당 열(이나 행)을 따라서 <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 코팩터의 원소를 서로 곱한다. 이는 좀더 일반화 할 수 있다. <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 코팩터의 원소를 **각기 다른 열(이나 행)에서 선택**하는 것이다. 임의의 (<span><script type="math/tex">h,k</script></span>)-열에 대해서, 
 ><div class="math"><script type="math/tex; mode=display">
