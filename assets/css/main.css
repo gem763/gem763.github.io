@@ -76,7 +76,7 @@ img {
 blockquote {
   margin: 0px; /*10px 20px 10px;*/
   padding: 0px 10px;
-  border-left: 0.3em solid #e6e6e6;
+  border-left: 0.5em solid #e6e6e6;
   color: #505050;
   /*line-height: 1.5;*/
 }
@@ -263,7 +263,7 @@ hr {
   padding:0px;
   color: #9a9a9a;
   /*font-family: 'Quattrocento Sans', sans-serif;*/
-  font-size:1rem;
+  font-size:0.9rem;
 }
 
 .post-date {
