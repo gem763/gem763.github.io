@@ -1,1 +1,1 @@
-{{#transform}}{{{files.0.content.text}}}{{/transform}}
+{{{files.0.content.text}}}
