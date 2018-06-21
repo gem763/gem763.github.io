@@ -1,1 +1,1 @@
-{{{files.0.content.text}}}
+{{{documentMarkdown}}}
