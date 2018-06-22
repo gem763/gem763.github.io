@@ -294,8 +294,12 @@ hr {
   text-decoration: none;
 }
 
-footnotes {
-  font-size: 5rem;
+a.footnote:before {   
+ content: "[";
+}
+
+a.footnote:after {
+    content: "]";
 }
 
 
