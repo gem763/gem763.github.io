@@ -8,7 +8,7 @@ title: Home
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
   </h1>
-  <span class="post-category"> # {{ post.categories }} </span>
+  <span class="post-category"> # {{ post.categories | join: " | " }} </span>
   {% if post.image %}
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
