@@ -36,7 +36,7 @@ excerpt_separator: <!--more-->
 \Vert \mathbf{x} \Vert_{p} \equiv \left( \sum_{i} |x_{i} |^p \right)^{1/p} 
 </script></div>
 
-<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 다양한여러가지 형태가 있으며, 각자 고유의  있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
+<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 다양한 형태가 있으며, 각자 고유의  이름이 있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
 
 * **Taxicab norm** 또는 **Manhattan norm** (<span><script type="math/tex">p=1</script></span>)
 <div class="math"><script type="math/tex; mode=display">
@@ -87,7 +87,7 @@ excerpt_separator: <!--more-->
 \Vert \mathbf{A} \Vert_{p} \equiv \sup_{\mathbf{x} \ne 0} \frac{\Vert \mathbf{A} \mathbf{x} \Vert_p}{\Vert \mathbf{x} \Vert_p}
 </script></div>
 
-즉 <span><script type="math/tex">\Vert \mathbf{A} \Vert_p</script></span> 는, 벡터 <span><script type="math/tex">\mathbf{A} \mathbf{x}</script></span>의 크기가 벡터 <span><script type="math/tex">\mathbf{x}</script></span>에 비해 얼마나 큰 지를 나타내는 지표라고 할 수 있다. <span><script type="math/tex">p</script></span> 값에 따라 아래처럼 여러가지 형태로 유도된다. 
+즉 <span><script type="math/tex">\Vert \mathbf{A} \Vert_p</script></span> 는, 벡터 <span><script type="math/tex">\mathbf{A} \mathbf{x}</script></span>가 벡터 <span><script type="math/tex">\mathbf{x}</script></span>에 비해 얼마나 큰 지를 나타내는 지표라고 할 수 있다. <span><script type="math/tex">p</script></span> 값에 따라 아래처럼 여러가지 형태로 유도된다. 
 
 * <span><script type="math/tex">\displaystyle \Vert \mathbf{A} \Vert_1 = \max_{1 \le j \le m} \sum_i |a_{ij}|</script></span>
 * <span><script type="math/tex">\displaystyle \Vert \mathbf{A} \Vert_\infty = \max_{1 \le i \le n} \sum_j |a_{ij}|</script></span>
@@ -137,7 +137,7 @@ Trace는 아래와 같은 성질을 지닌다.
 * <span><script type="math/tex">\text{tr}(\mathbf{A}\mathbf{B}) = \text{tr}(\mathbf{B}\mathbf{A})</script></span>
 * <span><script type="math/tex">\text{tr}(\mathbf{A}\mathbf{B}\mathbf{C}) = \text{tr}(\mathbf{B}\mathbf{C}\mathbf{A})</script></span> <span><script type="math/tex">= \text{tr}(\mathbf{C}\mathbf{A}\mathbf{B})</script></span> 
 
-위의 성질을 이용하면, 벡터 <span><script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script></span> 에 대한 이차형식(Quadratic form) <span><script type="math/tex">\mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x}</script></span> 은 다음과 같이 여러가지 방식으로 표현할 수 있다. 
+위의 성질을 이용하면, 벡터 <span><script type="math/tex">\mathbf{x} \in \mathbb{R}^n</script></span> 에 대한 이차형식(Quadratic form) <span><script type="math/tex">\mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x}</script></span> 은 다음과 같이 여러 형태로 표현할 수 있다. 
 
 <div class="math"><script type="math/tex; mode=display">
 \mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x} = \text{tr}(\mathbf{x}^\mathsf{T} \mathbf{A} \mathbf{x}) = \text{tr}(\mathbf{A} \mathbf{x} \mathbf{x}^\mathsf{T}) = \text{tr}(\mathbf{x} \mathbf{x}^\mathsf{T} \mathbf{A})
@@ -165,7 +165,7 @@ Trace는 아래와 같은 성질을 지닌다.
 
 > <big>**Cofactor expansion의 일반화**</big>
 > 
-> 위의 Determinant 정의에서 나오는 Cofactor expansion은 임의의 열(이나 행) **한 개**를 선택하고, 해당 열(이나 행)을 따라서 <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 코팩터의 원소를 서로 곱한다. 이는 좀더 일반화 할 수 있다. <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 코팩터의 원소를 **각기 다른 열(이나 행)에서 선택**하는 것이다. 임의의 (<span><script type="math/tex">h,k</script></span>)-열에 대해서, 
+> 위의 Determinant 정의에서 나오는 Cofactor expansion은 임의의 열(이나 행) **한 개**를 선택하고, 해당 열(이나 행)을 따라서 <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 cofactor의 원소를 서로 곱한다. 이는 좀더 일반화 할 수 있다. <span><script type="math/tex">\mathbf{A}</script></span>의 원소와 cofactor의 원소를 **각기 다른 열(이나 행)에서 선택**하는 것이다. 임의의 (<span><script type="math/tex">h,k</script></span>)-열에 대해서, 
 ><div class="math"><script type="math/tex; mode=display">
 \sum_i \mathbf{C}_{ih} a_{ik} = 
 \begin{cases}
@@ -173,7 +173,7 @@ Trace는 아래와 같은 성질을 지닌다.
 0 & \text{otherwise}
 \end{cases}
 ></script></div>
->즉 <span><script type="math/tex">\mathbf{A}</script></span>와 코팩터의 각기 다른 열에서 원소를 선택하여 서로 곱하면 그 값은 0이 된다는 사실을 알 수 있다. 임의의 (<span><script type="math/tex">h,k</script></span>)-행에 대해서도 마찬가지이다. 이는 <span><script type="math/tex">\mathbf{A}</script></span>의 역행렬을 유도하는 과정에서 사용하게 되는 주요 성질이다. 증명은 [여기](https://proofwiki.org/wiki/Matrix_Product_with_Adjugate_Matrix)를 참고. 
+>즉 <span><script type="math/tex">\mathbf{A}</script></span>와 cofactor의 각기 다른 열에서 원소를 선택하여 서로 곱하면 그 값은 0이 된다는 사실을 알 수 있다. 임의의 (<span><script type="math/tex">h,k</script></span>)-행에 대해서도 마찬가지이다. 이는 <span><script type="math/tex">\mathbf{A}</script></span>의 역행렬을 유도하는 과정에서 사용하게 되는 주요 성질이다. 증명은 [여기](https://proofwiki.org/wiki/Matrix_Product_with_Adjugate_Matrix)를 참고. 
 
 
 
