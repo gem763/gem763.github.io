@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Norm, Trace, Determinant
-tags: [Linear algebra, Math]
+tags: [Linear algebra]
 categories: [Linear algebra, Math]
 excerpt_separator: <!--more-->
 
