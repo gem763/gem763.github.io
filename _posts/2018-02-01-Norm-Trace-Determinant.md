@@ -2,7 +2,7 @@
 layout: post
 title: Norm, Trace, Determinant
 tags: [Linear algebra, Math]
-categories: [Linear algebra]
+categories: [Linear algebra, Math]
 excerpt_separator: <!--more-->
 
 ---
@@ -25,7 +25,7 @@ excerpt_separator: <!--more-->
 \begin{aligned}
 \small\it{\text{Triangle inequality}} ~~~&\Vert \mathbf{x}+\mathbf{y} \Vert \le \Vert \mathbf{x} \Vert + \Vert \mathbf{y} \Vert \\
 \small\it{\text{Absolutely homogeneous}} ~~~&\Vert \alpha \mathbf{x} \Vert = |\alpha| \Vert \mathbf{x} \Vert \\
-\small\it{\text{Positive definite}} ~~~&\Vert \mathbf{x} \Vert = 0 ~\Longleftrightarrow~ \mathbf{x}=\mathbf{0}
+\smalnite}} ~~~&\Vert \mathbf{x} \Vert = 0 ~\Longleftrightarrow~ \mathbf{x}=\mathbf{0}
 \end{aligned}
 </script></div>
 
@@ -36,7 +36,7 @@ excerpt_separator: <!--more-->
 \Vert \mathbf{x} \Vert_{p} \equiv \left( \sum_{i} |x_{i} |^p \right)^{1/p} 
 </script></div>
 
-<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 다양한 형태가 있으며, 각자 고유의 명칭이 있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
+<span><script type="math/tex">p</script></span> 값에 따라 아래와 같이 다양한여러가지 형태가 있으며, 각자 고유의  있다. 특히 <span><script type="math/tex">p=2</script></span> 인 Euclidean norm을 가장 많이 쓰는 편이다. 
 
 * **Taxicab norm** 또는 **Manhattan norm** (<span><script type="math/tex">p=1</script></span>)
 <div class="math"><script type="math/tex; mode=display">
@@ -149,8 +149,7 @@ Trace는 아래와 같은 성질을 지닌다.
 
 행렬식이라고도 한다. 정방행렬 <span><script type="math/tex">\mathbf{A} = [a_{ij}] \in \mathbb{R}^{n \times n}</script></span>에 대해, 다음과 같이 재귀적(Recurisve)인 방식으로 정의되는데, 이를 **Cofactor expansion**이라고 부른다. 임의의 <span><script type="math/tex">k</script></span>-행 또는 임의의 <span><script type="math/tex">k</script></span>-열에 대해서, 
 
-<div class="math"><script type="math/tex; mode=display">
-\det{\mathbf{A}} = \sum_i \mathbf{C}_{ik} a_{ik} = \sum_j  \mathbf{C}_{kj} a_{kj}
+<div class="math"><script type="math/tex; mode=display"> \sum_i \mathbf{C}_{ik} a_{ik} = \sum_j  \mathbf{C}_{kj} a_{kj}
 </script></div>
 
 * <span><script type="math/tex">\mathbf{C}_{ij} = (-1)^{i+j} \mathbf{M}_{ij}</script></span> : Cofactor
