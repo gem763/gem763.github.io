@@ -294,6 +294,11 @@ hr {
   text-decoration: none;
 }
 
+footnotes {
+  font-size: 5rem;
+}
+
+
 /*
   Pagination
 */
