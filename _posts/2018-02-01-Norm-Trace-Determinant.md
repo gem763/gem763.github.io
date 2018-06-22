@@ -25,7 +25,7 @@ excerpt_separator: <!--more-->
 \begin{aligned}
 \small\it{\text{Triangle inequality}} ~~~&\Vert \mathbf{x}+\mathbf{y} \Vert \le \Vert \mathbf{x} \Vert + \Vert \mathbf{y} \Vert \\
 \small\it{\text{Absolutely homogeneous}} ~~~&\Vert \alpha \mathbf{x} \Vert = |\alpha| \Vert \mathbf{x} \Vert \\
-\smalnite}} ~~~&\Vert \mathbf{x} \Vert = 0 ~\Longleftrightarrow~ \mathbf{x}=\mathbf{0}
+\small\it{\text{Positive definite}} ~~~&\Vert \mathbf{x} \Vert = 0 ~\Longleftrightarrow~ \mathbf{x}=\mathbf{0}
 \end{aligned}
 </script></div>
 
