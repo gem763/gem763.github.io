@@ -295,13 +295,18 @@ hr {
 }
 
 a.footnote:before {   
- content: "[";
+  content: "[";
 }
 
 a.footnote:after {
-    content: "]";
+  content: "]";
 }
 
+div.footnotes {
+  font-size: 0.95rem;
+  margin-top: 3em;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /*
   Pagination
