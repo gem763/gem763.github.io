@@ -5,7 +5,19 @@ layout: default
 <h1>
   {{ page.title }}
 </h1>
-<span class="post-category"> # {{ page.categories | join: " | " }} </span>
+<!--<span class="post-category"> # {{ page.categories | join: " | " }} </span>-->
+
+<div class="post-category">
+  {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+  <a href="{{site.baseurl}}/categories/#{{category|slugize}}">&nbsp;# {{category}}&nbsp;</a>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+</div>
 
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">

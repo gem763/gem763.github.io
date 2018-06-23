@@ -182,7 +182,7 @@ hr {
 
 #markdown-toc a:active,#markdown-toc a:focus,#markdown-toc a:hover{
 	background-color:rgba(0,0,0,.075);
-	border-radius:3px
+	border-radius:3px;
 }
 
 
@@ -264,6 +264,16 @@ hr {
   color: #9a9a9a;
   /*font-family: 'Quattrocento Sans', sans-serif;*/
   font-size:0.9rem;
+}
+
+.post-category a {
+	color: black; /*#9a9a9a;*/
+}
+
+.post-category a:active,.post-category a:focus,.post-category a:hover{
+  background-color:rgba(0,0,0,.075);
+  border-radius:5px;
+  display: inline-block;
 }
 
 .post-date {

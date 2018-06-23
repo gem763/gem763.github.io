@@ -8,7 +8,20 @@ title: Home
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
   </h1>
-  <span class="post-category"> # {{ post.categories | join: " | " }} </span>
+  <!--<span class="post-category"> # {{ post.categories | join: " | " }} </span>-->
+  
+  <div class="post-category">
+  {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+  <a href="{{site.baseurl}}/categories/#{{category|slugize}}">&nbsp;# {{category}}&nbsp;</a>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+  </div>
+  
   {% if post.image %}
   <div class="thumbnail-container">
     <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
