@@ -150,7 +150,7 @@ Trace는 아래와 같은 성질을 지닌다.
 행렬식이라고도 한다. 정방행렬 <span><script type="math/tex">\mathbf{A} = [a_{ij}] \in \mathbb{R}^{n \times n}</script></span>에 대해, 다음과 같이 재귀적(Recurisve)인 방식으로 정의되는데, 이를 **Cofactor expansion**이라고 부른다. 임의의 <span><script type="math/tex">k</script></span>-행 또는 임의의 <span><script type="math/tex">k</script></span>-열에 대해서, 
 
 <div class="math"><script type="math/tex; mode=display"> 
-\det{\mathbf{A}} = \sum_i  \mathbf{C}_{ki} a_{ki} = \sum_j \mathbf{C}_{jk} a_{jk}
+\det{\mathbf{A}} \equiv \sum_i  \mathbf{C}_{ki} a_{ki} = \sum_j \mathbf{C}_{jk} a_{jk}
 </script></div>
 
 * <span><script type="math/tex">\mathbf{C}_{ij} = (-1)^{i+j} \mathbf{M}_{ij}</script></span> : Cofactor
