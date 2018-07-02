@@ -7,10 +7,7 @@ excerpt_separator: <!--more-->
 
 ---
 
-## Overview
-
 미국에 상장되어 있는 글로벌 채권 ETF를 활용하여 Global Fixed-income Allocation Model를 설계하였다. 개리 안토나치의 Dual momentum 전략을 기본 골격으로 하였으나, Reinforcement라는 또다른 전략을 추가하여, 기관투자자 입장에서 좀더 실용적인 Model을 만들고자 하였다. 유니버스 내에서 5개 이상의 종목을 동적으로 선택하는 것이 Sharpe 측면에서 가장 적절하였다. 
-<!--more-->
 
 **GFAM Cumulative return**
 ![cum_base](https://gem763.github.io/quanty/reports/gfam/cum_base.png)
@@ -21,6 +18,7 @@ excerpt_separator: <!--more-->
 * **MDD 7-15%**
 * **1년 단위 손실가능성 1-3%**
 
+<!--more-->
 
 ## Background: Dual momentum strategy
 
