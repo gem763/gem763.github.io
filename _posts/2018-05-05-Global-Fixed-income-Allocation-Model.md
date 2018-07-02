@@ -22,7 +22,8 @@ excerpt_separator: <!--more-->
 
 <br/>
 
-* TOC {: toc}
+* TOC 
+{: toc}
 
 <br/>
 
