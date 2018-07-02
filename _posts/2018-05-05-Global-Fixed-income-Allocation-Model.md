@@ -7,10 +7,10 @@ excerpt_separator: <!--more-->
 
 ---
 
-미국에 상장되어 있는 글로벌 채권 ETF를 활용하여 Global Fixed-income Allocation Model을 설계하였다. 개리 안토나치의 Dual momentum 전략을 기본 골격으로 하였으나, Reinforcement라는 또다른 전략을 추가하여, 투자자 입장에서 좀더 실용적인 Model을 만들고자 하였다. 유니버스 내에서 5개 이상의 종목을 동적으로 선택하는 것이 Sharpe 측면에서 가장 적절하였다. 
+미국에 상장되어 있는 글로벌 채권 ETF를 활용하여 **Global Fixed-income Allocation Model**을 설계하였다. 개리 안토나치의 **Dual momentum** 전략을 기본 골격으로 하였으나, **Reinforcement**라는 또다른 전략을 추가하여, 투자자 입장에서 좀더 실용적인 Model을 만들고자 하였다. 유니버스 내에서 5개 이상의 종목을 동적으로 선택하는 것이 Sharpe 측면에서 가장 적절하였다. 
 
 <center><b>Cumulative return</b></center>
-<center><img src="https://gem763.github.io/assets/img/20180505/cum_base.png" alt="r2"/></center>
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_base.png" alt="cum_base"/></center>
 
 <!--more-->
 
@@ -18,9 +18,10 @@ excerpt_separator: <!--more-->
 * **중장기: CAGR 7-9%, 연변동성 7-8%, Sharpe 1.1-1.2**
 * **단기: CAGR 7-8%, 연변동성 7%, Sharpe 1.1-1.2**
 * **MDD 7-15%**
-* **1년 단위 손실가능성 1-3%**
+* **1년 손실가능성 1-3%**
 
 
+<br/>
 
 ## Background: Dual momentum strategy
 
@@ -48,7 +49,7 @@ Dual momentum 전략에 대한 자세한 설명은 다음을 참고하면 된다
 > **NOTE**
 >모멘텀 전략이 작동하는 원인에는 논의가 분분한데, 가장 잘 알려진 것이 Behavioral finance의 대표적인 Anomaly인 **Herding effect**이다. 
 ><center><i>Herding effect</i></center>
-><center><img src="https://gem763.github.io/quanty/reports/gfam/herding.jpg" alt="herding"/></center>
+><center><img src="https://gem763.github.io/assets/img/20180505/herding.jpg" alt="herding"/></center>
 >
 >이에 따르면, 과거 일정기간 동안의 Winner가 앞으로도 한동안 Winner가 될 가능성이 높다(Relative momentum). 비슷한 논리로, 잘 나가던 금융자산의 가격이 갑자기 고꾸라지는 경우는 드물다. 상승하던 금융자산의 현재가치에 급속한 변화가 생겼다고 하더라도, Herding effect는 해당 자산의 가치하락에 마찰적 요인(friction)으로 작용하기 때문이다. 이는 하락장 초기에 현금성 자산으로 갈아탈 수 있는 기회(Absolute momentum)를 제공한다. 참고로 Herding effect는, 개별종목보다 **자산군(Asset class) 레벨에서 훨씬 효과적으로 작동**한다고 알려져 있다. 
 
@@ -56,9 +57,10 @@ Dual momentum 전략에 대한 자세한 설명은 다음을 참고하면 된다
 ## Objectives
 안토나치의 논문에는 그의 Dual momentum 전략을 Fixed-income universe에 적용한 사례가 기술되어 있으며, 성과도 상당히 양호하다. 다음은 그의 논문에 실려있는 결과 중 일부이다. 
 
-![stats_antonacci](https://gem763.github.io/quanty/reports/gfam/stats_antonacci.PNG)
+<center><img src="https://gem763.github.io/assets/img/20180505/stats_antonacci.PNG" alt="stats_antonacci"/></center>
 
-![cum_antonacci](https://gem763.github.io/quanty/reports/gfam/cum_antonacci.PNG)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_antonacci.PNG" alt="cum_antonacci"/></center>
+
 
 결과를 간단히 요약하자면, 
 * **US High yield**(Bank of America Merrill Lynch U.S. Cash Pay High Yield Index)와 **US Credit bond**(Barclays Capital Aggregate Bond Index), 이 두 개의 인덱스에 Dual momentum 적용
@@ -95,6 +97,7 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 미국에 상장되어 있는 다음의 24개 ETF를 투자 유니버스로 선정한다. 대부분의 시가총액이 1조원 이상이다. 참고로, 최초설정일이 다소 최근이더라도, Underlying index가 충분히 긴 시간동안 존재하는 종목으로 선택하였다. 
 
 *As of 2018.04.30*
+
 | Ticker |               Description               | Duration (Year) | MarketCap (B,USD) | Expense (%) |  Inception date | Underlying start |
 |:------:|:---------------------------------------:|:--------:|:-----------------:|:-------:|:-------:|:----------------:|
 | AGG    | US Aggregate                            | 6.1      | 55.2              | 0.05    | 2003-09 | 1976-01          |
@@ -174,9 +177,10 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 ### Absolute vs. Relative vs. Dual momentum
 우선 **N=1** 인 경우에 대해, Dual momentum을 구성하는 두 전략, 즉 Absolute momentum과 Relative momentum의 성과를 비교해보자. 다음은 각 전략별 누적수익률 차트이다. Reinforcement 전략은 아직 적용하지 않았다. 
 
-![cum_compare_mode](https://gem763.github.io/quanty/reports/gfam/cum_compare_mode.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_compare_mode.png" alt="cum_compare_mode"/></center>
 
-![stats_compare_mode](https://gem763.github.io/quanty/reports/gfam/stats_compare_mode.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/stats_compare_mode.png" alt="stats_compare_mode"/></center>
+
 
 * Absolute momentum 전략(파랑)은 여차하면 현금으로 이동하므로, 상대적으로 안정적인 성과를 보여준다. 하지만 CAGR은 가장 작다. 
 * Relative momentum 전략(주황)은 시장상황에 따라 변동성이 매우 큰 편이지만, 상대적으로 높은 수익률이 기대된다.  
@@ -188,7 +192,8 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 ### Calibration
 **N**을 1부터 10까지 변화시켜가며 Dual momentum 전략의 성과를 측정해보았다. 
 
-![stats_npicks_1_10](https://gem763.github.io/quanty/reports/gfam/stats_npicks_1_10.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/stats_npicks_1_10.png" alt="stats_npicks_1_10"/></center>
+
 
 * **N**이 커질수록 CAGR은 낮아지는 경향이 있다. 
 * 하지만 연변동성(및 MDD)은 훨씬 빠른 속도로 작아진다.  
@@ -196,13 +201,14 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 * 참고로 이 보고서 처럼 투자유니버스가 큰 경우에 대해, 전체 유니버스 종목 갯수의 20-30% 수준에서 종목을 선택하는 것이 합리적이라고 주장하는 Article이 있다. 우리의 유니버스 종목 갯수가 총 24개 이므로, 따라서 적절한 편입종목 수는 **N=5~7** 수준이라는 얘기이다. 
 * 종목 1개만 선택하는 것은, 수익률은 좋을 지 모르나 운용 안정성이 매우 떨어진다. 다음의 누적수익률 차트를 보면, **N=5** 부근에서 안정적으로 Saturation 되는 것을 확인할 수 있다.  
 
-![cum_npicks_1_5](https://gem763.github.io/quanty/reports/gfam/cum_npicks_1_5.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_npicks_1_5.png" alt="cum_npicks_1_5"/></center>
+
 
 
 ### Reinforcement
 **N=5** 인 경우의 Dual momentum에 대해, Reinforcement 전략을 적용해보자. Dual momentum을 기본 골격으로 하되, Dual momentum에 의해 선택된 종목의 수가 부족한 경우, 상대적으로 Risky한 US Treasury Long의 추가편입 여부를 결정하였다. 
 
-![cum_compare_reinforce](https://gem763.github.io/quanty/reports/gfam/cum_compare_reinforce.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_compare_reinforce.png" alt="cum_compare_reinforce"/></center>
 
 * Dual momentum 전략만 적용 (파랑): US High yield(주황)와 거의 유사한 CAGR과 상대적으로 낮은 변동성이 관측된다. 이는 안토나치 논문과 동일한 결과이다. 
 * **Dual momentum + Reinforcement** (빨강): 글로벌 채권 유니버스 내에서 상대적으로 Risky한 자산의 익스포져를 확대한 결과, **Dual momentum만 적용한 것 보다 우월한 결과**가 도출되었다. 대신 변동성은 좀더 커진다. 
@@ -212,10 +218,13 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 이제 위의 Trading rule(= Dual momentum + Reinforcement)에 따라 운용하는 전략을 **GFAM**(Global Fixed-income Allocation Model)이라고 부르자. 그리고 **N=5**에 대해서 해당 전략의 성과를 측정해보자. 글로벌 주식시장인 **ACWI**(MSCI All country)와 채권시장인 **AGG**(US Aggregate), 주식시장과 채권시장의 중간격인 **HYG**(US High yield)를 참고용으로 추가하였다. 
 
 **Cumulative return**
-![cum_base](https://gem763.github.io/quanty/reports/gfam/cum_base.png)
+
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_base.png" alt="cum_base"/></center>
+
 
 **Statistics**
-![stats_base](https://gem763.github.io/quanty/reports/gfam/stats_base.png)
+
+<center><img src="https://gem763.github.io/assets/img/20180505/stats_base.png" alt="stats_base"/></center>
 
 각 성과지표에 관한 설명은 [여기](#performance-measures)를 참고하기 바란다. GFAM의 성과 중 특이할 만한 것들만 추려서 얘기하자면, 
 * **중장기: CAGR 9.1%, 변동성 7.8%, Sharpe 1.17**
@@ -230,26 +239,28 @@ MDD는 채권시장과 유사한 수준으로 낮았다. 반면 주식시장의 
 
 
 **Risk-return profile**
-![profile_base](https://gem763.github.io/quanty/reports/gfam/profile_base.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/profile_base.png" alt="profile_base"/></center>
 
 
 그렇다면, GFAM의 연도별 성과는 어땟을까. 다음 차트는 연도별로 GFAM의 누적수익률(전년도 마지막 영업일=1.0)을 나타낸다. 2018년도는 1~3월 까지의 수익률만 나타내었다. 
 
 **Yearly cumulative returns**
-![cum_yearly_all](https://gem763.github.io/quanty/reports/gfam/cum_yearly_all.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_yearly_all.png" alt="cum_yearly_all"/></center>
+
 
 GFAM의 성과가 몇몇 해(2003, 2008, 2009, 2011년)에 다소 과도하게 좋았기 때문에, 다른 해의 성과가 시각적으로 좀 묻히는 경향이 있다(y축이 동일 스케일이므로). 해당 구간들을 제거한 연도별 누적수익률 차트도 확인해보자.
 
 
 **Yearly cumulative returns excluding 2003, 2008, 2009, 2011**
-![cum_yearly_removed](https://gem763.github.io/quanty/reports/gfam/cum_yearly_removed.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/cum_yearly_removed.png" alt="cum_yearly_removed"/></center>
 
 이제 좀더 명확하게 보인다. 2007년과 2010년을 제외한 대부분의 해에서 US Aggregate보다 나은 성과가 나오고 있다. 변동성이 좀 크긴 하다. 
 
 한편 GFAM에 투자했을 때의 **단기적(1년)인 기대효과**는 어떨까. 아래는 위의 백테스트 기간(약 15년)동안 얻을수 있는 1년 성과를 모두 추출해서, 분포를 그려본 것이다. 
 
 **1-Year Rolling Distributions**
-![dist_base](https://gem763.github.io/quanty/reports/gfam/dist_base.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/dist_base.png" alt="dist_base"/></center>
+
 
 * 붉은색 수직선은 각 분포의 중간값(Median)을 의미한다. 맨 위쪽의 Statistics 차트에서 CAGR(Rolling 1Y), Standard dev(Rolling 1Y), Sharpe(Rolling 1Y)의 대표값으로 각각 사용되었다. 
 * **CAGR(Rolling 1Y)에서 0 이하 부분의 넓이는 1년 단위의 손실가능성을 의미**한다. 위에서 언급했듯이 GFAM(빨강)의 1년 단위 손실가능성은 매우 낮은 편인데, 이는 Absolute momentum 전략을 통해 하락장의 손실을 사전에 차단했기 때문인 것으로 보인다. 
@@ -260,7 +271,8 @@ GFAM의 성과가 몇몇 해(2003, 2008, 2009, 2011년)에 다소 과도하게 �
 GFAM의 성과를 종목별로 분해해보자. 아래 왼쪽 차트는 GFAM의 **1일 수익률을 100이라고 했을 때, 각 종목이 평균적으로 몇 %를 기여했는 지**를 나타낸다. 오른쪽 차트는 각 종목이 선택된 총 월수를 의미한다. 
 
 **Performance breakdown**
-![perf_breakdown](https://gem763.github.io/quanty/reports/gfam/perf_breakdown.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/perf_breakdown.png" alt="perf_breakdown"/></center>
+
 
 * GFAM의 성과에 가장 큰 기여를 한 종목은 **TLT**(US Treasury Long)였고, 그 다음으로는 **PFF**(US Preferred stock)였다. 반면 **LQD**(US Investment grade)에서는 손실이 발생했다. 
 * **TLT**의 성과 기여도(평균 20%)가 큰 것은, **Reinforcement 전략에 따른 익스포져 확대 및 높은 변동성** 등의 이유가 크게 작용했을 것으로 추정된다. 
@@ -274,13 +286,13 @@ GFAM의 성과를 종목별로 분해해보자. 아래 왼쪽 차트는 GFAM의 
 > 2003년 이후로의 백테스트 결과를 잘 살펴보면, 꽤나 신경쓰이는 구간이 있다. 2008년과 2009년이다. 해당 구간동안 GFAM 성과의 변동폭이 컸고, 결과적으로는 (+) 요인으로 작용하면서, **GFAM 고유의 성과를 다소 왜곡했을 것이라는 주장이 가능**하다. 과연 그럴까? 2010년 이후의 성과를 측정하여 확인해보자.
 > 
 > **Cumulative return since 2010**
-> ![cum_since2010](https://gem763.github.io/quanty/reports/gfam/cum_since2010.png)
->
+> <center><img src="https://gem763.github.io/assets/img/20180505/cum_since2010.png" alt="cum_since2010"/></center>
+> 
 > **Statistics since 2010**
-> ![stats_since2010](https://gem763.github.io/quanty/reports/gfam/stats_since2010.png)
->
+> <center><img src="https://gem763.github.io/assets/img/20180505/stats_since2010.png" alt="stats_since2010"/></center>
+> 
 > **GFAM(2003~) vs. GFAM(2010~)**
->![stats_compare_since2010](https://gem763.github.io/quanty/reports/gfam/stats_compare_since2010.png)
+> <center><img src="https://gem763.github.io/assets/img/20180505/stats_compare_since2010.png" alt="stats_compare_since2010"/></center>
 >
 > * CAGR과 Sharpe가 소폭 낮아지긴 했지만, 전구간(2003~) 백테스트 결과보다 열등하다고 보긴 힘들었다. (물론 통계적인 유의도까지 검증한 건 아니다)
 > * 오히려 **MDD는 큰 폭으로 개선**되었으며, **1년 단위 손실가능성은 1% 이하로 축소**되었다. 
@@ -289,7 +301,8 @@ GFAM의 성과를 종목별로 분해해보자. 아래 왼쪽 차트는 GFAM의 
 
 ### Portfolio history
 아래 차트는 2015년 부터 2018년 4월까지 40개월 간의 포트폴리오 변동을 보여준다. 이중 5개월 동안 **TLT**(US Treasury Long)가 단독으로 편입되었으며, 5개월 동안 Cash asset인 **AGG**(US Aggregate, 흰색)가 단독 편입되었다.
-![port_history](https://gem763.github.io/quanty/reports/gfam/port_history.png)
+
+<center><img src="https://gem763.github.io/assets/img/20180505/port_history.png" alt="port_history"/></center>
 
 단독으로 편입되었다고 해서 실제로 그렇게 운용되지는 않을 것이다. 미국에는 유사한 Underlying index를 추종하는 ETF가 많다. 예를들어 **TLT**와 같은 US Treasury Long-term ETF인 **SPTL**가 상장되어 있고, 성과도 거의 동일하다. 
 
@@ -299,7 +312,7 @@ GFAM의 성과를 종목별로 분해해보자. 아래 왼쪽 차트는 GFAM의 
 
 그러나 이 보고서에서는, **훨씬 넓은 범위의 투자 유니버스에서 여러 종목을 한꺼번에 선택**하는 전략을 쓰고 있기 때문에, 매매회전률이 높다. 당사의 매매회전률 산출공식(= 12개월 매도비율)에 근거하여 GFAM의 매매회전률 추이를 계산해보면 아래 차트와 같다. **평균적으로 600%에 육박**한다. 참고로, 월 리밸런싱하는 펀드(예를들어 퀀트운용본부의 퀀트MP펀드)의 당사 매매회전률 가이드라인은 500% 수준이다. 
 
-![turnover](https://gem763.github.io/quanty/reports/gfam/turnover.png)
+<center><img src="https://gem763.github.io/assets/img/20180505/turnover.png" alt="turnover"/></center>
 
 
 ## Conclusions
