@@ -476,13 +476,16 @@ pre code {
   Tables
 */
 
+.table-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 table {
   border-collapse: collapse;
   margin-bottom: 30px;
   width: 100%;
   font-size: 13px;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 table, th, td {
