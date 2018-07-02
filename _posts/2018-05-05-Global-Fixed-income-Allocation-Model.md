@@ -98,6 +98,7 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 
 *As of 2018.04.30*
 <div class="math">
+	
 | Ticker |               Description               | Duration (Year) | MarketCap (B,USD) | Expense (%) |  Inception date | Underlying start |
 |:------:|:---------------------------------------:|:--------:|:-----------------:|:-------:|:-------:|:----------------:|
 | AGG    | US Aggregate                            | 6.1      | 55.2              | 0.05    | 2003-09 | 1976-01          |
@@ -124,6 +125,7 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 | EMB    | EM Treasury USD                         | 7.3      | 11.4              | 0.39    | 2007-12 | 1997-12          |
 | EMLC   | EM Treasury local (USD unhedged)        | 5.2      | 5.6               | 0.42    | 2010-07 | 2007-12          |
 | EMHY   | EM HY USD                               | 5.8      | 0.6               | 0.50    | 2012-04 | 2001-10          |
+
 </div>
 
 <br/>
