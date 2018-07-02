@@ -20,6 +20,9 @@ excerpt_separator: <!--more-->
 * **MDD 7-15%**
 * **1년 손실가능성 1-3%**
 
+<br/>
+
+* TOC {: toc}
 
 <br/>
 
@@ -27,10 +30,10 @@ excerpt_separator: <!--more-->
 
 Dual momentum은 게리 안토나치(Gary Antonacci)가 2012년 고안한 투자전략의 이름이다. 안토나치는 모멘텀 전략을 다음과 같이 크게 두 가지로 구분하였다. 
 
-* **Absolute momentum**
+* **Absolute momentum**: 
 상승장에 투자하고 하락장에 현금(또는 안전자산)을 보유하는 전략이다. 그는 해당 자산의 과거 12개월 수익률이 예금금리를 상회하는 경우를 상승장, 그 반대의 경우를 하락장으로 정의(물론 정의하기 나름이며, 이 보고서에서는 약간 다른 방법을 썼다)했다. 추세추종 전략 또는 시계열(Time-series) 모멘텀 전략이라고도 한다. 
 
-* **Relative momentum**
+* **Relative momentum**: 
 여러 자산들간의 모멘텀 지표를 서로 비교하여, 상대적으로 모멘텀이 큰 자산에 집중투자하는 방법이다. 안토나치는 Absolute momentum과 마찬가지로, 자산들간의 12개월 과거수익률을 서로 비교했다. 횡단면(Cross-sectional) 모멘텀 전략이라고도 부른다. 
 
 안토나치의 실험에 따르면, Absolute momentum 전략은 Market shock 등의 불확실성에 대해 탁월한 방어력이 있다. 반면 Relative momentum 전략은 변동성에 매우 취약하긴 하지만, 기대수익률은 더 높다. 
@@ -127,7 +130,6 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 | EMHY   | EM HY USD                               | 5.8      | 0.6               | 0.50    | 2012-04 | 2001-10          |
 
 </div>
-
 <br/>
 
 
