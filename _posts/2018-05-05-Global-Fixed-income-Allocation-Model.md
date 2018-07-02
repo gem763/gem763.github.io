@@ -97,7 +97,7 @@ US High yield와 US Credit bond로만 한정하여 실험하였기 때문에,  �
 미국에 상장되어 있는 다음의 24개 ETF를 투자 유니버스로 선정한다. 대부분의 시가총액이 1조원 이상이다. 참고로, 최초설정일이 다소 최근이더라도, Underlying index가 충분히 긴 시간동안 존재하는 종목으로 선택하였다. 
 
 *As of 2018.04.30*
-<div class="table-wrapper">
+<div class="table-wrapper" markdown="block">
 
 | Ticker |               Description               | Duration (Year) | MarketCap (B,USD) | Expense (%) |  Inception date | Underlying start |
 |:------:|:---------------------------------------:|:--------:|:-----------------:|:-------:|:-------:|:----------------:|
