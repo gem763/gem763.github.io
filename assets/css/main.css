@@ -482,6 +482,7 @@ table {
   width: 100%;
   font-size: 13px;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 table, th, td {
