@@ -194,7 +194,7 @@ Elasticity 변수인 <span><script type="math/tex">\alpha</script></span>, <span
 **저자는 방어적인 투자의 목표수익률을 5%, 공격적인 투자자의 목표수익률을 10%로 보았다**. 따라서 (Risk-Return profile에서 Efficient frontier를 그리는 것과 마찬가지로) Calmar ratio <span><script type="math/tex">\mathbf{CR}_5</script></span>, <span><script type="math/tex">\mathbf{CR}_{10}</script></span>를 극대화하는 접선(Calmar frontier)를 그렸다. 그리고 해당 접점의 (<span><script type="math/tex">\alpha, \beta</script></span>) 조합을 각각 Golden defensive model, Golden offensive model이라고 정의하였다. 
 
 
-<center><img src="https://gem763.github.io/assets/img/20180708/calmar_frontier.PNG" alt="cum_dm" width=500/></center>
+<center><img src="https://gem763.github.io/assets/img/20180708/calmar_frontier.PNG" alt="cum_dm"/></center>
 
 결과적으로 다음의 두 가지 모델을 도출하게 된다. 
 
@@ -219,11 +219,11 @@ z_i^{o} =
 IS 테스트에서 도출한 두 개의 모델 각각의 Out-of-sample 성과가 어땠는지를 확인해본다. 테스트 구간은 1964년 4월부터 2014년 8월까지 총 50년간(IS 구간과 동일)이다. 
 
 <center><b>Cumulative return</b></center>
-<center><img src="https://gem763.github.io/assets/img/20180708/cum_golden.PNG" alt="cum_dm" width=500/></center>
+<center><img src="https://gem763.github.io/assets/img/20180708/cum_golden.PNG" alt="cum_dm"/></center>
 
 <br/>
 <center><b>Statistics</b></center>
-<center><img src="https://gem763.github.io/assets/img/20180708/golden_table.PNG" alt="cum_dm" width=400/></center>
+<center><img src="https://gem763.github.io/assets/img/20180708/golden_table.PNG" alt="cum_dm"/></center>
 
 * **연수익률 13-15%** 수준으로 동일가중 및 미국주식시장 대비 양호한 성과를 기록하였다. 
 * 변동성이 동일가중 포트폴리오에 비해 크게 개선되었다고 보기는 힘들었으나, 
