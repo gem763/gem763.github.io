@@ -314,7 +314,7 @@ Offensive model (<span><script type="math/tex">\alpha=2</script></span>)의 변�
 
 >**아이디어 1**. 모멘텀 스코어 <span><script type="math/tex">z_i</script></span>을 기준으로 <span><script type="math/tex">m</script></span>개의 자산을 선택하는 것이 아니라, (Dual momentum의 방식대로) **가격모멘텀 <span><script type="math/tex">\mathbf{R}_i</script></span>을 기준으로 선택**한다. 
 
-(<span><script type="math/tex">\alpha, \beta</script></span>)의 조합을 미리 정해놓는 것이 아니라, 리밸런싱 할 때마다 동적으로 의사결정하게 하면 어떨까? 문제를 단순화 시키기 위해, <span><script type="math/tex">\beta=1</script></span> 로 고정하면, 다음의 모멘텀 스코어를 얻게 된다. 
+한편 (<span><script type="math/tex">\alpha, \beta</script></span>)의 조합을 미리 정해놓는 것이 아니라, 리밸런싱 할 때마다 동적으로 의사결정하게 하면 어떨까? 문제를 단순화 시키기 위해, <span><script type="math/tex">\beta=1</script></span> 로 고정하면, 다음의 모멘텀 스코어를 얻게 된다. 
 
 <div class="math"><script type="math/tex; mode=display">
 z_i \equiv 
