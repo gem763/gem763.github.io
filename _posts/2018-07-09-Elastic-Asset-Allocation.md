@@ -336,7 +336,7 @@ z_i \equiv
 >**아이디어 2**. 매 리밸런싱 시점별로, 다음과 같이 **총 모멘텀 <span><script type="math/tex">\mathbf{M}</script></span>의 최대값을 생성하는 Elasticity** <span><script type="math/tex">\alpha^*</script></span>를 찾고([Grid search](https://en.wikipedia.org/wiki/Hyperparameter_optimization#Grid_search)), 이를 통해 포트폴리오 비중을 결정한다. 
 >
 ><div class="math"><script type="math/tex; mode=display">
->\alpha^* = \underset{|\alpha| \le \theta}{\arg \max} \mathbf{E}[R]^\mathsf{T} \mathbf{z}
+>\alpha^* = \underset{|\alpha| \le \theta}{\arg \max} ~\mathbf{E}[R]^\mathsf{T} \mathbf{z}
 ></script></div>
 
 
