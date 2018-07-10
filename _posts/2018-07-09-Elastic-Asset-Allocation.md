@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 
 ---
 
-Keller 교수의 Elastic Asset Allocation 논문을 리뷰하였다. Dual momentum 을 이기는 전략을 찾는 것이 원래의 목표였으나, Elastic Asset Allocation의 Original version 만으로는 목표달성이 힘들었다. 따라서 논문의 전략을 일부 수정하였고, 그 과정을 기록하였다. 
+Keller 교수의 Elastic Asset Allocation 논문을 리뷰하였다. Dual momentum의 수익률을 이기는 전략을 찾는 것이 원래의 목표였으나, Elastic Asset Allocation의 Original version 만으로는 목표달성이 힘들었다. 따라서 논문의 전략을 일부 수정하였고, 그 과정을 기록하였다. 
 
 <center><img src="https://gem763.github.io/assets/img/20180708/cum_optima_3.PNG" alt="cum_optima_3"/></center>
 
