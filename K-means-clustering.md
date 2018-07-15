@@ -38,7 +38,7 @@
 K-means clustering 문제의 수치적인 접근을 위해, 위에서 정의된 왜곡도 <span><script type="math/tex">\mathcal{D}_j</script></span>를 다음과 같이 풀어쓴다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\mathcal{D}_j = \sum_{\mathbf{x} \in S_j} \Vert \mathbf{x} - oldsymbol{\mu}_j \Vert^2 = \sum^n_{i=1} r_{ij} \Vert \mathbf{x}_i - \mathbf{\mu}_j \Vert^2
+\mathcal{D}_j = \sum_{\mathbf{x} \in S_j} \Vert \mathbf{x} - \boldsymbol{\mu}_j \Vert^2 = \sum^n_{i=1} r_{ij} \Vert \mathbf{x}_i - \mathbf{\mu}_j \Vert^2
 </script></div>
 
 
