@@ -36,7 +36,7 @@
 
 ## 프로세스
 
-K-means clustering 문제의 수치적인 접근을 위해, 위에서 정의된 왜곡도 <span><script type="math/tex">\mathcal{D}_j</script></span>를 다음과 같이 풀어쓴다. 
+K-means clustering 문제의 수치적인 해결을 위해, 위에서 정의된 왜곡도 <span><script type="math/tex">\mathcal{D}_j</script></span>를 다음과 같이 풀어쓴다. 
 
 <div class="math"><script type="math/tex; mode=display">
 \mathcal{D}_j = \sum_{\mathbf{x} \in S_j} \Vert \mathbf{x} - \boldsymbol{\mu}_j \Vert^2 = \sum^n_{i=1} r_{ij} \Vert \mathbf{x}_i - \boldsymbol{\mu}_j \Vert^2
@@ -88,10 +88,10 @@ K-means 클러스터링은 Centroid <span><script type="math/tex">\boldsymbol{\m
 
 ### Assignment
 
-직전 단계에서 Centroid 추정값 <span><script type="math/tex">\hat{\boldsymbol{\mu}}(t) = \{ \hat{\boldsymbol{\mu}}_1 (t), \cdots, \hat{\boldsymbol{\mu}}_k (t) \}</script></span>가 주어졌다면, 목적함수는 다음과 같이 분해할 수 있다. 
+직전 단계에서 Centroid 추정값 <span><script type="math/tex">\hat{\boldsymbol{\mu}}(t) = \{ \hat{\boldsymbol{\mu}}_1 (t), \cdots, \hat{\boldsymbol{\mu}}_k (t) \}</script></span>가 주어졌다면, 목적함수는 다음과 같이 분해된다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\mathcal{J}_\mathbf{r} = \underbrace{\sum^k_{j=1} r_{1j} \Vert \mathbf{x}_1 -\hat{\boldsymbol{\mu}}_j(t) \Vert^2}_{\text{minimize}} + \cdots + \underbrace{\sum^k_{j=1} r_{nj} \Vert \mathbf{x}_n -\hat{\boldsymbol{\mu}}_j(t) \Vert^2}_{\text{minimize}}
+\mathcal{J}_\mathbf{r} = \sum^k_{j=1} r_{1j} {\underbrace{\Vert \mathbf{x}_1 -\hat{\boldsymbol{\mu}}_j(t) \Vert}_{\text{minimize}}}^2 + \cdots + \sum^k_{j=1} r_{nj} {\underbrace{\Vert \mathbf{x}_n -\hat{\boldsymbol{\mu}}_j(t) \Vert}_{\text{minimize}}}^2
 </script></div>
 
 이 때 <span><script type="math/tex">r_{ij} \ge 0</script></span> 이고 <span><script type="math/tex">\Vert \cdot \Vert \ge 0</script></span> 이므로,  <span><script type="math/tex">\mathcal{J}_\mathbf{r}</script></span>을 <span><script type="math/tex">\mathbf{r}</script></span>에 대해서 최소화 한다는 것은, 각각의 데이터가 속한 클러스터와의 거리를 최소화 한다는 말과 동일하다고 할 수 있다. 따라서 **주어진 Centroid <span><script type="math/tex">\hat{\boldsymbol{\mu}}(t)</script></span>와의 거리가 가장 가까운 클러스터 <span><script type="math/tex">\hat{\mathbf{r}}(t) = \{ \hat{r}_{ij}(t) \}</script></span>를 선택**하면 된다. 
