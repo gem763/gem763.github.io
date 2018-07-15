@@ -110,25 +110,25 @@ K-means 클러스터링은 Centroid <span><script type="math/tex">\boldsymbol{\m
 
 직전 단계에서 추정된 클러스터 <span><script type="math/tex">\hat{\mathbf{r}}(t) = \{ \hat{r}_{ij}(t) \}</script></span>가 주어진 상태에서, 목적함수 <span><script type="math/tex">\mathcal{J}_\mathbf{r}</script></span>에 LME를 적용해보자. 
 
-<span><script type="math/tex">\displaystyle \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \mathbf{\mu}} = \left[ \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \mathbf{\mu}_1} \cdots \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \mathbf{\mu}_k} \right]^T = 0</script></span> 에서, 
+<span><script type="math/tex">\displaystyle \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \boldsymbol{\mu}} = \left[ \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \boldsymbol{\mu}_1} \cdots \frac{\partial \mathcal{J}_\mathbf{r}}{\partial \boldsymbol{\mu}_k} \right]^T = 0</script></span> 에서, 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
 0 
-&= \frac{\partial}{\partial \mathbf{\mu}_j} \left[
-\sum^n_{i=1} \sum^k_{j=1} \hat{r}_{ij}(t) \Vert \mathbf{x}_i - \mathbf{\mu}_j \Vert^2 \right] \\
-&= \frac{\partial}{\partial \mathbf{\mu}_j} \left[
-\sum^n_{i=1} \hat{r}_{ij}(t) ( \mathbf{x}_i - \mathbf{\mu}_j )^T ( \mathbf{x}_i - \mathbf{\mu}_j ) \right] \\
-&= -2 \sum^n_{i=1} \hat{r}_{ij}(t) ( \mathbf{x}_i - \mathbf{\mu}_j ) \\
-&= -2 \left[ \sum^n_{i=1} \hat{r}_{ij}(t) ~\mathbf{x}_i - \left( \sum^n_{i=1} \hat{r}_{ij}(t) \right) \mathbf{\mu}_j \right]
+&= \frac{\partial}{\partial \boldsymbol{\mu}_j} \left[
+\sum^n_{i=1} \sum^k_{j=1} \hat{r}_{ij}(t) \Vert \mathbf{x}_i - \boldsymbol{\mu}_j \Vert^2 \right] \\
+&= \frac{\partial}{\partial \boldsymbol{\mu}_j} \left[
+\sum^n_{i=1} \hat{r}_{ij}(t) ( \mathbf{x}_i - \boldsymbol{\mu}_j )^T ( \mathbf{x}_i - \boldsymbol{\mu}_j ) \right] \\
+&= -2 \sum^n_{i=1} \hat{r}_{ij}(t) ( \mathbf{x}_i - \boldsymbol{\mu}_j ) \\
+&= -2 \left[ \sum^n_{i=1} \hat{r}_{ij}(t) ~\mathbf{x}_i - \left( \sum^n_{i=1} \hat{r}_{ij}(t) \right) \boldsymbol{\mu}_j \right]
 \end{aligned}
 </script></div>
 
 <div class="math"><script type="math/tex; mode=display">
-\therefore \hat{\mathbf{\mu}}_j (t+1) = \frac{\displaystyle \sum^n_{i=1} \hat{r}_{ij}(t) ~\mathbf{x}_i}{\displaystyle \sum^n_{i=1} \hat{r}_{ij}(t)}
+\therefore \hat{\boldsymbol{\mu}}_j (t+1) = \frac{\displaystyle \sum^n_{i=1} \hat{r}_{ij}(t) ~\mathbf{x}_i}{\displaystyle \sum^n_{i=1} \hat{r}_{ij}(t)}
 </script></div>
 
-따라서 **Centroid <span><script type="math/tex">\hat{\mathbf{\mu}}(t+1) = \{ \hat{\mathbf{\mu}}_1(t+1), \cdots, \hat{\mathbf{\mu}}_k(t+1)  \}</script></span>는 각각의 클러스터에 속한 데이터들의 샘플 평균값**으로 계산된다. 이 알고리즘을 K-means 라고 부르는 이유이기도 하다. 
+따라서 **Centroid <span><script type="math/tex">\hat{\boldsymbol{\mu}}(t+1) = \{ \hat{\boldsymbol{\mu}}_1(t+1), \cdots, \hat{\boldsymbol{\mu}}_k(t+1)  \}</script></span>는 각각의 클러스터에 속한 데이터들의 샘플 평균값**으로 계산된다. 이 알고리즘을 K-means 라고 부르는 이유이기도 하다. 
 
 
 <br/>
