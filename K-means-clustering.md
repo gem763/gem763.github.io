@@ -158,6 +158,9 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 <br/>
 
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="cum_optima_3"/></center>
+
+
 ## 한계
 1. k의 갯수
 2. centroid의 초기값
