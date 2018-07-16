@@ -17,7 +17,7 @@ Keller 교수의 Elastic Asset Allocation 논문을 리뷰하였다. Dual moment
 {:toc}
 
 ## Motivation
-다음 차트는 2003년 이후 7개의 자산군(미국주식, 선진국주식, 신흥국주식, 원자재, 미국 부동산, 미국 High-yield, 미국 중기채)에서 [Dual momentum]((https://books.google.co.kr/books/about/Dual_Momentum_Investing_An_Innovative_St.html?id=PVGoBAAAQBAJ&source=kp_cover&redir_esc=y)) 전략(노랑) 으로 투자했을 때의 투자성과를 보여준다. (백테스트 방법론에 대한 자세한 설명은 아래에서 다룬다)
+다음 차트는 2003년 이후 7개의 자산군(미국주식, 선진국주식, 신흥국주식, 원자재, 미국 부동산, 미국 High-yield, 미국 중기채)에서 [Dual momentum](https://books.google.co.kr/books/about/Dual_Momentum_Investing_An_Innovative_St.html?id=PVGoBAAAQBAJ&source=kp_cover&redir_esc=y) 전략(노랑) 으로 투자했을 때의 투자성과를 보여준다. (백테스트 방법론에 대한 자세한 설명은 아래에서 다룬다)
 
 <center><img src="https://gem763.github.io/assets/img/20180708/cum_dm.PNG" alt="cum_dm"/></center>
 
