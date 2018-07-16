@@ -185,7 +185,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 
 | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> |
-|--|--|--|--|
+|:-:|:-:|:-:|:-:|
 | (1, 1) | (2, 1) | (4, 3) | (5, 4) |
 
 
