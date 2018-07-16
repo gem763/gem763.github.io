@@ -1,7 +1,18 @@
 ---
-
+layout: post
+title: K-means clustering
+tags: [Machine learning]
+categories: [Machine learning]
+excerpt_separator: <!--more-->
 
 ---
+
+데이터에 대한 사전정보가 전혀 없는 상태에서, 해당 데이터들을 몇 개의 그룹으로 나누고 싶을 때가 있다. 이를 **클러스터링** 문제라고 한다. 머신러닝에서 클러스터링은 전형적인 비지도학습 (Unsupervised learning)에 해당한다. 그 중에서 특히 K-mean clustering은 단지 거리정보만을 이용하여 클러스터링을 수행하는 단순한 알고리즘을 쓰기 때문에, 구현하기가 상대적으로 수월하다. 
+
+<center><b>Iteration에 따른 클러스터 추정의 수렴</b></center>
+<center><img src="https://gem763.github.io/assets/img/20180715/iterations.PNG" alt="iterations"/></center>
+
+<!--more-->
 
 * TOC
 {:toc}
@@ -298,4 +309,8 @@ K-means clustering은, 알고리즘이 단순한 만큼 여러가지 한계점�
 
 [^h_cluster]: Hard clustering과는 달리, **어떤 클러스터에 속할 확률값을 계산하여 클러스터링**을 하는 방법도 존재하는데, 이를 **Soft clustering** 이라고 한다. 대표적으로는 [GMM](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model)이 있다. 
 
+<br/>
+
+## EM 알고리즘
+K-means clustering의 Assignment-Update 프로세스를 일반화시키면 **EM (Expectation-Maximization) 알고리즘**이 된다. EM 알고리즘은 다른 포스트에서 자세히 소개할 예정이다. 
 
