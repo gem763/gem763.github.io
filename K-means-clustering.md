@@ -8,7 +8,7 @@
 
 ## 개요
 
-<span><script type="math/tex">n</script></span>개의 입력데이터 <span><script type="math/tex">\mathbf{X} = (\mathbf{x}_1 \cdots \mathbf{x}_n)</script></span>를 <span><script type="math/tex">k</script></span> (<span><script type="math/tex">\le n</script></span>)개의 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, \cdots, S_k \}</script></span>에 배정하려고 한다. 이때 클러스터의 갯수 <span><script type="math/tex">k</script></span>는 미리 정해져 있다고 가정한다. 
+<span><script type="math/tex">n</script></span>개의 입력데이터 <span><script type="math/tex">\mathbf{X} = (\mathbf{x}_1 \cdots \mathbf{x}_n)</script></span>, <span><script type="math/tex">\mathbf{x}_i \in \mathbb{R}^d</script></span> 를 <span><script type="math/tex">k</script></span>개의 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, \cdots, S_k \}</script></span>에 배정하려고 한다. 이때 클러스터의 갯수 <span><script type="math/tex">k</script></span> (<span><script type="math/tex">\le n</script></span>)는 미리 정해져 있다고 가정한다. 
 
 이 문제를 모델링 해보자. 우선 임의의 클러스터 <span><script type="math/tex">\mathbf{S}</script></span>에 대해서, 클러스터 <span><script type="math/tex">j</script></span>의 왜곡도 (Distortion)[^distortion] <span><script type="math/tex">\mathcal{D}_j</script></span>를 정의하고, 
 
@@ -104,11 +104,17 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 * **종료**
     * <span><script type="math/tex">\hat{\boldsymbol{\mu}}</script></span>가 수렴하면(즉 <span><script type="math/tex">\hat{\mathbf{r}}</script></span>의 변동이 없으면) 알고리즘을 종료
 
+<br/>
 
+다음은 iteration이 진행됨에 따라 클러스터가 어떻게 추정되는 지를 도식화한 그림이다. <span><script type="math/tex">d=2</script></span> (즉 2차원 데이터), <span><script type="math/tex">k=3</script></span> (3개의 클러스터로 구분) 에 대하여, 3개의 Centroid (<span><script type="math/tex">\color{red}{+}</script></span>, <span><script type="math/tex">\color{gold}{\times}</script></span>, <span><script type="math/tex">\color{blue}{\circ}</script></span>)가 어떻게 update 되는 지를 확인할 수 있다. 
+
+<center><b>Convergence of K-means</b></center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="cum_optima_3" width=400/></center>
+<center><small>(출처: 위키피디아)</small></center>
 
 <br/>
 
-## 알고리즘 세부사항
+## 알고리즘의 유도
 
 ### Assignment
 
@@ -157,8 +163,6 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 
 <br/>
-
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="cum_optima_3"/></center>
 
 
 ## 한계
