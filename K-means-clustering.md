@@ -188,9 +188,11 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 |:-:|:-:|:-:|:-:|:-:|
 | **좌표** | (1, 1) | (2, 1) | (4, 3) | (5, 4) |
 
+<center><img src="https://gem763.github.io/assets/img/20180715/dataset.PNG" alt="dataset"/></center>
+
 <br/>
 
-**Iteration 0** (t=0)
+<big>**Iteration 0**</big> (t=0)
 * **Centroid 초기화**: 데이터 중 임의로 두 개를 선택한다. 
 
 <div class="math"><script type="math/tex; mode=display">
@@ -218,7 +220,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 ---
 
-**Iteration 1** (t=1)
+<big>**Iteration 1**</big> (t=1)
 * **Update**: 이전 단계에서 추정한 클러스터를 기준으로 Centroid를 재계산한다. 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
@@ -245,7 +247,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 ---
 
-**Iteration 2** (t=2)
+<big>**Iteration 2**</big> (t=2)
 * **Update**: 이전 단계에서 추정한 클러스터를 기준으로 Centroid를 재계산한다. 
 
 <div class="math"><script type="math/tex; mode=display">
@@ -263,13 +265,16 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 | <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(2)</script></span> | 0.5 | 0.5 | 3.2 | 4.6 |
 | <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(2)</script></span> | 4.3 | 3.5 | 0.7 | 0.7 |
 
-<br/>
-
 
 | | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
 | <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(2)=0</script></span> |
 | <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(2)=1</script></span> |
+
+<br/>
+
+<center><b>Iteration에 따른 클러스터 추정의 수렴</b></center>
+<center><img src="https://gem763.github.io/assets/img/20180715/iterations.PNG" alt="iterations"/></center>
 
 클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 직관대로 클러스터는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>와 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 묶이게 되었다. 물론 데이터의 차원이 커지게 되면 (즉 d가 커지게 되면) 직관적인 추정 자체가 불가능해 지는 경우가 많아진다. 
 
