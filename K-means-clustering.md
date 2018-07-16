@@ -179,24 +179,101 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 <br/>
 
 ## 예제
-다음과 같이 4개의 데이터[^ex_from]가 있다. 이 데이터들을 2개의 클러스터에 할당해보자. 즉 n=4, d=2, k=2 가 된다. 
+다음과 같이 4개의 데이터[^ex_from]가 주어져 있다. 이 데이터들을 2개의 클러스터에 할당해보자. 즉 n=4, d=2, k=2 가 된다. 
 
 [^ex_from]: 이 예제는 [여기](http://people.revoledu.com/kardi/tutorial/kMean/NumericalExample.htm)의 데이터를 참고로 하였다. 
 
 
-| **데이터** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> |
+| **데이터** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
 | **좌표** | (1, 1) | (2, 1) | (4, 3) | (5, 4) |
 
+<br/>
 
-* Centroid 초기화 (t=0)
-* Assignment (t=0)
-* Update (t=1)
-* Assignment (t=1)
+**Iteration 0** (t=0)
+* Centroid 초기화: 데이터 중 임의로 두 개를 선택
+
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+\hat{\boldsymbol{\mu}}_1(0) &= \mathbf{x}_1 = (1,1) \\
+\hat{\boldsymbol{\mu}}_2(0) &= \mathbf{x}_2 = (2,1)
+\end{aligned}
+</script></div>
+
+* Assignment: 각 데이터에서 Centroid 까지의 유클리드 거리를 계산한다. 
+
+| **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(0)</script></span> | 0 | 1 | 3.6 | 5 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(0)</script></span> | 1 | 0 | 2.8 | 4.2 |
+
+예를들어 <span><script type="math/tex">\mathbf{x}_4</script></span>와 <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(0)</script></span> 간의 거리는 <span><script type="math/tex">\sqrt{(5-2)^2 + (4-1)^2}=4.2</script></span> 로 계산된다. 이 예제에서 모든 거리는 소숫점 둘째자리에서 반올림 되었다. 이제 각 데이터별로 짧은 거리의 Centroid를 선택하면, 다음과 같이 클러스터 추정치 <span><script type="math/tex">\hat{\mathbf{r}}(0) = \{ \hat{r}_{ij}(0) \}</script></span> 를 얻게 된다. 
+
+| **클러스터 할당** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(0)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(0)=0</script></span> | <span><script type="math/tex">\hat{r}_{31}(0)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(0)=0</script></span> |
+| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(0)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(0)=1</script></span> | <span><script type="math/tex">\hat{r}_{32}(0)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(0)=1</script></span> |
+
+
+즉 <span><script type="math/tex">\{ \mathbf{x}_1 \}</script></span>과 <span><script type="math/tex">\{ \mathbf{x}_2, \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 클러스터링이 된다. 
 
 
 
+<br/>
 
+**Iteration 1** (t=1)
+* Update
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+\hat{\boldsymbol{\mu}}_1(1) &= \mathbf{x}_1 = (1,1) \\
+\hat{\boldsymbol{\mu}}_2(1) &= \frac{\mathbf{x}_2 + \mathbf{x}_3 + \mathbf{x}_4}{3} = (3.7, ~2.7)
+\end{aligned}
+</script></div>
+
+
+* Assignment
+
+| **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(1)</script></span> | 0 | 1 | 3.6 | 5 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(1)</script></span> | 3.1 | 2.4 | 0.5 | 1.9 |
+
+
+| **클러스터 할당** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">r_{11}(1)=1</script></span> | <span><script type="math/tex">r_{21}(1)=1</script></span> | <span><script type="math/tex">r_{31}(1)=0</script></span> | <span><script type="math/tex">r_{41}(1)=0</script></span> |
+| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">r_{12}(1)=0</script></span> | <span><script type="math/tex">r_{22}(1)=0</script></span> | <span><script type="math/tex">r_{32}(1)=1</script></span> | <span><script type="math/tex">r_{42}(1)=1</script></span> |
+
+<br/>
+
+**Iteration 2** (t=1)
+* Update
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+\hat{\boldsymbol{\mu}}_1(2) &= \frac{\mathbf{x}_1 + \mathbf{x}_2}{2} = (1.5,~1) \\
+\hat{\boldsymbol{\mu}}_2(2) &= \frac{\mathbf{x}_3 + \mathbf{x}_4}{2} = (4.5, ~3.5)
+\end{aligned}
+</script></div>
+
+
+* Assignment
+
+| **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(2)</script></span> | 0.5 | 0.5 | 3.2 | 4.6 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(2)</script></span> | 4.3 | 3.5 | 0.7 | 0.7 |
+
+<br/>
+
+| **클러스터 할당** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
+|:-:|:-:|:-:|:-:|:-:|
+| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">r_{11}(2)=1</script></span> | <span><script type="math/tex">r_{21}(2)=1</script></span> | <span><script type="math/tex">r_{31}(2)=0</script></span> | <span><script type="math/tex">r_{41}(2)=0</script></span> |
+| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">r_{12}(2)=0</script></span> | <span><script type="math/tex">r_{22}(2)=0</script></span> | <span><script type="math/tex">r_{32}(2)=1</script></span> | <span><script type="math/tex">r_{42}(2)=1</script></span> |
+
+클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 클러스터는 (<span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2</script></span>)과 (<span><script type="math/tex">\mathbf{x}_3, \mathbf{x}_4</script></span>) 로 묶이게 된다. 
+
+
+<br/>
 
 ## 한계
 K-means clustering은, 알고리즘이 단순한 만큼 여러가지 한계점을 지니고 있다. 
