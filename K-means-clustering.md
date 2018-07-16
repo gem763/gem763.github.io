@@ -217,9 +217,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 즉 <span><script type="math/tex">\{ \mathbf{x}_1 \}</script></span>과 <span><script type="math/tex">\{ \mathbf{x}_2, \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 클러스터링이 된다. 
 
-
-
-<br/>
+---
 
 **Iteration 1** (t=1)
 * Update
@@ -244,7 +242,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 | <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(1)=0</script></span> |
 | <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(1)=1</script></span> |
 
-<br/>
+---
 
 **Iteration 2** (t=1)
 * Update
