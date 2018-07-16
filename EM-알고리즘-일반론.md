@@ -6,6 +6,8 @@
 ## 개요
 어떤 확률분포로부터 데이터 집합 <span><script type="math/tex">\mathbf{X}</script></span>이 관측되었다. 이 관측데이터들은, 관측되지 않는 어떤 이산(discrete) 데이터의 집합 <span><script type="math/tex">\mathbf{Z}</script></span>에 의존한다고 가정해보자. 즉 각각의 관측 데이터 <span><script type="math/tex">\mathbf{x} \in \mathbf{X}</script></span>는 그에 대응하는 하나의 비관측 데이터 <span><script type="math/tex">\mathbf{z} \in \mathbf{Z}</script></span>을 가진다. 이런 비관측 데이터 <span><script type="math/tex">\mathbf{Z}</script></span>를 **잠재변수**(Latent variables)라고 한다. 이런 상황에서, 각 관측 데이터가 따르는 확률분포의 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>를 추정할 수 있을까?
 
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/EM_Clustering_of_Old_Faithful_data.gif" alt="EM Clustering of Old Faithful data.gif"></center>
+
 
 * **관측이 가능**한 데이터 집합 <span><script type="math/tex">\mathbf{X} \rightarrow</script></span> 각 원소는 모수가 <span><script type="math/tex">\boldsymbol{\theta}</script></span>인 어떤 확률분포로부터 출력
 * **관측이 불가능**한 데이터 집합 <span><script type="math/tex">\mathbf{Z} \rightarrow</script></span> 잠재변수
@@ -166,6 +168,44 @@ U(\boldsymbol{\theta}, q)
 
 <span><script type="math/tex">U</script></span>에 MLE를 적용하는 것은 <span><script type="math/tex">\mathbf{E}_{q(\mathbf{Z})} \left[ \ln \mathcal{L} (\boldsymbol{\theta} ; \mathbf{X}, \mathbf{Z}) \right]</script></span>에 MLE를 적용하는 것과 동일한데, 이 경우 summation이 <span><script type="math/tex">\log</script></span> 밖으로 빠져나오게 된다. 즉 <span><script type="math/tex">U</script></span>는 <span><script type="math/tex">\ln \mathcal{L}(\boldsymbol{\theta}; \mathbf{X})</script></span>보다 훨씬 더 쉽게 <span><script type="math/tex">\boldsymbol{\theta}</script></span>에 대해 미분할 수 있는 것이다.  물론 <span><script type="math/tex">U</script></span>에 LME를 적용한다고 해서 정확한 해(즉 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>의 추정값)를 구할 수는 없으며, 이는 반복적(iterative)인 방법의 추정이 필요한 이유가 된다. 
 
+<br/>
+
+
+> <big><b>KL 다이버전스</b></big>
+> 
+> KL 다이버전스(Kullback-Leiber divergence)는 두 확률분포 간의 차이를 측정하는 도구이다. 확률분포 <span><script type="math/tex">q</script></span>와 <span><script type="math/tex">p</script></span>에 대하여  
+> <div class="math"><script type="math/tex; mode=display">
+> D_{KL} (q \parallel p) \equiv \sum_i q(i) \ln \frac{q(i)}{p(i)}
+> </script></div>
+> 로 정의되며, 다음의 성질을 지닌다. 
+> 
+> * 두 분포가 유사할 수록 KL 다이버전스가 작으며, <span><script type="math/tex">q = p</script></span>인 경우 <span><script type="math/tex">D_{KL} (q \parallel p) = 0</script></span> 이다.
+> * <span><script type="math/tex">D_{KL} (q \parallel p) \ne D_{KL} (p \parallel q)</script></span>
+> * <span><script type="math/tex">D_{KL} (q \parallel p) \ge 0</script></span>
+> 
+> 위의 성질 중 <span><script type="math/tex">D_{KL} (q \parallel p) \ge 0</script></span> 은 Jensen 부등식을 이용하여 증명할 수 있다. 
+> 
+> <div class="math"><script type="math/tex; mode=display">
+> D_{KL} (q \parallel p) = - \sum_i q_i \ln \frac{p_i}{q_i} \ge - \ln \left[ \sum_i q_i \frac{p_i}{q_i} \right] = - \ln \left[ \sum_i p_i \right] = 0
+> </script></div>
+
+<br/>
+
+> <big><b>Jesen 부등식</b></big>
+>
+> 함수 <span><script type="math/tex">\phi</script></span>가 convex하고, 확률변수 <span><script type="math/tex">X</script></span>에 대하여 <span><script type="math/tex">\operatorname{E}(X)</script></span>가 유한할 때, 다음이 성립한다. 
+> 
+> <div class="math"><script type="math/tex; mode=display">
+> \phi [\operatorname{E}(X)] \le \operatorname{E}[\phi (X)]
+> </script></div>
+> 
+> 만약 <span><script type="math/tex">\phi</script></span>가 strictly convex 인 경우, strict inequality가 적용된다. 
+> 
+> | <span><script type="math/tex">\phi(\cdot)</script></span>의 형태 | 부등식 |
+> | -------- | -------- |
+> | convex (아래로 볼록) | <span><script type="math/tex">\displaystyle \phi \left( \frac{\sum a_i x_i}{\sum a_j} \right) \le \frac{\sum a_i \phi(x_i)}{\sum a_j}</script></span> |
+> | concave (위로 볼록) | <span><script type="math/tex">\displaystyle \phi \left( \frac{\sum a_i x_i}{\sum a_j} \right) \ge \frac{\sum a_i \phi(x_i)}{\sum a_j}</script></span> |
+> 
 
 <br/>
 
