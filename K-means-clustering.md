@@ -110,7 +110,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 <center><b>Convergence of K-means</b></center>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif" height="480" width="494">
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif" width="400"></center>
 
 <center><small>(출처: 위키피디아)</small></center>
 
