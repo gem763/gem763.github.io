@@ -68,7 +68,7 @@ EM 알고리즘은 이를 다음의 방법으로 해결하고자 한다.
 * **E-Step**: <span><script type="math/tex">\boldsymbol{\theta}^{(t)}</script></span>가 주어진 상태에서, 로그 우도함수의 <span><script type="math/tex">\mathbf{Z}</script></span>에 대한 조건부 기대값 <span><script type="math/tex">Q</script></span>를 구하는 단계
 
 <div class="math"><script type="math/tex; mode=display">
-Q(\boldsymbol{\theta} \mid \bold\theta^{(t)}) = \sum_{\mathbf{Z}} p(\mathbf{Z} \mid \mathbf{X}, \boldsymbol{\theta}^{(t)}) \ln \mathcal{L} (\boldsymbol{\theta}; \mathbf{X}, \mathbf{Z}) 
+Q(\boldsymbol{\theta} \mid \boldsymbol{\theta}^{(t)}) = \sum_{\mathbf{Z}} p(\mathbf{Z} \mid \mathbf{X}, \boldsymbol{\theta}^{(t)}) \ln \mathcal{L} (\boldsymbol{\theta}; \mathbf{X}, \mathbf{Z}) 
 </script></div>
 <br/>
 
