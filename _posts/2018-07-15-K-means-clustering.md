@@ -312,5 +312,5 @@ K-means clustering은, 알고리즘이 단순한 만큼 여러가지 한계점�
 <br/>
 
 ## EM 알고리즘
-K-means clustering의 Assignment-Update 프로세스를 일반화시키면 **EM (Expectation-Maximization) 알고리즘**이 된다. EM 알고리즘은 다른 포스트에서 자세히 소개할 예정이다. 
+K-means clustering의 Assignment-Update 프로세스를 일반화시키면 [EM (Expectation-Maximization) 알고리즘](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm)이 된다. EM 알고리즘은 다른 포스트에서 자세히 소개할 예정이다. 
 
