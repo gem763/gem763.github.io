@@ -241,8 +241,8 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 | **클러스터 할당** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
-| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">r_{11}(1)=1</script></span> | <span><script type="math/tex">r_{21}(1)=1</script></span> | <span><script type="math/tex">r_{31}(1)=0</script></span> | <span><script type="math/tex">r_{41}(1)=0</script></span> |
-| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">r_{12}(1)=0</script></span> | <span><script type="math/tex">r_{22}(1)=0</script></span> | <span><script type="math/tex">r_{32}(1)=1</script></span> | <span><script type="math/tex">r_{42}(1)=1</script></span> |
+| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(1)=0</script></span> |
+| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(1)=1</script></span> |
 
 <br/>
 
@@ -267,8 +267,8 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 | **클러스터 할당** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
-| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">r_{11}(2)=1</script></span> | <span><script type="math/tex">r_{21}(2)=1</script></span> | <span><script type="math/tex">r_{31}(2)=0</script></span> | <span><script type="math/tex">r_{41}(2)=0</script></span> |
-| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">r_{12}(2)=0</script></span> | <span><script type="math/tex">r_{22}(2)=0</script></span> | <span><script type="math/tex">r_{32}(2)=1</script></span> | <span><script type="math/tex">r_{42}(2)=1</script></span> |
+| <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(2)=0</script></span> |
+| <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(2)=1</script></span> |
 
 클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 클러스터는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>과 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 묶이게 된다. 
 
