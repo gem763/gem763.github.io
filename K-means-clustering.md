@@ -179,7 +179,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 <br/>
 
 ## 예제
-다음과 같이 4개의 데이터[^ex_from]가 주어져 있다. 이 데이터들을 2개의 클러스터에 할당해보자. 즉 n=4, d=2, k=2 가 된다. 
+다음과 같이 4개의 데이터[^ex_from]가 주어져 있다. 이 데이터들을 2개의 클러스터에 할당해보자. 즉 n=4, d=2, k=2 가 된다. 직관적으로 봤을 때는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>와 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 으로 클러스터링이 될 것 같다. 
 
 [^ex_from]: 이 예제는 [여기](http://people.revoledu.com/kardi/tutorial/kMean/NumericalExample.htm)의 데이터를 참고로 하였다. 
 
@@ -191,7 +191,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 <br/>
 
 **Iteration 0** (t=0)
-* Centroid 초기화: 데이터 중 임의로 두 개를 선택
+* **Centroid 초기화**: 데이터 중 임의로 두 개를 선택한다. 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
@@ -200,7 +200,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 \end{aligned}
 </script></div>
 
-* Assignment: 각 데이터에서 Centroid 까지의 유클리드 거리를 계산한다. 
+* **Assignment**: 각 데이터에서 Centroid 까지의 유클리드 거리를 계산한다. 
 
 | **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
@@ -219,7 +219,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 ---
 
 **Iteration 1** (t=1)
-* Update
+* **Update**: 이전 단계에서 추정한 클러스터를 기준으로 Centroid를 재계산한다. 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
 \hat{\boldsymbol{\mu}}_1(1) &= \mathbf{x}_1 = (1,1) \\
@@ -228,7 +228,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 </script></div>
 
 
-* Assignment
+* **Assignment**: 재계산된 Centroid를 통해 클러스터를 재추정한다. 
 
 | **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
@@ -241,10 +241,13 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 | <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(1)=0</script></span> |
 | <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(1)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(1)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(1)=1</script></span> |
 
+<span><script type="math/tex">\{ \mathbf{x}_1 \}</script></span>의 클러스터에 <span><script type="math/tex">\mathbf{x}_2</script></span>가 신규 편입된 것을 알 수 있다. 
+
 ---
 
-**Iteration 2** (t=1)
-* Update
+**Iteration 2** (t=2)
+* **Update**: 이전 단계에서 추정한 클러스터를 기준으로 Centroid를 재계산한다. 
+
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
 \hat{\boldsymbol{\mu}}_1(2) &= \frac{\mathbf{x}_1 + \mathbf{x}_2}{2} = (1.5,~1) \\
@@ -253,7 +256,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 </script></div>
 
 
-* Assignment
+* **Assignment**: 재계산된 Centroid를 통해 클러스터를 재추정한다. 
 
 | **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
@@ -268,7 +271,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 | <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">\hat{r}_{11}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{21}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{31}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{41}(2)=0</script></span> |
 | <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">\hat{r}_{12}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{22}(2)=0</script></span> | <span><script type="math/tex">\hat{r}_{32}(2)=1</script></span> | <span><script type="math/tex">\hat{r}_{42}(2)=1</script></span> |
 
-클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 클러스터는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>과 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 묶이게 된다. 
+클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 직관대로 클러스터는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>와 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 묶이게 되었다. 물론 데이터의 차원이 커지게 되면 (즉 d가 커지게 되면) 직관적인 추정 자체가 불가능해 지는 경우가 많아진다. 
 
 
 <br/>
