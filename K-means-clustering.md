@@ -204,8 +204,8 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 | **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
-| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(0)</script></span> | 0 | 1 | 3.6 | 5 |
-| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(0)</script></span> | 1 | 0 | 2.8 | 4.2 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(0)</script></span> | 0.0 | 1.0 | 3.6 | 5.0 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(0)</script></span> | 1.0 | 0.0 | 2.8 | 4.2 |
 
 예를들어 <span><script type="math/tex">\mathbf{x}_4</script></span>와 <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(0)</script></span> 간의 거리는 <span><script type="math/tex">\sqrt{(5-2)^2 + (4-1)^2}=4.2</script></span> 로 계산된다. 이 예제에서 모든 거리는 소숫점 둘째자리에서 반올림 되었다. 이제 각 데이터별로 짧은 거리의 Centroid를 선택하면, 다음과 같이 클러스터 추정치 <span><script type="math/tex">\hat{\mathbf{r}}(0) = \{ \hat{r}_{ij}(0) \}</script></span> 를 얻게 된다. 
 
@@ -235,7 +235,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 | **Centroid와의 거리** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_2</script></span> | <span><script type="math/tex">\mathbf{x}_3</script></span> | <span><script type="math/tex">\mathbf{x}_4</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
-| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(1)</script></span> | 0 | 1 | 3.6 | 5 |
+| <span><script type="math/tex">\hat{\boldsymbol{\mu}}_1(1)</script></span> | 0.0 | 1.0 | 3.6 | 5.0 |
 | <span><script type="math/tex">\hat{\boldsymbol{\mu}}_2(1)</script></span> | 3.1 | 2.4 | 0.5 | 1.9 |
 
 
@@ -270,7 +270,7 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 | <span><script type="math/tex">S_1</script></span> | <span><script type="math/tex">r_{11}(2)=1</script></span> | <span><script type="math/tex">r_{21}(2)=1</script></span> | <span><script type="math/tex">r_{31}(2)=0</script></span> | <span><script type="math/tex">r_{41}(2)=0</script></span> |
 | <span><script type="math/tex">S_2</script></span> | <span><script type="math/tex">r_{12}(2)=0</script></span> | <span><script type="math/tex">r_{22}(2)=0</script></span> | <span><script type="math/tex">r_{32}(2)=1</script></span> | <span><script type="math/tex">r_{42}(2)=1</script></span> |
 
-클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 클러스터는 (<span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2</script></span>)과 (<span><script type="math/tex">\mathbf{x}_3, \mathbf{x}_4</script></span>) 로 묶이게 된다. 
+클러스터에 변화가 없으므로, iteration 2에서 알고리즘을 종료한다. 결국 클러스터는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>과 <span><script type="math/tex">\{ \mathbf{x}_3, \mathbf{x}_4 \}</script></span> 로 묶이게 된다. 
 
 
 <br/>
