@@ -108,10 +108,10 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 다음은 iteration이 진행됨에 따라 클러스터가 어떻게 추정되는 지를 도식화한 그림이다. <span><script type="math/tex">d=2</script></span> (즉 2차원 데이터), <span><script type="math/tex">k=3</script></span> (3개의 클러스터로 구분) 에 대하여, 3개의 Centroid (<span><script type="math/tex">\color{red}{+}</script></span>, <span><script type="math/tex">\color{gold}{\times}</script></span>, <span><script type="math/tex">\color{blue}{\circ}</script></span>)가 어떻게 update 되는 지를 확인할 수 있다. 
 
+<span style="color:blue">some *blue* text</span>
+
 <center><b>Convergence of K-means</b></center>
-
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="K-means convergence.gif" width="400"></center>
-
 <center><small>(출처: 위키피디아)</small></center>
 
 <br/>
