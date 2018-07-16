@@ -3,6 +3,9 @@
 
 ---
 
+* TOC
+{:toc}
+
 ## 개요
 
 <span><script type="math/tex">n</script></span>개의 입력데이터 <span><script type="math/tex">\mathbf{X} = (\mathbf{x}_1 \cdots \mathbf{x}_n)</script></span>를 <span><script type="math/tex">k</script></span> (<span><script type="math/tex">\le n</script></span>)개의 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, \cdots, S_k \}</script></span>에 배정하려고 한다. 이때 클러스터의 갯수 <span><script type="math/tex">k</script></span>는 미리 정해져 있다고 가정한다. 
