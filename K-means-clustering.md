@@ -30,13 +30,23 @@
 여기서 <span><script type="math/tex">\boldsymbol{\mu} = \{ \boldsymbol{\mu}_1, \cdots, \boldsymbol{\mu}_k \}</script></span>는 각 클러스터의 **Centroid**(중심점)을 의미한다. 즉 총 왜곡도는 각 클러스터에 속한 데이터들이 해당 Centroid로부터 얼마나 떨어져 있는지를 나타내는 지표이다. 
 
 
-[**K-means clustering**](https://en.wikipedia.org/wiki/K-means_clustering)은 총 왜곡도를 최소화하는 클러스터 <span><script type="math/tex">\hat{\mathbf{S}}</script></span>를 찾는 최적화 알고리즘이다. 즉, 
+[**K-means clustering**](https://en.wikipedia.org/wiki/K-means_clustering)은 총 왜곡도를 최소화하는 클러스터 <span><script type="math/tex">\hat{\mathbf{S}}</script></span>를 찾는 최적화 알고리즘[^lloyd]이다. 즉, 
+
+[^lloyd]: Lloyd 알고리즘이라고도 한다. 
 
 <div class="math"><script type="math/tex; mode=display">
 \hat{\mathbf{S}} = \underset{\mathbf{S}}{\arg \min} ~\mathcal{J}_\mathbf{S} = \underset{\mathbf{S}}{\arg \min} \sum^k_{j=1} \sum_{\mathbf{x} \in S_j} \Vert \mathbf{x} - \boldsymbol{\mu}_j \Vert^2
 </script></div>
 
 이 문제는 대수적으로 명쾌하게 풀리지 않는다. 위의 총 왜곡도를 최소화하기 위해서는 우선 Centroid <span><script type="math/tex">\boldsymbol{\mu}</script></span>에 대한 정보를 알고 있어야 하는데, 이 값들은 클러스터 <span><script type="math/tex">\mathbf{S}</script></span>가 정해져 있어야 알 수 있는 값들이기 때문이다. 따라서 K-means clustering은 수치적인 접근방법을 쓴다. **반복적인(iterative)** 절차를 통해 <span><script type="math/tex">\mathbf{S}</script></span>와 <span><script type="math/tex">\boldsymbol{\mu}</script></span>를 번갈아가며 추정하는 과정에서 최적 클러스터 <span><script type="math/tex">\hat{\mathbf{S}}</script></span>로 수렴해 나간다. K-means clustering은 데이터에 대한 사전정보(즉 레이블)가 없는 상태로 데이터 간의 특정 패턴을 추정한다는 측면에서, 머신러닝의 [**비지도 학습** (Unsupervised learning)](https://en.wikipedia.org/wiki/Unsupervised_learning)에 해당한다. 
+
+<br/>
+
+><big><b>K-NN 알고리즘</b></big> 
+>
+>[K-NN (K-Nearest Neighbors)](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)과 K-mean는 전혀 다른 알고리즘이다. K-NN은 머신러닝의 [**지도학습** (Supervised learning)](https://en.wikipedia.org/wiki/Supervised_learning)에 속하며, 특정 데이터 주위에 있는 데이터들을 통해 해당 데이터의 특성을 파악하는 단순한 기법이다. 
+>* **K-NN Classification**: 주위의 <span><script type="math/tex">k</script></span>개 데이터 중 (다수결의 원칙에 의해) 대다수가 속해있는 Class에 해당 데이터를 할당한다. 만약 <span><script type="math/tex">k=1</script></span> 이라면, 가장 근접한 데이터가 속해있는 Class에 할당된다. 
+>* **K-NN Regression**: 주위 <span><script type="math/tex">k</script></span>개 데이터의 평균값을 해당 데이터에 할당한다. 
 
 
 <br/>
@@ -91,8 +101,12 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 * **Centroid 초기화**
     * Centroid의 추정값 <span><script type="math/tex">\hat{\boldsymbol{\mu}}</script></span>를 임의의 값 <span><script type="math/tex">\hat{\boldsymbol{\mu}}(0) = \{ \hat{\boldsymbol{\mu}}_1(0), \cdots, \hat{\boldsymbol{\mu}}_k(0) \}</script></span> 으로 초기화
+    * 초기화 기법: 무작위 분할법(Random partition)[^rnd_partition], Forgy[^forgy] 등
 
-    
+[^rnd_partition]: 가장 많이 쓰이는 방법으로, 데이터들을 임의의 클러스터에 우선 할당한 후, 해당 클러스터의 평균값으로 Centroid를 초기화한다. 
+
+[^forgy]: 데이터 집합에서 선택한 임의의 <span><script type="math/tex">k</script></span>개 데이터를 Centroid 초기값으로 본다.     
+
 * **Assignment**
     * 이전 단계에서 추정한 Centroid <span><script type="math/tex">\hat{\boldsymbol{\mu}}</script></span>을 이용하여 클러스터 <span><script type="math/tex">\hat{\mathbf{r}}</script></span>을 추정하는 단계
     * **각각의 데이터에 가장 가까운 클러스터를 할당**
@@ -164,18 +178,43 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 
 <br/>
 
+## 예제
+다음과 같이 4개의 데이터[^ex_from]가 있다. 이 데이터들을 2개의 클러스터에 할당해보자. 즉 n=4, d=2, k=2 가 된다. 
+
+[^ex_from]: 이 예제는 [여기](http://people.revoledu.com/kardi/tutorial/kMean/NumericalExample.htm)의 데이터를 참고로 하였다. 
+
+<center>
+
+| <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> |
+|--|--|--|--|
+| (1, 1) | (2, 1) | (4, 3) | (5, 4) |
+
+</center>
+
+* Centroid 초기화 (t=0)
+* Assignment (t=0)
+* Update (t=1)
+* Assignment (t=1)
+
+
+
+
 
 ## 한계
-1. k의 갯수
-2. centroid의 초기값
-3. 유클리드 거리의 한계
-4. Hard cluster
+K-means clustering은, 알고리즘이 단순한 만큼 여러가지 한계점을 지니고 있다. 
 
-GMM은 3,4를 해결
+* **클러스터의 갯수** <span><script type="math/tex">k</script></span>**를 미리 지정**해야 한다: <span><script type="math/tex">k</script></span> 값에 따라 결과값은 천차만별일 수 있기 때문에, <span><script type="math/tex">k</script></span>를 모른다는 것은 알고리즘의 결정적인 한계라고 볼 수 있다. [Elbow method](https://en.wikipedia.org/wiki/Determining_the_number_of_clusters_in_a_data_set#The_elbow_method) 등, 이를 타개하기 위한 여러가지 방법론이 있다. 
 
+* **전역 최적해(Global optima)을 보장하지 않는다**: 최적 클러스터가 지역 최적해(Local optima)에 수렴할 가능성이 있다. 따라서 여러가지 초기값으로 테스트해 본 후, 총 왜곡도가 가장 낮은 결과를 수용하는 등의 방식으로 한계를 완화한다. 
 
-<br/>
+* **Centroid 초기화가 알고리즘 성능에 영향**을 줄 수 있다: 잘못된 초기화는 수많은 iteration을 수반할 수 있기 때문에, 알고리즘의 성능에 악영향을 미칠 수 있다. 적절한 Centroid 초기값을 결정하는 여러가지 알고리즘이 있는데, 가장 유명한 것이 [K-means++](https://en.wikipedia.org/wiki/K-means%2B%2B) 이다. 
 
-## KNN과의 비교
-KNN(K-Nearest Neighbors, K-최근접 알고리즘)은 우리가 판단하고자 하는 점 주위의 K개 점이 각각 어떤 클래스에 속하는지를 보고, 해당 점의 클래스를 판단하는 알고리즘이며, Supervised learning 에 속한다. 
+* **Outlier에 예민**하다: Centroid를 각 클러스터 데이터들의 샘플평균으로 계산하기 때문에, 클러스터에 outlier가 포함되면 Centroid가 크게 왜곡될 수 있다. 
+
+* **다양한 모양의 클러스터에 취약**하다: 유클리드 거리(Euclidean distance)로 총 왜곡도를 산출하기 때문에, 각 Centroid로부터 구형(Spherical)의 클러스터가 만들어진다. 따라서 도넛형, 사각형, 럭비공형 등 다양한 모양의 클러스터를 인식하기에는 적합하지 않다. 
+
+* **Hard clustering**: 만약 어떤 한 데이터가 여러 개의 Centroid들로부터 같은 위치에 존재한다면? 참 애매할 것이다. K-mean는 어떤 클러스터에 속할지 안속할지를 이분법적으로 판단하는 데, 이를 Hard clustering 이라고 부른다. [^h_cluster]
+
+[^h_cluster]: Hard clustering과는 달리, **어떤 클러스터에 속할 확률값을 계산하여 클러스터링**을 하는 방법도 존재하는데, 이를 **Soft clustering** 이라고 한다. 대표적으로는 [GMM](https://en.wikipedia.org/wiki/Mixture_model#Gaussian_mixture_model)이 있다. 
+
 
