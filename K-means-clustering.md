@@ -184,9 +184,9 @@ K-means clustering은 Centroid <span><script type="math/tex">\boldsymbol{\mu}</s
 [^ex_from]: 이 예제는 [여기](http://people.revoledu.com/kardi/tutorial/kMean/NumericalExample.htm)의 데이터를 참고로 하였다. 
 
 
-| 데이터 | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> |
+| **데이터** | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> | <span><script type="math/tex">\mathbf{x}_1</script></span> |
 |:-:|:-:|:-:|:-:|:-:|
-| 좌표 | (1, 1) | (2, 1) | (4, 3) | (5, 4) |
+| **좌표** | (1, 1) | (2, 1) | (4, 3) | (5, 4) |
 
 
 * Centroid 초기화 (t=0)
