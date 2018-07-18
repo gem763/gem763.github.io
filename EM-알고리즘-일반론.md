@@ -3,10 +3,79 @@
 
 ---
 
-## 개요
+## Motivation
+
+아래의 왼쪽 차트와 같은 데이터 집합이 주어졌다고 해보자. 데이터들은 3개의 그룹으로 구분되어 있고, 편의를 위해 색깔로 해당 그룹을 표시하였다. 
+
+<center><img src="https://gem763.github.io/assets/img/20180719/cluster_data.png" alt="cluster_data"/></center>
+<center><small>(출처: 위키피디아)</small></center>
+
+이제 각 데이터가 속한 그룹을 모르고 있다고 가정해보자. 우리는 클러스터링 기법을 통해 위의 색깔로 구분된 것과 유사하게 그룹을 나누고 싶은 것이다. 
+
+이전 포스트의 [K-means clustering](https://gem763.github.io/machine%20learning/K-means-clustering.html)이 이 문제를 해결해줄 수 있을까? 문제의 성격에 따라 해결할 수도 있고, 못할 수도 있다. 그리고 결정적으로, 위의 문제는 해결해주지 못한다. K-means clustering은 유클리드 거리를 사용하여, 모든 클러스터의 총 왜곡도를 최소화하는 방향으로 클러스터링을 수행한다. 따라서 이 문제와 같이 클러스터의 크기가 상이한 경우에는 다소 납득할 수 없는 결과가 도출될 수도 있다. 위의 오른쪽 차트처럼 말이다. [K-means clustering의 한계](https://gem763.github.io/machine%20learning/K-means-clustering.html#%ED%95%9C%EA%B3%84)를 참조하기 바란다. 
+
+데이터가 클러스터에 속할 지의 여부를 (K-means clustering 처럼 칼같이 결정[^hard_cl]하지 말고) **확률적**으로 묘사하면 좀 낫지 않을까? 이를 위해 다음의 몇 가지를 가정하면, 
+
+* 데이터 <span><script type="math/tex">\mathbf{x} \in \mathbb{R}^d</script></span> 는 어떤 확률변수 <span><script type="math/tex">X</script></span> 로부터 독립적으로 도출
+* 각 데이터는 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, S_2 \}</script></span> 중 어느 하나에 포함 (편의를 위해 클러스터는 2개만 존재한다고 가정)
+* 각 클러스터는 다변수 [가우시안 정규분포](https://en.wikipedia.org/wiki/Normal_distribution) <span><script type="math/tex">\mathcal{N}_d</script></span>으로 묘사
+
+
+각 가우시안 정규분포의 모수 <span><script type="math/tex">\boldsymbol{\mu}_j \in \mathbb{R}^d</script></span>, <span><script type="math/tex">\mathbf{\Sigma}_j \in \mathbb{R}^{d \times d}</script></span> 에 대하여, 확률변수 <span><script type="math/tex">X</script></span>는 다음과 같이 표현할 수 있다. 
+
+[^hard_cl]: Hard clustering 이라고 한다. 반대로, 클러스터를 확률적으로 결정하는 방식을 Soft clustering 이라고 한다. 
+
+<div class="math"><script type="math/tex; mode=display">
+X \sim 
+\begin{cases}
+\mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) & \text{if}~~ X \in S_1 \\
+\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ X \in S_2
+\end{cases}
+</script></div>
+
+어느 클러스터에 속하는지의 여부도 결국은 확률적으로 결정되어야 할 것이므로, 새로운 확률변수 <span><script type="math/tex">Z</script></span>를 도입하면 다음과 같이 조건부 확률분포로 나타날 수 있게 된다. 
+
+<div class="math"><script type="math/tex; mode=display">
+X \mid Z \sim 
+\begin{cases}
+\mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) & \text{if}~~ Z=1 \\
+\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ Z=2
+\end{cases}
+</script></div>
+
+여기서 
+
+<div class="math"><script type="math/tex; mode=display">
+p(Z=1) ~\overset{\text{let}}{=}~ \tau_1, ~~p(Z=2) ~\overset{\text{let}}{=}~ \tau_2 (= 1-\tau_1)
+</script></div>
+
+라고 하면, 최종적인 확률분포는 다음과 같이 표현된다. 
+
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+p(\mathbf{x}) &= p(\mathbf{x} \mid Z=1) p(Z=1) + p(\mathbf{x} \mid Z=2) p(Z=2) \\
+&= \tau_1\mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) + \tau_2\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2)
+\end{aligned}
+</script></div>
+
+이처럼 여러개의 확률분포가 섞여서 만들어진 분포를 **혼합분포**(Mixture distribution)이라고 하고, 특히 위의 전개에서와 같이 가우시안 정규분포로 이루어진 혼합분포를 **가우시한 혼합분포**(Gaussian Mixture distribution)이라고 부른다. 
+
+데이터가 어느 클러스터에 속해 있는지를 확인하기 위해서는 우선 해당 혼합분포를 명확하게 이해하는 것이 중요하다. 따라서 결국 우리가 해야 할 일은 혼합분포의 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>를 추정하는 것이 된다. 
+
+<div class="math"><script type="math/tex; mode=display">
+\boldsymbol{\theta} = (\tau_1, \tau_2, \boldsymbol{\mu}_1, \boldsymbol{\mu}_2, \mathbf{\Sigma}_1, \mathbf{\Sigma}_2)
+</script></div>
+
+<center><img src="https://gem763.github.io/assets/img/20180719/cluster_by_em.png" alt="cluster_em"/></center>
+
+<center><small>(출처: 위키피디아)</small></center>
+
+
+## 모델링
+
 어떤 확률분포로부터 데이터 집합 <span><script type="math/tex">\mathbf{X}</script></span>이 관측되었다. 이 관측데이터들은, 관측되지 않는 어떤 이산(discrete) 데이터의 집합 <span><script type="math/tex">\mathbf{Z}</script></span>에 의존한다고 가정해보자. 즉 각각의 관측 데이터 <span><script type="math/tex">\mathbf{x} \in \mathbf{X}</script></span>는 그에 대응하는 하나의 비관측 데이터 <span><script type="math/tex">\mathbf{z} \in \mathbf{Z}</script></span>을 가진다. 이런 비관측 데이터 <span><script type="math/tex">\mathbf{Z}</script></span>를 **잠재변수**(Latent variables)라고 한다. 이런 상황에서, 각 관측 데이터가 따르는 확률분포의 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>를 추정할 수 있을까?
 
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/EM_Clustering_of_Old_Faithful_data.gif" alt="EM Clustering of Old Faithful data.gif"></center>
+
 
 
 * **관측이 가능**한 데이터 집합 <span><script type="math/tex">\mathbf{X} \rightarrow</script></span> 각 원소는 모수가 <span><script type="math/tex">\boldsymbol{\theta}</script></span>인 어떤 확률분포로부터 출력
