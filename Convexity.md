@@ -95,7 +95,9 @@ Convex set <span><script type="math/tex">\mathbb{S}</script></span> (<span><scri
 f \left(\sum_{i=1}^n \lambda_i x_i\right) \le \sum_{i=1}^n \lambda_i f(x_i)
 </script></div>
 
-[^jensen_concave]: 참고로 <span><script type="math/tex">f</script></span>가 Concave function 인 경우에는 부등호의 방향이 반대가 된다. <div class="math"><script type="math/tex; mode=display">f \left(\sum_{i=1}^n \lambda_i x_i\right) \ge \sum_{i=1}^n \lambda_i f(x_i)</script></div> Strictly concave function 인 경우에도 마찬가지이다. 
+[^jensen_concave]: 참고로 <span><script type="math/tex">f</script></span>가 Concave function 인 경우에는 부등호의 방향이 반대가 된다. 
+<div class="math"><script type="math/tex; mode=display">f \left(\sum_{i=1}^n \lambda_i x_i\right) \ge \sum_{i=1}^n \lambda_i f(x_i)</script></div>
+Strictly concave function 인 경우에도 마찬가지이다. 
 
 <br/>
 
