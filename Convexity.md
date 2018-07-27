@@ -41,7 +41,7 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \le  \lambda f(\m
 쉽게 말해서 Convex function은 **아래로 볼록** 함수를 일컫는다. 다음 차트를 통해 직관적으로 이해할 수 있을 것이다. <span><script type="math/tex">\mathbb{S} = [a,b] \subset \mathbb{R}</script></span> 인 경우에 해당한다. 
 
 <center><b>Convex function의 형태</b></center>
-<center><img src="https://gem763.github.io/assets/img/20180729/convex_fn.PNG" alt="convex_fn" width=600/></center>
+<center><img src="https://gem763.github.io/assets/img/20180729/convex_fn.PNG" alt="convex_fn"/></center>
 <center><small>(출처: https://am207.github.io)</small></center>
 
 <br/>
