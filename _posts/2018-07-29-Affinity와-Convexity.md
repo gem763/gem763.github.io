@@ -372,7 +372,7 @@ f(\mathbf{x}) = \mathbf{a}^\mathsf{T} \mathbf{x} + b
 ## Jesen 부등식
 
 ### Jensen 부등식
-Convex set <span><script type="math/tex">\mathbb{S}</script></span> 에서 정의된 **Convex function** [^jensen_concave] <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span> 가 있다.  임의의 <span><script type="math/tex">\mathbf{x}_i \in \mathbb{S}</script></span> 및 <span><script type="math/tex">\lambda_i \in (0,1)</script></span> 에 대하여, <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 라고 할 때, 다음의 부등식이 성립한다. 이를 **Jensen 부등식**이라고 한다. 
+Convex set <span><script type="math/tex">\mathbb{S}</script></span> 에서 정의된 **Convex function** [^jensen_concave] <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span> 가 있다.  임의의 <span><script type="math/tex">\mathbf{x}_i \in \mathbb{S}</script></span> 및 <span><script type="math/tex">\lambda_i \in (0,1)</script></span> 에 대하여, <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 라고 할 때, 다음의 부등식이 성립한다. 이를 [**Jensen 부등식**](https://en.wikipedia.org/wiki/Jensen%27s_inequality)이라고 한다. 
 
 <div class="math"><script type="math/tex; mode=display">
 f \left(\sum_{i=1}^r \lambda_i \mathbf{x}_i\right) \le \sum_{i=1}^r \lambda_i f(\mathbf{x}_i)
