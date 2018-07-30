@@ -243,6 +243,7 @@ g(\mathbf{z}) \equiv f(\mathbf{z+\alpha}) - f(\alpha)
 <br/>
 
 **1. Convex & Concave**
+
 가정에 의해 함수 <span><script type="math/tex">f</script></span>가 Convex & Concave 하므로, <span><script type="math/tex">\mathbf{z}_1, \mathbf{z}_2 \in \mathbb{A}_o</script></span> 및 <span><script type="math/tex">k \in \mathbb{R}</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
@@ -285,6 +286,7 @@ g(\mathbf{z}) &= g \left(\tfrac{1}{\gamma} \gamma \mathbf{z} + (1- \tfrac{1}{\ga
 따라서 모든 <span><script type="math/tex">\gamma \ge 0</script></span> 에 대하여 <span><script type="math/tex">g(\gamma \mathbf{z}) = \gamma g(\mathbf{z})</script></span> 임을 알 수 있다. 
 
 **3. Additivity**
+
 바로 위에서 증명한 Multiplication과, <span><script type="math/tex">g</script></span>가 Convex & Concave하다는 사실을 이용한다.  
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
@@ -366,6 +368,7 @@ f \left(\sum_{i=1}^r \lambda_i \mathbf{x}_i\right) \le \sum_{i=1}^r \lambda_i f(
 <br/>
 
 **Proof.**
+
 [귀납법 (Induction)](https://en.wikipedia.org/wiki/Mathematical_induction)으로 쉽게 증명할 수 있다. <span><script type="math/tex">n=2</script></span> 인 경우의 Jensen 부등식은 Convex function의 정의에 의해 자명하다. <span><script type="math/tex">n=k</script></span> 에 대해서도 다음의 부등식이 성립한다고 가정하자.  
 
 <div class="math"><script type="math/tex; mode=display">
@@ -420,6 +423,7 @@ Jensen 부등식에서 등호가 성립한다면 <span><script type="math/tex">~
 <br/>
 
 **Proof.**
+
 Jensen 부등식의 등호가 성립한다고 가정하자. 
 
 <div class="math"><script type="math/tex; mode=display">
@@ -442,7 +446,9 @@ Jensen 부등식에서 함수 <span><script type="math/tex">f</script></span>가
 <br/>
 
 **Proof.**
+
 (1) <span><script type="math/tex">\Rightarrow</script></span> 자명하다
+
 (2) <span><script type="math/tex">\Leftarrow</script></span> Jensen 부등식에서 등호가 성립한다면, <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span>  거나 <span><script type="math/tex">f</script></span>가 Affine map 이어야 한다. 그런데 가정에서 <span><script type="math/tex">f</script></span>는 Strictly convex 하므로, 따라서 <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span> 인 경우밖에 없다. 
 
 <br/>
@@ -462,7 +468,7 @@ f \left( \mathbf{E}[X] \right) = \mathbf{E} \left[ f(X) \right] \Longleftrightar
 
 <br/>
 
-증명은 생략한다. 대신, 확률변수의 Jensen 부등식을 직관적으로 이해해보자. 아래 차트는 Convex function <span><script type="math/tex">\varphi</script></span> 로 인해, 확률변수 <span><script type="math/tex">X</script></span>의 분포가 <span><script type="math/tex">\varphi (X)</script></span> 로 어떻게 mapping 되는 지를 보여준다. 
+이산확률변수의 Jensen 부등식은 자명하다. 연속확률변수인 경우의 증명은 생략한다. 대신, 확률변수의 Jensen 부등식을 직관적으로 이해해보자. 아래 차트는 Convex function <span><script type="math/tex">\varphi</script></span> 로 인해, 확률변수 <span><script type="math/tex">X</script></span>의 분포가 <span><script type="math/tex">\varphi (X)</script></span> 로 어떻게 mapping 되는 지를 보여준다. 
 
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Jensen_graph.svg/309px-Jensen_graph.svg.png" alt="jensen_graph"/></center>
 <center><small>(출처: 위키피디아)</small></center>
