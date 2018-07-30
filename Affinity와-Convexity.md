@@ -30,7 +30,7 @@ Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](
 
 <center><big><b>Affine map = Linear map + Translation</b></big></center>
 
-구체적으로 표현하자면, Affine set <span><script type="math/tex">\mathbb{A} \subset \mathbb{R}^n</script></span> 의 원소 <span><script type="math/tex">\mathbf{x} \in \mathbb{A}</script></span> 와 벡터 <span><script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script></span> 및 행렬 <span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{n \times m}</script></span> 에 대해서 다음과 같은 형태의 함수 <span><script type="math/tex">h(\cdot):\mathbb{A} \mapsto \mathbb{R}^m</script></span> 를 의미한다. 
+구체적으로 기술하자면, Affine set <span><script type="math/tex">\mathbb{A} \subset \mathbb{R}^n</script></span> 의 원소 <span><script type="math/tex">\mathbf{x} \in \mathbb{A}</script></span> 와 벡터 <span><script type="math/tex">\mathbf{b} \in \mathbb{R}^m</script></span> 및 행렬 <span><script type="math/tex">\mathbf{A} \in \mathbb{R}^{n \times m}</script></span> 에 대해서 다음과 같은 형태의 함수 <span><script type="math/tex">h(\cdot):\mathbb{A} \mapsto \mathbb{R}^m</script></span> 를 의미한다. 
 
 [^affine_map]: Affine transformation, Affine function 이라고도 한다. [여기](http://mathworld.wolfram.com/AffineFunction.html)를 참고. 
 
@@ -166,7 +166,7 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \lt  \lambda f(\m
 Affine set <span><script type="math/tex">\mathbb{A} \subset \mathbb{R}^n</script></span>에서 정의된 함수 <span><script type="math/tex">f(\cdot): \mathbb{A} \mapsto \mathbb{R}</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
-(f= \textsf{Affine}) ~\Longleftrightarrow~ (f= \textsf{Convex \& Concave})
+(f= \textsf{Affine}) ~\Longleftrightarrow~ (f= \mathsf{Convex ~\&~ Concave})
 </script></div>
 
 
