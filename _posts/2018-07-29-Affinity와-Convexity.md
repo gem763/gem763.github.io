@@ -168,7 +168,7 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \lt  \lambda f(\m
 ><br/>
 ><center><img src="https://gem763.github.io/assets/img/20180729/combinations.PNG" alt="convex_fn"/></center>
 >
-> 참고로 [Linear subspace](https://en.wikipedia.org/wiki/Linear_subspace)란, 모든 선형결합에 대해서 닫혀있는 공간을 뜻한다. 
+> 참고로 [Linear subspace](https://en.wikipedia.org/wiki/Linear_subspace)란, 제약조건이 없는 모든 선형결합에 대해서 닫혀있는 공간을 뜻한다. 
 
 [^hull]: 이처럼 어떤 집합(그림에서는 <span><script type="math/tex">\{ \mathbf{x}_1, \mathbf{x}_2 \}</script></span>)을 포함하고 있는 최소한의 Affine set과 Convex set을 각각 [Affine hull](https://en.wikipedia.org/wiki/Affine_hull), [Convex hull](https://en.wikipedia.org/wiki/Convex_hull) 이라고 부른다. 
 
