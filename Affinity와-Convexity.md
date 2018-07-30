@@ -48,6 +48,7 @@ h(\mathbf{x}) = \mathbf{A}^\mathsf{T} \mathbf{x} + \mathbf{b}
 <br/>
 
 <center><b>여러가지 형태의 Affine map</b></center>
+<br/>
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2D_affine_transformation_matrix.svg/512px-2D_affine_transformation_matrix.svg.png" alt="convex_fn"/></center>
 <center><small>(출처: 위키피디아)</small></center>
 
@@ -134,7 +135,7 @@ Convex function의 정의에서와는 달리, <span><script type="math/tex">\lam
 > 
 >| Affine combination | Convex combination |
 >|--|--|
->| <div class="math"><script type="math/tex; mode=display">\sum_i \lambda_i = 1</script></div> | <div class="math"><script type="math/tex; mode=display">\sum_i \lambda_i = 1, ~\lambda_i \in [0,1]</script></div> |
+>| <script type="math/tex; mode=display">\sum_i \lambda_i = 1</script> | <script type="math/tex; mode=display">\sum_i \lambda_i = 1, ~\lambda_i \in [0,1]</script> |
 >
 > Affine set과 Convex set은 각각 Affine combination과 Convex combination에 닫혀있는 공간을 의미한다. 임의의 원소 <span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2</script></span>가 포함되어 있는 **최소한의 Affine set과 Convex set**을 구성해보면 다음 그림과 같다.  [^hull]
 >
