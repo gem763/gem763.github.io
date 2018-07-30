@@ -5,21 +5,21 @@
 
 ## Affinity
 ### Affine combination
-유한 개의 벡터들로 [선형결합 (Linear combination)](https://en.wikipedia.org/wiki/Linear_combination)을 할 때, 모든 계수(coefficient)들의 합이 1인 경우를 [**Affine combination**](https://en.wikipedia.org/wiki/Affine_combination)이라고 한다. <span><script type="math/tex">n</script></span>개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span> 에 대해서, Affine combination은 다음과 같이 표현된다. 
+유한 개의 벡터들로 [선형결합 (Linear combination)](https://en.wikipedia.org/wiki/Linear_combination)을 할 때, 모든 계수(coefficient)들의 합이 1인 경우를 [**Affine combination**](https://en.wikipedia.org/wiki/Affine_combination)이라고 한다. <span><script type="math/tex">r</script></span>개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r</script></span> 에 대해서, Affine combination은 다음과 같이 표현된다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r
 </script></div>
 
-여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 을 만족한다. 유클리드 공간(Euclidean space)에서 임의의 두 점을 선택했을 때, **두 점을 지나는 직선 상의 모든 점들**은 Affine combination으로 표현할 수 있다. 
+여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 을 만족한다. 유클리드 공간(Euclidean space)에서 임의의 두 점을 선택했을 때, **두 점을 지나는 직선 상의 모든 점들**은 Affine combination으로 표현할 수 있다. 
 
 <br/>
 
 ### Affine set
-Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](https://en.wikipedia.org/wiki/Affine_space) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{A}</script></span>가 Affine set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{A}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Affine combination도 <span><script type="math/tex">\mathbb{A}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 에 대해서, 
+Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](https://en.wikipedia.org/wiki/Affine_space) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{A}</script></span>가 Affine set 이라면, 이 집합에서 <span><script type="math/tex">r</script></span>개의 원소 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r \in \mathbb{A}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Affine combination도 <span><script type="math/tex">\mathbb{A}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 에 대해서, 
 
 <div class="math"><script type="math/tex; mode=display">
-\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n \in \mathbb{S}
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r \in \mathbb{S}
 </script></div>
 
 
@@ -71,21 +71,21 @@ h(\mathbf{x}) \\
 
 ## Convexity
 ### Convex combination
-Affine combination에서 **모든 계수들이 0 이상**이라는 추가적인 제약조건이 있는 경우를 [**Convex combination**](https://en.wikipedia.org/wiki/Convex_combination) 이라고 한다. <span><script type="math/tex">n</script></span>개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span>에 대해서, Convex combination은 다음과 같이 표현된다. 
+Affine combination에서 **모든 계수들이 0 이상**이라는 추가적인 제약조건이 있는 경우를 [**Convex combination**](https://en.wikipedia.org/wiki/Convex_combination) 이라고 한다. <span><script type="math/tex">r</script></span>개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r</script></span>에 대해서, Convex combination은 다음과 같이 표현된다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r
 </script></div>
 
-여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_i \ge 0</script></span> 과 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 을 만족한다. 유클리드 공간에서 임의의 두 점을 선택했을 때, **두 점을 잇는 직선 사이의 모든 점들**은 Convex combination으로 표현할 수 있다. 
+여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_i \ge 0</script></span> 과 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 을 만족한다. 유클리드 공간에서 임의의 두 점을 선택했을 때, **두 점을 잇는 직선 사이의 모든 점들**은 Convex combination으로 표현할 수 있다. 
 
 <br/>
 
 ### Convex set
-Convex combination에 대해서 닫혀있는 집합을 [**Convex set**](https://en.wikipedia.org/wiki/Convex_set) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{S}</script></span>가 Convex set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{S}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Convex combination도 <span><script type="math/tex">\mathbb{S}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_i \ge 0</script></span> 및 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 에 대하여, 
+Convex combination에 대해서 닫혀있는 집합을 [**Convex set**](https://en.wikipedia.org/wiki/Convex_set) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{S}</script></span>가 Convex set 이라면, 이 집합에서 <span><script type="math/tex">r</script></span>개의 원소 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r \in \mathbb{S}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Convex combination도 <span><script type="math/tex">\mathbb{S}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_i \ge 0</script></span> 및 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
-\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n \in \mathbb{S}
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r \in \mathbb{S}
 </script></div>
 
 정의에 의해, **모든 Affine set은 Convex set** 이라고 할 수 있다. 
@@ -138,15 +138,15 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \lt  \lambda f(\m
 
 > <big><b>비교: Combinations and Sets</b></big>
 > 
-> 유한 개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span>와 <span><script type="math/tex">\lambda_i \in \mathbb{R}</script></span> 에 대하여 Affine combination과 Convex combination은 다음과 같이 선형결합(Linear combination)으로 나타낼 수 있다. 
-> <div class="math"><script type="math/tex; mode=display">\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n</script></div>
+> 유한 개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r</script></span>와 <span><script type="math/tex">\lambda_i \in \mathbb{R}</script></span> 에 대하여 Affine combination과 Convex combination은 다음과 같이 선형결합(Linear combination)으로 나타낼 수 있다. 
+> <div class="math"><script type="math/tex; mode=display">\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r</script></div>
 > 
 > 단 제약조건이 다르다. 
 > 
 > 
 >| <center>Affine combination</center> | <center>Convex combination</center> |
 >|--|--|
->| <script type="math/tex; mode=display">\sum_i \lambda_i = 1</script> | <script type="math/tex; mode=display">\sum_i \lambda_i = 1, ~\lambda_i \in [0,1]</script> |
+>| <script type="math/tex; mode=display">\sum_{i=1}^r \lambda_i = 1</script> | <script type="math/tex; mode=display">\sum_{i=1}^r \lambda_i = 1, ~\lambda_i \in [0,1]</script> |
 >
 > Affine set과 Convex set은 각각 Affine combination과 Convex combination에 닫혀있는 공간을 의미한다. 임의의 원소 <span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2</script></span>가 포함되어 있는 **최소한의 Affine set과 Convex set**을 구성해보면 다음 그림과 같다.  [^hull]
 >
@@ -208,12 +208,12 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) &\ge  \lambda f(\
 \mathbb{A}_o = \{ \mathbf{x} - \alpha \mid \mathbf{x} \in \mathbb{A} \} \ni 0
 </script></div>
 
-<span><script type="math/tex">\mathbb{A}_o</script></span>는 원점을 포함하게 된다. 과연 <span><script type="math/tex">\mathbb{A}_o</script></span>는 Affine set 일까? 임의의 <span><script type="math/tex">\mathbf{z}_i \in \mathbb{A}_o</script></span> 및 <span><script type="math/tex">\theta_1 + \cdots + \theta_n = 1</script></span> 에 대하여, 
+<span><script type="math/tex">\mathbb{A}_o</script></span>는 원점을 포함하게 된다. 과연 <span><script type="math/tex">\mathbb{A}_o</script></span>는 Affine set 일까? 임의의 <span><script type="math/tex">\mathbf{z}_i \in \mathbb{A}_o</script></span> 및 <span><script type="math/tex">\theta_1 + \cdots + \theta_r = 1</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
 \mathbf{x}_i \equiv \mathbf{z}_i + \alpha &\in \mathbb{A} \\
-\theta_1 \mathbf{x}_1 + \cdots + \theta_n \mathbf{x}_n \overset{\text{let}}{=} \mathbf{y} &\in \mathbb{A}
+\theta_1 \mathbf{x}_1 + \cdots + \theta_r \mathbf{x}_r \overset{\text{let}}{=} \mathbf{y} &\in \mathbb{A}
 \end{aligned}
 </script></div>
 
@@ -221,9 +221,9 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) &\ge  \lambda f(\
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-\theta_1 \mathbf{z}_1 + \cdots + \theta_n \mathbf{z}_n
-&= \sum_{i=1}^n \theta_i (\mathbf{x}_i - \alpha) \\
-&= \sum_{i=1}^n \theta_i \mathbf{x}_i  - \alpha \\
+\theta_1 \mathbf{z}_1 + \cdots + \theta_r \mathbf{z}_r
+&= \sum_{i=1}^r \theta_i (\mathbf{x}_i - \alpha) \\
+&= \sum_{i=1}^r \theta_i \mathbf{x}_i  - \alpha \\
 &= \mathbf{y} - \alpha \in \mathbb{A}_o
 \end{aligned}
 </script></div>
@@ -247,7 +247,7 @@ g(\mathbf{z}) \equiv f(\mathbf{z+\alpha}) - f(\alpha)
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-g \left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 \right) 
+g &\left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 \right) \\
 &= f \left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 + \alpha \right) - f(\alpha) \\
 &= f \left( k (\mathbf{z}_1 + \alpha) + (1-k) (\mathbf{z}_2 + \alpha) \right) - f(\alpha) \\
 &= k f (\mathbf{z}_1 + \alpha) + (1-k) f(\mathbf{z}_2 + \alpha) - f(\alpha) \\
@@ -351,36 +351,25 @@ f(\mathbf{x}) = \mathbf{a}^\mathsf{T} \mathbf{x} + b
 <br/>
 
 
+
 ## Jesen 부등식
 
-Convex set <span><script type="math/tex">\mathbb{S}</script></span> (<span><script type="math/tex">\subset \mathbb{R}</script></span>)에서 정의된 함수 <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span> 가 있다.  유한 개의 <span><script type="math/tex">x_i \in \mathbb{S}</script></span> 및 <span><script type="math/tex">\lambda_i \ge 0</script></span> 에 대하여, <span><script type="math/tex">\sum_i \lambda_i = 1</script></span> 라고 할 때, 다음의 부등식이 성립한다. 이를 **Jensen 부등식**이라고 한다. 
+### Jensen 부등식
+Convex set <span><script type="math/tex">\mathbb{S}</script></span> 에서 정의된 **Convex function** [^jensen_concave] <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span> 가 있다.  임의의 <span><script type="math/tex">\mathbf{x}_i \in \mathbb{S}</script></span> 및 <span><script type="math/tex">\lambda_i \in (0,1)</script></span> 에 대하여, <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 라고 할 때, 다음의 부등식이 성립한다. 이를 **Jensen 부등식**이라고 한다. 
 
-* <span><script type="math/tex">f</script></span>가 **Convex function**: [^jensen_concave]
 <div class="math"><script type="math/tex; mode=display">
-f \left(\sum_{i=1}^n \lambda_i x_i\right) \le \sum_{i=1}^n \lambda_i f(x_i)
+f \left(\sum_{i=1}^r \lambda_i \mathbf{x}_i\right) \le \sum_{i=1}^r \lambda_i f(\mathbf{x}_i)
 </script></div>
 
-[^jensen_concave]: 참고로 <span><script type="math/tex">f</script></span>가 Concave function 인 경우에는 부등호의 방향이 반대가 된다. <script type="math/tex; mode=display">f \left(\sum_{i=1}^n \lambda_i x_i\right) \ge \sum_{i=1}^n \lambda_i f(x_i)</script> Strictly concave function 인 경우에도 마찬가지이다. 
+[^jensen_concave]: <span><script type="math/tex">f</script></span>가 Concave function 인 경우에는 부등호의 방향이 반대가 된다. <script type="math/tex; mode=display">f \left(\sum_{i=1}^n \lambda_i x_i\right) \ge \sum_{i=1}^n \lambda_i f(x_i)</script> 
 
 <br/>
 
-* <span><script type="math/tex">f</script></span>가 **Strictly convex function**: 
-<div class="math"><script type="math/tex; mode=display">
-f \left(\sum_{i=1}^n \lambda_i x_i\right) \le \sum_{i=1}^n \lambda_i f(x_i)
-</script></div>
+**Proof.**
+[귀납법 (Induction)](https://en.wikipedia.org/wiki/Mathematical_induction)으로 쉽게 증명할 수 있다. <span><script type="math/tex">n=2</script></span> 인 경우의 Jensen 부등식은 Convex function의 정의에 의해 자명하다. <span><script type="math/tex">n=k</script></span> 에 대해서도 다음의 부등식이 성립한다고 가정하자.  
 
 <div class="math"><script type="math/tex; mode=display">
- f \left(\sum_{i=1}^n \lambda_i x_i\right) = \sum_{i=1}^n \lambda_i f(x_i)  \Longleftrightarrow x_1 = \cdots = x_n
-</script></div>
-
-
-<br/>
-
-**Convex function 인 경우의 증명:**
-Jensen 부등식은 [귀납법 (Induction)](https://en.wikipedia.org/wiki/Mathematical_induction)으로 쉽게 증명할 수 있다. <span><script type="math/tex">f</script></span>가 Convex function인 경우에 대해서 우선 증명해보자. <span><script type="math/tex">n=2</script></span> 인 경우의 Jensen 부등식은 Convex function의 정의에 의해 자명하게 성립함을 알 수 있다. <span><script type="math/tex">n=k</script></span> 에 대해서도 다음의 Jensen 부등식이 성립한다고 가정하자.  
-
-<div class="math"><script type="math/tex; mode=display">
-f \left(\sum_{i=1}^k \lambda_i x_i\right) \le \sum_{i=1}^k \lambda_i f(x_i)
+f \left(\sum_{i=1}^k \lambda_i \mathbf{x}_i\right) \le \sum_{i=1}^k \lambda_i f(\mathbf{x}_i)
 </script></div>
 
 이제 <span><script type="math/tex">n=k+1</script></span> 에 대해서 식을 전개하면, 
@@ -423,61 +412,61 @@ f \left( \sum_{i=1}^{k+1} \lambda_i x_i \right)
 
 <br/>
 
-**Strictly convex function 인 경우의 증명:**
-부등호의 증명방식은 Convex function인 경우와 동일하다. 등호부분만 추가로 증명하면 된다. 마찬가지로, <span><script type="math/tex">n=2</script></span> 인 경우는 자명하다. <span><script type="math/tex">n=k</script></span> 에 대해서 다음의 Jensen 부등식과 등식이 성립한다고 가정한다. 
-
-<div class="math"><script type="math/tex; mode=display">
-f \left(\sum_{i=1}^k \lambda_i x_i\right) \le \sum_{i=1}^k \lambda_i f(x_i)
-</script></div>
-
-<div class="math"><script type="math/tex; mode=display">
-\underbrace{f \left(\sum_{i=1}^k \lambda_i x_i\right) = \sum_{i=1}^k \lambda_i f(x_i) \Longleftrightarrow x_1 = \cdots = x_k}_{\text{(*)}}
-</script></div>
-
-이제 <span><script type="math/tex">n=k+1</script></span> 에 대해서 식을 전개하면, 
-
-<div class="math"><script type="math/tex; mode=display">
-\begin{aligned}
-\underbrace{f \left( \sum_{i=1}^{k+1} \lambda_i x_i \right)}_{\text{(1)}}
-&\le \underbrace{(1-\lambda_{k+1}) f \left( \sum_{i=1}^{k} \frac{\lambda_i}{1-\lambda_{k+1}} x_i \right) + \lambda_{k+1} f(x_{k+1})}_{\text{(2)}} \\
-&\le \underbrace{\frac{1-\lambda_{k+1}}{1-\lambda_{k+1}} \sum_{i=1}^{k} \lambda_{i} f(x_i)  + \lambda_{k+1} f(x_{k+1})}_{\text{(3)}} \\
-&= \sum_{i=1}^{k+1} \lambda_i f(x_i)
-\end{aligned}
-</script></div>
-
-따라서 부등호 부분은 쉽게 증명된다. 이제 다음의 등호부분를 증명해보자. 
-
-<span><script type="math/tex">\boxed{f \left(\sum_{i=1}^{k+1} \lambda_i x_i\right) = \sum_{i=1}^{k+1} \lambda_i f(x_i) \Longleftarrow x_1 = \cdots = x_{k+1}}</script></span>
-
-<span><script type="math/tex">x_1 = \cdots = x_{k+1} \overset{\text{let}}{=} x</script></span> 라고 하면, 식(*)에 의해 (2)=(3) 임을 알 수 있다. 게다가 
-<div class="math"><script type="math/tex; mode=display">
-\sum_{i=1}^k \frac{\lambda_i}{1-\lambda_{k+1}} x_i = \frac{x}{1-\lambda_{k+1}} \sum_{i=1}^k \lambda_i = x = x_{k+1}
-</script></div>
-
-이므로, (1)=(2)도 성립한다.  따라서 <span><script type="math/tex">f \left(\sum_{i=1}^{k+1} \lambda_i x_i\right) = \sum_{i=1}^{k+1} \lambda_i f(x_i)</script></span> 를 얻게 된다. 
+### Jensen 부등식에서의 등호조건
+Jensen 부등식에서 등호가 성립한다면 <span><script type="math/tex">~\Longrightarrow~</script></span> 다음의 둘 중 하나가 참이다.  
+* <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span>
+* 함수 <span><script type="math/tex">f</script></span>가 Affine map
 
 <br/>
 
-<span><script type="math/tex">\boxed{f \left(\sum_{i=1}^{k+1} \lambda_i x_i\right) = \sum_{i=1}^{k+1} \lambda_i f(x_i) \Longrightarrow x_1 = \cdots = x_{k+1}}</script></span>
-
-<span><script type="math/tex">f \left(\sum_{i=1}^{k+1} \lambda_i x_i\right) = \sum_{i=1}^{k+1} \lambda_i f(x_i)</script></span> 라고 하면, (1)=(2)=(3) 이 된다. 식(*)에 의해, (2)=(3)은 곧 <span><script type="math/tex">x_1 = \cdots = x_k</script></span> 를 의미한다. 한편 (1)=(2)는 <span><script type="math/tex">\sum_{i=1}^k \frac{\lambda_i}{1-\lambda_{k+1}} x_i = x_{k+1}</script></span> 를 의미하므로, 이 식에 <span><script type="math/tex">x_1 = \cdots = x_k \overset{\text{let}}{=} x</script></span> 를 대입하면, 
-
+**Proof.**
+Jensen 부등식의 등호가 성립한다고 가정하자. 
 
 <div class="math"><script type="math/tex; mode=display">
-\begin{aligned}
-x_{k+1} 
-&= \sum_{i=1}^k \frac{\lambda_i}{1-\lambda_{k+1}} x_i \\
-&= \frac{x}{1-\lambda_{k+1}} \sum_{i=1}^k \lambda_i \\
-&= x
-\end{aligned}
+f \left(\sum_{i=1}^r \lambda_i \mathbf{x}_i\right) = \sum_{i=1}^r \lambda_i f(\mathbf{x}_i)
 </script></div>
 
-따라서 <span><script type="math/tex">x_1 = \cdots = x_k = x_{k+1}</script></span> 를 얻게 된다. 증명끝.
-
+* <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span> 일 때는 등호가 자명하다. 
+* <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span> 가 아니라면, Convex set <span><script type="math/tex">\mathbb{S}</script></span>의 모든 원소에 대해 <span><script type="math/tex">f</script></span>는 Convex & Concave 하므로, 따라서 <span><script type="math/tex">f</script></span>는 Affine map 이다. 
 
 
 <br/>
 
-> <big><b>확률변수의 Jensen 부등식</b></big>
-> 
+### Strictly convex function의 Jensen 부등식
+Jensen 부등식에서 함수 <span><script type="math/tex">f</script></span>가 Strictly convex function 이라면, 
+
+<div class="math"><script type="math/tex; mode=display">
+\mathbf{x}_1 = \cdots = \mathbf{x}_r ~\Longleftrightarrow~ f \left(\sum_{i=1}^r \lambda_i \mathbf{x}_i\right) = \sum_{i=1}^r \lambda_i f(\mathbf{x}_i)
+</script></div>
+
+<br/>
+
+**Proof.**
+(1) <span><script type="math/tex">\Rightarrow</script></span> 자명하다
+(2) <span><script type="math/tex">\Leftarrow</script></span> Jensen 부등식에서 등호가 성립한다면, <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span>  거나 <span><script type="math/tex">f</script></span>가 Affine map 이어야 한다. 그런데 가정에서 <span><script type="math/tex">f</script></span>는 Strictly convex 하므로, 따라서 <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span> 인 경우밖에 없다. 
+
+<br/>
+
+### 확률변수의 Jensen 부등식
+Convex function <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span> 과 확률변수 <span><script type="math/tex">X</script></span>에 대하여 다음의 부등식이 성립한다. 
+
+<div class="math"><script type="math/tex; mode=display">
+f \left( \mathbf{E}[X] \right) \le \mathbf{E} \left[ f(X) \right]
+</script></div>
+
+만약 <span><script type="math/tex">f</script></span>가 Strictly convex function 이라면, 
+
+<div class="math"><script type="math/tex; mode=display">
+f \left( \mathbf{E}[X] \right) = \mathbf{E} \left[ f(X) \right] \Longleftrightarrow X=Const
+</script></div>
+
+<br/>
+
+증명은 생략한다. 대신, 확률변수의 Jensen 부등식을 직관적으로 이해해보자. 아래 차트는 Convex function <span><script type="math/tex">\varphi</script></span> 로 인해, 확률변수 <span><script type="math/tex">X</script></span>의 분포가 <span><script type="math/tex">\varphi (X)</script></span> 로 어떻게 mapping 되는 지를 보여준다. 
+
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Jensen_graph.svg/309px-Jensen_graph.svg.png" alt="jensen_graph"/></center>
+<center><small>(출처: 위키피디아)</small></center>
+
+원래의 <span><script type="math/tex">X</script></span>의 분포(예시)는 왼쪽으로 꼬리가 길게 늘어져있고, 이에따라 <span><script type="math/tex">X</script></span>의 기대값 <span><script type="math/tex">\mathbf{E}[X]</script></span>은 다소 왼쪽에 위치하게 된다. 하지만 Convex function의 독특한 형태로 인해 <span><script type="math/tex">X</script></span> 분포의 오른쪽 부분이 확장(Stretching-out) 변환되면서, 확률변수 <span><script type="math/tex">Y=\varphi(X)</script></span>의 분포 상단이 점차 늘어지는 모양이 되었다. 결과적으로 <span><script type="math/tex">Y</script></span>의 기대값 <span><script type="math/tex">\mathbf{E}[Y]</script></span>을 위로 밀어올리게 되면서, <span><script type="math/tex">\varphi(\mathbf{E}[X]) \le \mathbf{E}[Y] = \mathbf{E}[\varphi(X)]</script></span> 의 관계를 도출하게 되는데, 이것이 바로 확률변수의 Jensen 부등식인 것이다. 
+
 
