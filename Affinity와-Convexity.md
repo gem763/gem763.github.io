@@ -160,16 +160,16 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \lt  \lambda f(\m
 <br/>
 
 
-## Convex + Concave = Affine function
+## Convex + Concave = Affine map
 어떤 함수가 아래로 볼록(convex)이면서 동시에 위로 볼록(concave)이라면, 직관적으로 이 함수는 선형함수일 것으로 예상된다. 보다 명확하게 서술하면 다음과 같다. 
 
 Affine set <span><script type="math/tex">\mathbb{A} \subset \mathbb{R}^n</script></span>에서 정의된 함수 <span><script type="math/tex">f(\cdot): \mathbb{A} \mapsto \mathbb{R}</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
-(f= \textsf{Affine}) ~\Longleftrightarrow~ (f= \mathsf{Convex ~\&~ Concave})
+(f: \textsf{Affine}) ~\Longleftrightarrow~ (f: \mathsf{Convex ~\&~ Concave})
 </script></div>
 
-
+<br/>
 
 **Proof.**
 
@@ -194,89 +194,98 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) &\ge  \lambda f(\
 \end{aligned}
 </script></div>
 
-을 동시에 만족하게 되고, 따라서 함수 <span><script type="math/tex">f</script></span>는 <span><script type="math/tex">\mathbb{A}</script></span>에서 Convex 및 Concave 하게 된다. 
+을 동시에 만족하게 되고, 따라서 함수 <span><script type="math/tex">f</script></span>는 Affine set <span><script type="math/tex">\mathbb{A}</script></span>에서 Convex 및 Concave 하게 된다. 
 
 <br/>
 
 <span><script type="math/tex">(2)\Leftarrow</script></span>
 
-함수 <span><script type="math/tex">f</script></span>가 Convex & Concave 하다고 가정하자. <span><script type="math/tex">f</script></span>를 Affine function 의 형태로 유도하면 증명이 완성된다. 임의의 <span><script type="math/tex">\alpha \in \mathbb{A}</script></span>에 대하여 <span><script type="math/tex">f(\alpha) \overset{\text{let}}{=} b</script></span> 로 놓는다. Affine set <span><script type="math/tex">\mathbb{A}</script></span> 전체를 <span><script type="math/tex">-\alpha</script></span> 만큼 좌표변환한 집합 <span><script type="math/tex">\mathbb{A}'</script></span>을 다음과 같이 정의하면, 
+함수 <span><script type="math/tex">f</script></span>가 Convex & Concave 하다고 가정하자. <span><script type="math/tex">f</script></span>를 Affine map 의 형태로 유도하면 증명이 완성된다. 그런데 한 가지 문제가 있다. 아래의 증명을 전개하는 과정에서 Affine set <span><script type="math/tex">\mathbb{A}</script></span>가 반드시 원점을 포함해야 한다는 논리가 필요한데, 그렇다는 보장이 없다. 좌표변환을 통해, 원점을 포함하는 Affine set <span><script type="math/tex">\mathbb{A}_o</script></span> 를 새롭게 정의해보자. 
+
+임의의 <span><script type="math/tex">\alpha \in \mathbb{A}</script></span>에 대하여, Affine set <span><script type="math/tex">\mathbb{A}</script></span> 전체를 <span><script type="math/tex">-\alpha</script></span> 만큼 좌표변환한 집합 <span><script type="math/tex">\mathbb{A}_o</script></span>을 다음과 같이 정의하면, 
 
 <div class="math"><script type="math/tex; mode=display">
-\mathbb{A}' = \{ \mathbf{x} - \alpha \mid \mathbf{x} \in \mathbb{A} \} \ni 0
+\mathbb{A}_o = \{ \mathbf{x} - \alpha \mid \mathbf{x} \in \mathbb{A} \} \ni 0
 </script></div>
 
-즉 원점이 <span><script type="math/tex">\mathbb{A}'</script></span>에 포함되게 된다. 게다가 임의의 <span><script type="math/tex">\mathbf{z}_i \in \mathbb{A}'</script></span> 및 <span><script type="math/tex">\sum_i \theta_i = 1</script></span> 에 대하여, 
-
-<div class="math"><script type="math/tex; mode=display">
-\mathbf{x}_i \equiv \mathbf{z}_i + \alpha \in \mathbb{A}
-</script></div>
-
-<div class="math"><script type="math/tex; mode=display">
-\sum_i \theta_i \mathbf{x}_i \in \mathbb{A}
-</script></div>
-
-이므로, 
+<span><script type="math/tex">\mathbb{A}_o</script></span>는 원점을 포함하게 된다. 과연 <span><script type="math/tex">\mathbb{A}_o</script></span>는 Affine set 일까? 임의의 <span><script type="math/tex">\mathbf{z}_i \in \mathbb{A}_o</script></span> 및 <span><script type="math/tex">\theta_1 + \cdots + \theta_n = 1</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-\sum_i\theta_i \mathbf{z}_i 
-&= \sum_i \theta_i (\mathbf{x}_i - \alpha) \\
-&= \sum_i \theta_i \mathbf{x}_1  - \alpha \\
-&\in \mathbb{A}'
+\mathbf{x}_i \equiv \mathbf{z}_i + \alpha &\in \mathbb{A} \\
+\theta_1 \mathbf{x}_1 + \cdots + \theta_n \mathbf{x}_n \overset{\text{let}}{=} \mathbf{y} &\in \mathbb{A}
+\end{aligned}
+</script></div>
+
+라고 하면, 
+
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+\theta_1 \mathbf{z}_1 + \cdots + \theta_n \mathbf{z}_n
+&= \sum_{i=1}^n \theta_i (\mathbf{x}_i - \alpha) \\
+&= \sum_{i=1}^n \theta_i \mathbf{x}_i  - \alpha \\
+&= \mathbf{y} - \alpha \in \mathbb{A}_o
 \end{aligned}
 </script></div>
 
 
-따라서 <span><script type="math/tex">\mathbb{A}'</script></span>는 원점을 지나는 Affine set 이라고 할 수 있다. 이제 <span><script type="math/tex">\mathbb{A}'</script></span> 에서 정의된 함수 <span><script type="math/tex">g(\cdot): \mathbb{A}' \mapsto \mathbb{R}</script></span> 를 다음과 같이 새로 정의한다. 
+따라서 <span><script type="math/tex">\mathbb{A}_o</script></span>는 **원점을 지나는 Affine set** 이라고 할 수 있다. 이제 <span><script type="math/tex">\mathbb{A}_o</script></span> 에서 정의된 함수 <span><script type="math/tex">g(\cdot): \mathbb{A}_o \mapsto \mathbb{R}</script></span> 를 다음과 같이 새로 정의한다. 
 
 <div class="math"><script type="math/tex; mode=display">
-g(\mathbf{z}) \equiv f(\mathbf{z+\alpha}) - b 
+g(\mathbf{z}) \equiv f(\mathbf{z+\alpha}) - f(\alpha) 
 </script></div>
 
-여기서 <span><script type="math/tex">g(0)</script></span> <span><script type="math/tex">= f(\alpha) - b = 0</script></span> 이다. 함수 <span><script type="math/tex">g</script></span> 은 다음의 세 가지 특성을 가지고 있다. 이들을 추가적으로 증명해보자. 
-* **[Convex & Concave]** <span><script type="math/tex">g</script></span>는 <span><script type="math/tex">f</script></span>와 마찬가지로 Convex & Concave 하다
-* **[Multiplication]** 모든 <span><script type="math/tex">\mathbf{z} \in \mathbb{A}'</script></span> 와 <span><script type="math/tex">\theta \ge 0</script></span>에 대하여, <span><script type="math/tex">g(\theta \mathbf{z}) = \theta g(\mathbf{z})</script></span>
-* **[Additivity]** <span><script type="math/tex">\mathbf{z}_1, \mathbf{z}_2 \in \mathbb{A}'</script></span>에 대하여, <span><script type="math/tex">g(\mathbf{z}_1 + \mathbf{z}_2) = g(\mathbf{z}_1)  + g(\mathbf{z}_2)</script></span>
+여기서 <span><script type="math/tex">g(0)</script></span> <span><script type="math/tex">= 0</script></span> 임을 알 수 있다. 함수 <span><script type="math/tex">g</script></span> 은 다음의 세 가지 특성을 가지고 있는데, 이들을 추가적으로 증명해보자. 
+1. **[Convex & Concave]** <span><script type="math/tex">f</script></span>와 마찬가지로, <span><script type="math/tex">g</script></span>는 Convex & Concave 하다
+2. **[Multiplication]** 모든 <span><script type="math/tex">\mathbf{z} \in \mathbb{A}_o</script></span> 와 실수 <span><script type="math/tex">\gamma \ge 0</script></span>에 대하여, <span><script type="math/tex">g(\gamma \mathbf{z}) = \gamma g(\mathbf{z})</script></span>
+3. **[Additivity]** <span><script type="math/tex">\mathbf{z}_1, \mathbf{z}_2 \in \mathbb{A}_o</script></span>에 대하여, <span><script type="math/tex">g(\mathbf{z}_1 + \mathbf{z}_2) = g(\mathbf{z}_1)  + g(\mathbf{z}_2)</script></span>
 
-**Convex & Concave**
-함수 <span><script type="math/tex">f</script></span>가 Convex & Concave 하므로, <span><script type="math/tex">\mathbf{z}_1, \mathbf{z}_2 \in \mathbb{A}'</script></span> 및 <span><script type="math/tex">\theta \in \mathbb{R}</script></span> 에 대하여, 
+<br/>
+
+**1. Convex & Concave**
+가정에 의해 함수 <span><script type="math/tex">f</script></span>가 Convex & Concave 하므로, <span><script type="math/tex">\mathbf{z}_1, \mathbf{z}_2 \in \mathbb{A}_o</script></span> 및 <span><script type="math/tex">k \in \mathbb{R}</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-g \left( \theta \mathbf{z}_1 + (1-\theta) \mathbf{z}_2 \right) 
-&= f \left( \theta \mathbf{z}_1 + (1-\theta) \mathbf{z}_2 + \alpha \right) - b \\
-&= f \left( \theta (\mathbf{z}_1 + \alpha) + (1-\theta) (\mathbf{z}_2 + \alpha) \right) - b \\
-&= \theta f (\mathbf{z}_1 + \alpha) + (1-\theta) f(\mathbf{z}_2 + \alpha) - b \\
-&= \theta \left( g(\mathbf{z}_1) + b \right) + (1-\theta) \left( g(\mathbf{z}_2) + b \right) - b \\
-&= \theta g(\mathbf{z}_1) + (1-\theta) g(\mathbf{z}_2)
+g \left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 \right) 
+&= f \left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 + \alpha \right) - f(\alpha) \\
+&= f \left( k (\mathbf{z}_1 + \alpha) + (1-k) (\mathbf{z}_2 + \alpha) \right) - f(\alpha) \\
+&= k f (\mathbf{z}_1 + \alpha) + (1-k) f(\mathbf{z}_2 + \alpha) - f(\alpha) \\
+&= k \left( g(\mathbf{z}_1) + f(\alpha) \right) + (1-k) \left( g(\mathbf{z}_2) + f(\alpha) \right) - f(\alpha) \\
+&= k g(\mathbf{z}_1) + (1-k) g(\mathbf{z}_2)
 \end{aligned}
 </script></div>
 
+따라서 <span><script type="math/tex">g</script></span> 역시 Convex & Concave 하다. 
 
-**Multiplication** 
-* <span><script type="math/tex">\theta \in [0, 1]</script></span>: Affine set <span><script type="math/tex">\mathbb{A}'</script></span>는 원점을 지나는 Convex set 이므로, 
+**2. Multiplication** 
+* <span><script type="math/tex">\gamma \in [0, 1]</script></span>: Affine set <span><script type="math/tex">\mathbb{A}_o</script></span>는 원점을 지나는 Convex set 이므로, 두 원소 <span><script type="math/tex">\mathbf{z}, 0 \in \mathbb{A}_o</script></span> 에 대하여, 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-g(\theta \mathbf{z}) 
-&= g(\theta \mathbf{z} + (1-\theta) 0) \\
-&= \theta g(\mathbf{z}) + (1-\theta) g(0) \\
-&= \theta g(\mathbf{z})
+g(\gamma \mathbf{z}) 
+&= g(\gamma \mathbf{z} + (1-\gamma) 0) \\
+&= \gamma g(\mathbf{z}) + (1-\gamma) g(0) \\
+&= \gamma g(\mathbf{z})
 \end{aligned}
 </script></div> 
 
-* <span><script type="math/tex">\theta \gt 1</script></span>: 이 경우 <span><script type="math/tex">1/\theta\in [0,1]</script></span> 이므로, 
+* <span><script type="math/tex">\gamma \gt 1</script></span>: 이 경우 <span><script type="math/tex">\tfrac{1}{\gamma} \in [0,1]</script></span> 이므로, 
 <div class="math"><script type="math/tex; mode=display">
-g \left(\tfrac{1}{\theta} \theta \mathbf{z} + (1- \tfrac{1}{\theta}) 0 \right) = \tfrac{1}{\theta} g(\theta \mathbf{z}) + (1-\tfrac{1}{\theta}) g(0) = \tfrac{1}{\theta} g(\theta \mathbf{z})
+\begin{aligned}
+g(\mathbf{z}) &= g \left(\tfrac{1}{\gamma} \gamma \mathbf{z} + (1- \tfrac{1}{\gamma}) 0 \right) \\
+&= \tfrac{1}{\gamma} g(\gamma \mathbf{z}) + (1-\tfrac{1}{\gamma}) g(0) \\
+&= \tfrac{1}{\gamma} g(\gamma \mathbf{z})
+\end{aligned}
 </script></div>
 
 <div class="math"><script type="math/tex; mode=display">
-\therefore g(\theta \mathbf{z}) = \theta g(\mathbf{z})
+\Longrightarrow ~g(\gamma \mathbf{z}) = \gamma g(\mathbf{z})
 </script></div>
 
-따라서 모든 <span><script type="math/tex">\theta \ge 0</script></span> 에 대하여 <span><script type="math/tex">g(\theta \mathbf{z}) = \theta g(\mathbf{z})</script></span> 임을 알 수 있다. 
+따라서 모든 <span><script type="math/tex">\gamma \ge 0</script></span> 에 대하여 <span><script type="math/tex">g(\gamma \mathbf{z}) = \gamma g(\mathbf{z})</script></span> 임을 알 수 있다. 
 
-**Additivity**
+**3. Additivity**
+바로 위에서 증명한 Multiplication과, <span><script type="math/tex">g</script></span>가 Convex & Concave하다는 사실을 이용한다.  
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
 g(\mathbf{z}_1 + \mathbf{z}_2) 
@@ -286,33 +295,58 @@ g(\mathbf{z}_1 + \mathbf{z}_2)
 \end{aligned}
 </script></div>
 
+<br/>
 
-이제 벡터 <span><script type="math/tex">\mathbf{a} = [a_i] \in \mathbb{R}^n</script></span> 을 다음과 같이 정의하자. 
+위의 3 가지를 모두 증명하였다. 이제 마지막으로, 함수 <span><script type="math/tex">g</script></span>를 Affine map의 형태로 유도해보자. 임의의 원소 <span><script type="math/tex">\mathbf{z} \in \mathbb{A}_o \subset \mathbb{R}^n</script></span> 는 표준 베이시스[^basis] <span><script type="math/tex">\mathbf{e}_i \in \mathbb{R}^n</script></span>의 선형결합으로 기술할 수 있고, 
 
-<div class="math"><script type="math/tex; mode=display">
-a_i = g(e_i)
-</script></div>
-
-여기서 <span><script type="math/tex">e_i \in \mathbb{R}^n</script></span> 는 <span><script type="math/tex">i</script></span> 번째 항목만 1 이고 나머지는 0인 벡터를 말한다. <span><script type="math/tex">g(\mathbf{z})</script></span> 를 전개해보면, 
+[^basis]: <span><script type="math/tex">i</script></span> 번째 항목만 1 이고 나머지는 0인 벡터를 말한다. [기저 (Standard basis)](https://en.wikipedia.org/wiki/Standard_basis)라고도 한다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\begin{aligned}
-g(\mathbf{z}) &= g(z_1 e_1 + \cdots + z_n e_n) \\
-&=z_1 g(e_1) + \cdots + z_n g(e_n) \\
-&= z_1 a_1 + \cdots + z_n a_n \\
-&= \mathbf{a}^\mathsf{T} \mathbf{z}
-\end{aligned}
+\mathbf{z} = z_1 \mathbf{e}_1 + \cdots + z_n \mathbf{e}_n
 </script></div>
 
-따라서, 
+위에서 증명한 Multiplication과 Additivity을 이용하면, 
 
 <div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-f(\mathbf{x}) &= g(\mathbf{x}-\alpha) + b \\
-&= \mathbf{a}^\mathsf{T} (\mathbf{x} - \alpha) + b \\
-&= \mathbf{a}^\mathsf{T} \mathbf{x} + (b - \mathbf{a}^\mathsf{T} \alpha)
+g(\mathbf{z}) &= g(z_1 \mathbf{e}_1 + \cdots + z_n \mathbf{e}_n) \\
+&=z_1 g(\mathbf{e}_1) + \cdots + z_n g(\mathbf{e}_n) \\
+&= \begin{bmatrix}
+g(\mathbf{e}_1) \cdots g(\mathbf{e}_n)
+\end{bmatrix} \mathbf{z}
 \end{aligned}
 </script></div>
+
+따라서 임의의 <span><script type="math/tex">\mathbf{x} = \mathbf{z} + \alpha \in \mathbb{A}</script></span> 에 대하여, 
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+f(\mathbf{x}) &= g(\mathbf{x}-\alpha) + f(\alpha) \\
+&= \begin{bmatrix}
+g(\mathbf{e}_1) \cdots g(\mathbf{e}_n)
+\end{bmatrix} (\mathbf{x} - \alpha) + f(\alpha) \\
+&= \begin{bmatrix}
+g(\mathbf{e}_1) \cdots g(\mathbf{e}_n)
+\end{bmatrix} \mathbf{x} + f(\alpha) - \begin{bmatrix}
+g(\mathbf{e}_1) \cdots g(\mathbf{e}_n)
+\end{bmatrix} \alpha
+\end{aligned}
+</script></div>
+
+여기서 벡터 <span><script type="math/tex">\mathbf{a} = [a_i] \in \mathbb{R}^n</script></span> 와 상수 <span><script type="math/tex">b \in \mathbb{R}</script></span> 을 다음과 같이 정의하면,  
+
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+a_i &= g(\mathbf{e}_i) \\
+b &= f(\alpha) - \mathbf{a}^\mathsf{T} \alpha
+\end{aligned}
+</script></div>
+
+함수 <span><script type="math/tex">f</script></span> 는 결국 Affine map의 형태가 된다. 
+
+<div class="math"><script type="math/tex; mode=display">
+f(\mathbf{x}) = \mathbf{a}^\mathsf{T} \mathbf{x} + b
+</script></div>
+
 
 <br/>
 
