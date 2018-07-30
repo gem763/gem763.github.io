@@ -133,7 +133,7 @@ Convex function의 정의에서와는 달리, <span><script type="math/tex">\lam
 > 단 제약조건이 다르다. 
 > 
 > 
->| Affine combination | Convex combination |
+>| <center>Affine combination</center> | <center>Convex combination</center> |
 >|--|--|
 >| <script type="math/tex; mode=display">\sum_i \lambda_i = 1</script> | <script type="math/tex; mode=display">\sum_i \lambda_i = 1, ~\lambda_i \in [0,1]</script> |
 >
