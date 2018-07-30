@@ -8,26 +8,25 @@
 유한 개의 벡터들로 [선형결합 (Linear combination)](https://en.wikipedia.org/wiki/Linear_combination)을 할 때, 모든 계수(coefficient)들의 합이 1인 경우를 [**Affine combination**](https://en.wikipedia.org/wiki/Affine_combination)이라고 한다. <span><script type="math/tex">n</script></span>개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span> 에 대해서, Affine combination은 다음과 같이 표현된다. 
 
 <div class="math"><script type="math/tex; mode=display">
-\gamma_1 \mathbf{x}_1 + \cdots + \gamma_n \mathbf{x}_n
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n
 </script></div>
 
-여기서 <span><script type="math/tex">\gamma_i \in \mathbb{R}</script></span> 는 <span><script type="math/tex">\sum_i \gamma_i = 1</script></span> 을 만족한다. 유클리드 공간(Euclidean space)에서 임의의 두 점을 선택했을 때, **두 점을 지나는 직선 상의 모든 점들**은 Affine combination으로 표현할 수 있다. 
+여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 을 만족한다. 유클리드 공간(Euclidean space)에서 임의의 두 점을 선택했을 때, **두 점을 지나는 직선 상의 모든 점들**은 Affine combination으로 표현할 수 있다. 
 
 <br/>
 
 ### Affine set
-Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](https://en.wikipedia.org/wiki/Affine_space) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{A}</script></span>가 Affine set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{A}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Affine combination도 <span><script type="math/tex">\mathbb{A}</script></span>에 속하게 된다. 
+Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](https://en.wikipedia.org/wiki/Affine_space) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{A}</script></span>가 Affine set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{A}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Affine combination도 <span><script type="math/tex">\mathbb{A}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 에 대해서, 
 
 <div class="math"><script type="math/tex; mode=display">
-\sum_{i=1}^n \gamma_i \mathbf{x}_i \in \mathbb{S}
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n \in \mathbb{S}
 </script></div>
 
-여기서 <span><script type="math/tex">\sum_i \gamma_i = 1</script></span> 이다. 
 
 <br/>
 
 ### Affine map
-**Affine map**[^affine_map]이란 **Linear map**[^linear_map]과 **Translation**[^translation]이 결합된 형태의 좌표변환을 의미한다. 
+**Affine map**[^affine_map]이란 **Linear map**[^linear_map]과 **Translation**[^translation]이 결합된 형태의 좌표변환을 말한다. 
 
 <center><big><b>Affine map = Linear map + Translation</b></big></center>
 
@@ -43,11 +42,25 @@ Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](
 h(\mathbf{x}) = \mathbf{A}^\mathsf{T} \mathbf{x} + \mathbf{b}
 </script></div>
 
+위의 Affine map은 좀더 간편한 형태로 변환할 수 있다. 
+
+<div class="math"><script type="math/tex; mode=display">
+\begin{bmatrix}
+h(\mathbf{x}) \\
+1
+\end{bmatrix} = 
+\underbrace{\begin{bmatrix}
+\mathbf{A}^\mathsf{T} & \mathbf{b} \\
+0 & 1
+\end{bmatrix}}_{\mathbf{M}}
+\begin{bmatrix}
+\mathbf{x} \\ 1
+\end{bmatrix}
+</script></div>
+
+여기서 행렬 <span><script type="math/tex">\mathbf{M} \in \mathbb{R}^{(m+1) \times (n+1)}</script></span> 을 [Augmented matrix](https://en.wikipedia.org/wiki/Augmented_matrix) 라고 한다. 다음은 여러가지 형태의 Augmented matrix <span><script type="math/tex">\mathbf{M}</script></span>에 따른 Affine map을 보여준다. 
 
 
-<br/>
-
-<center><b>여러가지 형태의 Affine map</b></center>
 <br/>
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2D_affine_transformation_matrix.svg/512px-2D_affine_transformation_matrix.svg.png" alt="convex_fn"/></center>
 <center><small>(출처: 위키피디아)</small></center>
@@ -64,18 +77,18 @@ Affine combination에서 **모든 계수들이 0 이상**이라는 추가적인 
 \lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n
 </script></div>
 
-여기서 <span><script type="math/tex">\lambda_i \in \mathbb{R}</script></span> 는 <span><script type="math/tex">\lambda_i \ge 0</script></span> 과 <span><script type="math/tex">\sum_i \lambda_i = 1</script></span> 을 만족한다. 유클리드 공간에서 임의의 두 점을 선택했을 때, **두 점을 잇는 직선 사이의 모든 점들**은 Convex combination으로 표현할 수 있다. 
+여기서 실수 <span><script type="math/tex">\lambda_i</script></span> 는 <span><script type="math/tex">\lambda_i \ge 0</script></span> 과 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 을 만족한다. 유클리드 공간에서 임의의 두 점을 선택했을 때, **두 점을 잇는 직선 사이의 모든 점들**은 Convex combination으로 표현할 수 있다. 
 
 <br/>
 
 ### Convex set
-Convex combination에 대해서 닫혀있는 집합을 [**Convex set**](https://en.wikipedia.org/wiki/Convex_set) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{S}</script></span>가 Convex set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{S}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Convex combination도 <span><script type="math/tex">\mathbb{S}</script></span>에 속하게 된다. 
+Convex combination에 대해서 닫혀있는 집합을 [**Convex set**](https://en.wikipedia.org/wiki/Convex_set) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{S}</script></span>가 Convex set 이라면, 이 집합에서 <span><script type="math/tex">n</script></span>개의 원소인 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n \in \mathbb{S}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Convex combination도 <span><script type="math/tex">\mathbb{S}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_i \ge 0</script></span> 및 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_n = 1</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
-\sum_{i=1}^n \lambda_i \mathbf{x}_i \in \mathbb{S}
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n \in \mathbb{S}
 </script></div>
 
-여기서 <span><script type="math/tex">\lambda_i \ge 0</script></span> 이고 <span><script type="math/tex">\sum_i \lambda_i = 1</script></span> 이다. 따라서 정의에 의해, **모든 Affine set은 Convex set** 이라고 할 수 있다. 
+정의에 의해, **모든 Affine set은 Convex set** 이라고 할 수 있다. 
 
 
 <br/>
@@ -90,7 +103,7 @@ Convex combination에 대해서 닫혀있는 집합을 [**Convex set**](https://
 
 
 ### Convex function
-Convex set <span><script type="math/tex">\mathbb{S}</script></span>에서 추출된 원소들 <span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2 \in \mathbb{S}</script></span> 와 <span><script type="math/tex">\lambda \in [0, 1]</script></span>에 대하여,  함수 <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span>가 다음의 부등식을 만족할 때, 이 함수를 [**Convex function**](https://en.wikipedia.org/wiki/Convex_function)이라고 부른다. 
+Convex set <span><script type="math/tex">\mathbb{S}</script></span>에서 추출된 원소들 <span><script type="math/tex">\mathbf{x}_1, \mathbf{x}_2 \in \mathbb{S}</script></span> 와 실수 <span><script type="math/tex">\lambda \in [0, 1]</script></span>에 대하여,  함수 <span><script type="math/tex">f(\cdot): \mathbb{S} \mapsto \mathbb{R}</script></span>가 다음의 부등식을 만족할 때, 이 함수를 [**Convex function**](https://en.wikipedia.org/wiki/Convex_function)이라고 부른다. 
 
 <div class="math"><script type="math/tex; mode=display">
 f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \le  \lambda f(\mathbf{x}_1) + (1-\lambda) f(\mathbf{x}_2)
@@ -104,7 +117,9 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \le  \lambda f(\m
 
 <br/>
 
-만약 <span><script type="math/tex">-f</script></span>가 Convex function이라면, 이 경우의 함수 <span><script type="math/tex">f</script></span>를 **Concave function** (위로 볼록 함수)이라고 부른다. 
+만약 <span><script type="math/tex">-f</script></span>가 Convex function이라면, 이 경우의 함수 <span><script type="math/tex">f</script></span>를 **Concave function** (**위로 볼록** 함수)이라고 부른다. 
+
+<br/>
 
 ### Strictly convex function
 
@@ -116,18 +131,14 @@ f \bigl( \lambda \mathbf{x}_1 + (1-\lambda)\mathbf{x}_2 \bigr) \lt  \lambda f(\m
 
 
 
-
-
-위의 식에서 **등호가 성립하는 경우가** <span><script type="math/tex">\mathbf{x}_1 = \mathbf{x}_2</script></span> 밖에 없는 경우, 이 함수를 **Strictly convex function**이라고 한다. 
-
-Convex function의 정의에서와는 달리, <span><script type="math/tex">\lambda</script></span>의 범위에서 0과 1이 빠졌다는 점에 주의하기 바란다.  <span><script type="math/tex">\lambda</script></span>가 0 또는 1이라면, <span><script type="math/tex">\mathbf{x}_1 \ne \mathbf{x}_2</script></span> 에 대해서도 위의 식에서 등호가 성립하게 되고, 이는 정의에 어긋나게 된다. 마찬가지 논리로, **affine function이 Strictly convex function에 포함되지 않는다**는 점도 알 수 있다. 만약 <span><script type="math/tex">f</script></span>가 affine function 이라면, <span><script type="math/tex">\mathbf{x}_1 \ne \mathbf{x}_2</script></span> 에 대해서 윗식의 등호가 성립하게 되기 때문이다. 따라서 Strictly convex function은, Convex function 중 선형(Linear)인 구간이 전혀 없는 함수로 이해할 수 있다. 
+참고로 **Affine function은 Strictly convex function에 포함되지 않는다**. 만약 <span><script type="math/tex">f</script></span>가 affine function 이라면, <span><script type="math/tex">\mathbf{x}_1 \ne \mathbf{x}_2</script></span> 에 대해서 윗식의 등호가 성립하며, 이는 Strictly convex function의 정의에 어긋나게 된다. 따라서 Strictly convex function은, Convex function 중 선형(Linear)인 구간이 전혀 없는 함수로 이해할 수 있다. 만약 <span><script type="math/tex">-f</script></span>가 Strictly convex function이라면, 이 경우의 함수 <span><script type="math/tex">f</script></span>를 **Strictly concave function** 이라고 부른다. 
 
 
 <br/>
 
 > <big><b>비교: Combinations and Sets</b></big>
 > 
-> 유한 개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span>와 <span><script type="math/tex">\lambda_i \in \mathbb{R}</script></span> 에 대하여 Affine combination과 Convex combination는 다음과 같이 선형결합(Linear combination)의 형태가 된다. 
+> 유한 개의 벡터 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_n</script></span>와 <span><script type="math/tex">\lambda_i \in \mathbb{R}</script></span> 에 대하여 Affine combination과 Convex combination은 다음과 같이 선형결합(Linear combination)으로 나타낼 수 있다. 
 > <div class="math"><script type="math/tex; mode=display">\lambda_1 \mathbf{x}_1 + \cdots + \lambda_n \mathbf{x}_n</script></div>
 > 
 > 단 제약조건이 다르다. 
@@ -155,7 +166,7 @@ Convex function의 정의에서와는 달리, <span><script type="math/tex">\lam
 Affine set <span><script type="math/tex">\mathbb{A} \subset \mathbb{R}^n</script></span>에서 정의된 함수 <span><script type="math/tex">f(\cdot): \mathbb{A} \mapsto \mathbb{R}</script></span> 에 대하여, 
 
 <div class="math"><script type="math/tex; mode=display">
-(f= \text{Affine}) ~\Longleftrightarrow~ (f= \text{Convex \& Concave})
+(f= \textsf{Affine}) ~\Longleftrightarrow~ (f= \textsf{Convex \& Concave})
 </script></div>
 
 
