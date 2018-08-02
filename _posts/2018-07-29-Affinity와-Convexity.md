@@ -34,7 +34,7 @@ Affinity와 Convexity는 머신러닝에서 **최적화** (Optimization)의 논�
 Affine combination에 대해서 닫혀있는(closed) 집합을 [**Affine set**](https://en.wikipedia.org/wiki/Affine_space) 이라고 한다. 만약 집합 <span><script type="math/tex">\mathbb{A}</script></span>가 Affine set 이라면, 이 집합에서 <span><script type="math/tex">r</script></span>개의 원소 <span><script type="math/tex">\mathbf{x}_1, \cdots, \mathbf{x}_r \in \mathbb{A}</script></span> 를 임의로 추출했을 때, 해당 원소들의 Affine combination도 <span><script type="math/tex">\mathbb{A}</script></span>에 속하게 된다. 즉 <span><script type="math/tex">\lambda_1 + \cdots + \lambda_r = 1</script></span> 에 대해서, 
 
 <div class="math"><script type="math/tex; mode=display">
-\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r \in \mathbb{S}
+\lambda_1 \mathbf{x}_1 + \cdots + \lambda_r \mathbf{x}_r \in \mathbb{A}
 </script></div>
 
 
