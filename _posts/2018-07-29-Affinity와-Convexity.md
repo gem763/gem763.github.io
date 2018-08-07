@@ -274,6 +274,8 @@ g &\left( k \mathbf{z}_1 + (1-k) \mathbf{z}_2 \right) \\
 
 따라서 <span><script type="math/tex">g</script></span> 역시 Convex & Concave 하다. 
 
+<br/>
+
 **2. Multiplication** 
 * <span><script type="math/tex">\gamma \in [0, 1]</script></span>: Affine set <span><script type="math/tex">\mathbb{A}_o</script></span>는 원점을 지나는 Convex set 이므로, 두 원소 <span><script type="math/tex">\mathbf{z}, 0 \in \mathbb{A}_o</script></span> 에 대하여, 
 <div class="math"><script type="math/tex; mode=display">
@@ -299,6 +301,8 @@ g(\mathbf{z}) &= g \left(\tfrac{1}{\gamma} \gamma \mathbf{z} + (1- \tfrac{1}{\ga
 </script></div>
 
 따라서 모든 <span><script type="math/tex">\gamma \ge 0</script></span> 에 대하여 <span><script type="math/tex">g(\gamma \mathbf{z}) = \gamma g(\mathbf{z})</script></span> 임을 알 수 있다. 
+
+<br/>
 
 **3. Additivity**
 
@@ -431,7 +435,7 @@ f \left( \sum_{i=1}^{k+1} \lambda_i x_i \right)
 <br/>
 
 ### Jensen 부등식에서의 등호조건
-Jensen 부등식에서 등호가 성립한다면 <span><script type="math/tex">~\Longrightarrow~</script></span> 다음의 둘 중 하나가 참이다.  
+Jensen 부등식에서 등호가 성립한다면, 다음의 둘 중 하나가 참이다.  
 * <span><script type="math/tex">\mathbf{x}_1 = \cdots = \mathbf{x}_r</script></span>
 * 함수 <span><script type="math/tex">f</script></span>가 Affine map
 
