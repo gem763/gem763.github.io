@@ -17,11 +17,11 @@
 데이터가 클러스터에 속할 지의 여부를 (K-means clustering 처럼 칼같이 결정[^hard_cl]하지 말고) **확률적**으로 묘사하면 좀 낫지 않을까? 이를 위해 다음의 몇 가지를 가정하면, 
 
 * 데이터 <span><script type="math/tex">\mathbf{x} \in \mathbb{R}^d</script></span> 는 어떤 확률변수 <span><script type="math/tex">X</script></span> 로부터 독립적으로 도출
-* 각 데이터는 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, S_2 \}</script></span> 중 어느 하나에 포함 (편의를 위해 클러스터는 2개만 존재한다고 가정)
+* 각 데이터는 클러스터 <span><script type="math/tex">\mathbf{S} = \{ S_1, S_2, S_3 \}</script></span> 중 어느 하나에 포함
 * 각 클러스터는 다변수 [가우시안 정규분포](https://en.wikipedia.org/wiki/Normal_distribution) <span><script type="math/tex">\mathcal{N}_d</script></span>으로 묘사
 
 
-각 가우시안 정규분포의 모수 <span><script type="math/tex">\boldsymbol{\mu}_j \in \mathbb{R}^d</script></span>, <span><script type="math/tex">\mathbf{\Sigma}_j \in \mathbb{R}^{d \times d}</script></span> 에 대하여, 확률변수 <span><script type="math/tex">X</script></span>는 다음과 같이 표현할 수 있다. 
+각 가우시안 정규분포의 모수 <span><script type="math/tex">\boldsymbol{\mu}_j \in \mathbb{R}^d</script></span>, <span><script type="math/tex">\mathbf{\Sigma}_j \in \mathbb{R}^{d \times d}</script></span> <span><script type="math/tex">(j=1,2,3)</script></span>에 대하여, 확률변수 <span><script type="math/tex">X</script></span>는 다음과 같이 표현할 수 있다. 
 
 [^hard_cl]: Hard clustering 이라고 한다. 반대로, 클러스터를 확률적으로 결정하는 방식을 Soft clustering 이라고 한다. 
 
@@ -29,42 +29,53 @@
 X \sim 
 \begin{cases}
 \mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) & \text{if}~~ X \in S_1 \\
-\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ X \in S_2
+\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ X \in S_2 \\
+\mathcal{N}_d (\boldsymbol{\mu}_3, \mathbf{\Sigma}_3) & \text{if}~~ X \in S_3
 \end{cases}
 </script></div>
 
-어느 클러스터에 속하는지의 여부도 결국은 확률적으로 결정되어야 할 것이므로, 새로운 확률변수 <span><script type="math/tex">Z</script></span>를 도입하면 다음과 같이 조건부 확률분포로 나타날 수 있게 된다. 
+어느 클러스터에 속하는지의 여부도 확률적으로 결정되어야 할 것이므로, 새로운 확률변수 <span><script type="math/tex">Z</script></span> (잠재변수라고 한다)를 도입하면 다음과 같이 조건부 확률분포로 나타날 수 있게 된다. 
 
 <div class="math"><script type="math/tex; mode=display">
 X \mid Z \sim 
 \begin{cases}
 \mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) & \text{if}~~ Z=1 \\
-\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ Z=2
+\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) & \text{if}~~ Z=2 \\
+\mathcal{N}_d (\boldsymbol{\mu}_3, \mathbf{\Sigma}_3) & \text{if}~~ Z=3
 \end{cases}
 </script></div>
 
 여기서 
 
 <div class="math"><script type="math/tex; mode=display">
-p(Z=1) ~\overset{\text{let}}{=}~ \tau_1, ~~p(Z=2) ~\overset{\text{let}}{=}~ \tau_2 (= 1-\tau_1)
-</script></div>
-
-라고 하면, 최종적인 확률분포는 다음과 같이 표현된다. 
-
-<div class="math"><script type="math/tex; mode=display">
 \begin{aligned}
-p(\mathbf{x}) &= p(\mathbf{x} \mid Z=1) p(Z=1) + p(\mathbf{x} \mid Z=2) p(Z=2) \\
-&= \tau_1\mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) + \tau_2\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2)
+\Pr[Z=1] ~\overset{\text{let}}{=}~ \tau_1 \\
+\Pr[Z=2] ~\overset{\text{let}}{=}~ \tau_2 \\
+\Pr[Z=3] ~\overset{\text{let}}{=}~ \tau_3
 \end{aligned}
 </script></div>
 
-이처럼 여러개의 확률분포가 섞여서 만들어진 분포를 **혼합분포**(Mixture distribution)이라고 하고, 특히 위의 전개에서와 같이 가우시안 정규분포로 이루어진 혼합분포를 **가우시한 혼합분포**(Gaussian Mixture distribution)이라고 부른다. 
+이고, <span><script type="math/tex">\tau_1 + \tau_2 + \tau_3 = 1</script></span> 라고 하면, <span><script type="math/tex">X</script></span>의 최종적인 확률분포 <span><script type="math/tex">p</script></span> 는 다음의 형태가 될 것이다. 
 
-데이터가 어느 클러스터에 속해 있는지를 확인하기 위해서는 우선 해당 혼합분포를 명확하게 이해하는 것이 중요하다. 따라서 결국 우리가 해야 할 일은 혼합분포의 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>를 추정하는 것이 된다. 
+<div class="math"><script type="math/tex; mode=display">
+\begin{aligned}
+p(\mathbf{x}) 
+&= \sum_{j=1}^n \Pr[\mathbf{X}=\mathbf{x} \mid Z=j] \Pr[Z=j] \\
+&= \tau_1\mathcal{N}_d (\boldsymbol{\mu}_1, \mathbf{\Sigma}_1) + \tau_2\mathcal{N}_d (\boldsymbol{\mu}_2, \mathbf{\Sigma}_2) + \tau_3\mathcal{N}_d (\boldsymbol{\mu}_3, \mathbf{\Sigma}_3) \\
+&= p(\mathbf{x}; ~\underbrace{\tau_1, \tau_2, \boldsymbol{\mu}_1, \boldsymbol{\mu}_2, \mathbf{\Sigma}_1, \mathbf{\Sigma}_2}_{\boldsymbol{\theta}}) \\
+&= p(\mathbf{x}; \boldsymbol{\theta})
+\end{aligned}
+</script></div>
+
+이처럼 여러 개의 확률분포가 섞여서 만들어진 분포를 **혼합분포**(Mixture distribution)라고 하고, 특히 위의 전개에서와 같이 가우시안 정규분포로 이루어진 혼합분포를 **가우시한 혼합분포**(Gaussian Mixture distribution)이라고 부른다. 데이터가 어느 클러스터에 속해 있는지를 확인하기 위해서는 우선 해당 혼합분포를 명확하게 이해하는 것이 중요하다. 따라서 결국 우리가 해야 할 일은 혼합분포의 모수 <span><script type="math/tex">\boldsymbol{\theta}</script></span>를 추정하는 것이 된다. 
 
 <div class="math"><script type="math/tex; mode=display">
 \boldsymbol{\theta} = (\tau_1, \tau_2, \boldsymbol{\mu}_1, \boldsymbol{\mu}_2, \mathbf{\Sigma}_1, \mathbf{\Sigma}_2)
 </script></div>
+
+그리고 이 모수를 추정하는 효과적인 방법 중 하나가 바로 [**EM 알고리즘**](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm) (Expectation–maximization algorithm, 기대값 최대화 알고리즘)이다. 
+
+다시 처음으로 돌아가서, 맨 위의 좌측 데이터 집합(original data)을 살펴보자. 이 데이터 집합이 어떤 혼합분포에서 추출되었다고 가정하고, EM 알고리즘으로 해당 모수를 추정한다. 이제 각 샘플 데이터 별로 
 
 <center><img src="https://gem763.github.io/assets/img/20180719/cluster_by_em.png" alt="cluster_em"/></center>
 
@@ -240,43 +251,6 @@ U(\boldsymbol{\theta}, q)
 <br/>
 
 
-> <big><b>KL 다이버전스</b></big>
-> 
-> KL 다이버전스(Kullback-Leiber divergence)는 두 확률분포 간의 차이를 측정하는 도구이다. 확률분포 <span><script type="math/tex">q</script></span>와 <span><script type="math/tex">p</script></span>에 대하여  
-> <div class="math"><script type="math/tex; mode=display">
-> D_{KL} (q \parallel p) \equiv \sum_i q(i) \ln \frac{q(i)}{p(i)}
-> </script></div>
-> 로 정의되며, 다음의 성질을 지닌다. 
-> 
-> * 두 분포가 유사할 수록 KL 다이버전스가 작으며, <span><script type="math/tex">q = p</script></span>인 경우 <span><script type="math/tex">D_{KL} (q \parallel p) = 0</script></span> 이다.
-> * <span><script type="math/tex">D_{KL} (q \parallel p) \ne D_{KL} (p \parallel q)</script></span>
-> * <span><script type="math/tex">D_{KL} (q \parallel p) \ge 0</script></span>
-> 
-> 위의 성질 중 <span><script type="math/tex">D_{KL} (q \parallel p) \ge 0</script></span> 은 Jensen 부등식을 이용하여 증명할 수 있다. 
-> 
-> <div class="math"><script type="math/tex; mode=display">
-> D_{KL} (q \parallel p) = - \sum_i q_i \ln \frac{p_i}{q_i} \ge - \ln \left[ \sum_i q_i \frac{p_i}{q_i} \right] = - \ln \left[ \sum_i p_i \right] = 0
-> </script></div>
-
-<br/>
-
-> <big><b>Jesen 부등식</b></big>
->
-> 함수 <span><script type="math/tex">\phi</script></span>가 convex하고, 확률변수 <span><script type="math/tex">X</script></span>에 대하여 <span><script type="math/tex">\operatorname{E}(X)</script></span>가 유한할 때, 다음이 성립한다. 
-> 
-> <div class="math"><script type="math/tex; mode=display">
-> \phi [\operatorname{E}(X)] \le \operatorname{E}[\phi (X)]
-> </script></div>
-> 
-> 만약 <span><script type="math/tex">\phi</script></span>가 strictly convex 인 경우, strict inequality가 적용된다. 
-> 
-> | <span><script type="math/tex">\phi(\cdot)</script></span>의 형태 | 부등식 |
-> | -------- | -------- |
-> | convex (아래로 볼록) | <span><script type="math/tex">\displaystyle \phi \left( \frac{\sum a_i x_i}{\sum a_j} \right) \le \frac{\sum a_i \phi(x_i)}{\sum a_j}</script></span> |
-> | concave (위로 볼록) | <span><script type="math/tex">\displaystyle \phi \left( \frac{\sum a_i x_i}{\sum a_j} \right) \ge \frac{\sum a_i \phi(x_i)}{\sum a_j}</script></span> |
-> 
-
-<br/>
 
 ### E-Step
 
@@ -406,7 +380,7 @@ U_0 \\
 \end{matrix}
 </script></div>
 
-
+<br/>
 
 ## 모형의 한계
 
